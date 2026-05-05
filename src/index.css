@@ -695,7 +695,6 @@ html[data-theme='light'] .hero__title {
 /* ——— Sections ——— */
 .section {
   padding-block: clamp(2rem, 4vw, 3rem);
-  content-visibility: auto;
 }
 
 .kicker {
@@ -1087,7 +1086,7 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   border-radius: var(--radius-lg);
   padding: 1.15rem 1.2rem 1.25rem;
   background: var(--surface);
-  overflow: hidden;
+  overflow: visible;
   box-shadow: var(--shadow-sm);
   transition:
     transform 0.15s ease,
