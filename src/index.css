@@ -98,6 +98,18 @@ html {
     animation: none !important;
     opacity: 0.55;
   }
+
+  .nav-toggle__bar {
+    transition: none !important;
+  }
+
+  .nav-backdrop {
+    animation: none;
+  }
+
+  .nav.nav--open ul {
+    animation: none;
+  }
 }
 
 body {
@@ -355,6 +367,17 @@ html[data-theme='light'] .brand__family {
   border: 0;
   background: rgba(5, 10, 18, 0.48);
   cursor: pointer;
+  animation: nav-backdrop-in 0.22s ease-out;
+}
+
+@keyframes nav-backdrop-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 html[data-theme='light'] .nav-backdrop {
@@ -363,10 +386,11 @@ html[data-theme='light'] .nav-backdrop {
 
 .nav-toggle {
   display: none;
+  position: relative;
+  flex-shrink: 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 5px;
   width: var(--header-control);
   height: var(--header-control);
   padding: 0;
@@ -376,11 +400,12 @@ html[data-theme='light'] .nav-backdrop {
   color: var(--heading);
   cursor: pointer;
   box-shadow: var(--shadow-sm);
+  touch-action: manipulation;
   transition:
     transform 0.15s ease,
     box-shadow 0.15s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
+    border-color 0.22s ease,
+    background 0.22s ease;
 }
 
 .nav-toggle:hover {
@@ -390,17 +415,59 @@ html[data-theme='light'] .nav-backdrop {
   box-shadow: 1px 1px 0 0 var(--neo-ink);
 }
 
+.nav-toggle:active {
+  transform: translate(1px, 1px) scale(0.97);
+}
+
+.nav-toggle[aria-expanded='true'] {
+  border-color: var(--amber);
+  background: var(--nav-hover-bg);
+}
+
 .nav-toggle:focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
 }
 
 .nav-toggle__bar {
-  display: block;
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 50%;
   width: 18px;
   height: 2px;
+  margin-top: -1px;
   border-radius: 1px;
   background: currentColor;
+  transform-origin: center;
+  transition:
+    transform 0.32s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.22s ease;
+}
+
+.nav-toggle__bar:nth-child(1) {
+  transform: translateX(-50%) translateY(-6px);
+}
+
+.nav-toggle__bar:nth-child(2) {
+  transform: translateX(-50%) translateY(0);
+}
+
+.nav-toggle__bar:nth-child(3) {
+  transform: translateX(-50%) translateY(6px);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bar:nth-child(1) {
+  transform: translateX(-50%) translateY(0) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) scaleX(0.15);
+}
+
+.nav-toggle[aria-expanded='true'] .nav-toggle__bar:nth-child(3) {
+  transform: translateX(-50%) translateY(0) rotate(-45deg);
 }
 
 @media (max-width: 900px) {
@@ -452,6 +519,17 @@ html[data-theme='light'] .nav-backdrop {
     box-shadow: var(--shadow);
     border-radius: var(--radius-lg);
     -webkit-overflow-scrolling: touch;
+    animation: nav-panel-in 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  @keyframes nav-panel-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   .nav.nav--open a {
