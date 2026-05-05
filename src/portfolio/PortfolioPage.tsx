@@ -9,6 +9,7 @@ import { useLocale } from '../locale/useLocale'
 import { resolveBrandLogoSrc } from '../theme/resolveBrandLogo'
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
+import { ProjectTag } from './ProjectTag'
 
 function RevealSection({
   children,
@@ -282,12 +283,22 @@ export function PortfolioPage() {
                 <div className="project-card__visual" aria-hidden />
                 <span className="project-card__badge">{proj.badge}</span>
                 <h3 className="project-card__title">
-                  <a href={proj.href}>{proj.title}</a>
+                  <a
+                    href={proj.href}
+                    {...(proj.href.startsWith('http')
+                      ? {
+                          target: '_blank',
+                          rel: 'noreferrer noopener',
+                        }
+                      : {})}
+                  >
+                    {proj.title}
+                  </a>
                 </h3>
                 <p className="project-card__summary">{proj.summary}</p>
                 <ul className="tag-row">
                   {proj.tags.map((t) => (
-                    <li key={t}>{t}</li>
+                    <ProjectTag key={t} label={t} />
                   ))}
                 </ul>
               </article>

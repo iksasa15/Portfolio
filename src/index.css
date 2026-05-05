@@ -496,7 +496,13 @@ html[data-theme='light'] .hero__title {
 }
 
 .stat-card__icon {
-  font-size: 1.25rem;
+  font-size: 1.3rem;
+  line-height: 1;
+  font-family:
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Noto Color Emoji',
+    sans-serif;
 }
 
 .stat-card__value {
@@ -771,6 +777,12 @@ html[data-theme='light'] .hero__title {
 
 .skill-card__icon {
   font-size: 1.35rem;
+  line-height: 1;
+  font-family:
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Noto Color Emoji',
+    sans-serif;
 }
 
 .skill-card__head h3 {
@@ -934,14 +946,32 @@ html[data-theme='light'] .hero__title {
   gap: 0.4rem;
 }
 
-.tag-row li {
+.tag-row__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 0.75rem;
   font-weight: 700;
-  padding: 0.2rem 0.45rem;
+  padding: 0.2rem 0.45rem 0.2rem 0.35rem;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border);
   color: var(--text);
+}
+
+.tag-row__item--plain {
+  padding: 0.2rem 0.45rem;
+}
+
+.tag-row__emoji {
+  margin-inline-end: 0.3rem;
+  font-size: 1.05em;
+  font-family:
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Noto Color Emoji',
+    sans-serif;
+  line-height: 1;
 }
 
 /* ——— Contact ——— */
@@ -1137,7 +1167,7 @@ html[data-theme='light'] .skill-pill {
   background: rgba(0, 0, 0, 0.04);
 }
 
-html[data-theme='light'] .tag-row li {
+html[data-theme='light'] .tag-row__item {
   background: rgba(0, 0, 0, 0.04);
 }
 

@@ -1,5 +1,7 @@
 /** English portfolio copy — mirrors `src/content.ts` */
 
+import type { SkillLevel } from '../content'
+
 export const site = {
   name: 'Ahmed Alharbi',
   fullName: 'Ahmed Alharbi',
@@ -96,7 +98,11 @@ export const journey = [
   },
 ]
 
-export const skillGroups = [
+export const skillGroups: {
+  title: string
+  icon: string
+  skills: { name: string; level: SkillLevel }[]
+}[] = [
   {
     title: 'Web development',
     icon: '💻',
@@ -125,6 +131,14 @@ export const skillGroups = [
 ]
 
 export const projects = [
+  {
+    title: 'NextEd: Smart Learning for Outstanding Performance',
+    badge: 'Graduation project',
+    summary:
+      'NextEd is an AI learning platform that summarizes lectures, builds quizzes and flashcards, and handles tasks, calendars, reminders, and study analytics. It analyzes performance from grades and completion, visualizes insights, and proposes a tailored improvement plan—review cadence, pacing, and weak-spot focus—to raise scores with clear steps, so students study smarter, not harder.',
+    tags: ['Flutter', 'Firebase', 'ChatGPT API'],
+    href: 'https://drive.google.com/file/d/1ZDMDpL59VROoyvq2PuEZwkGL3vOTa_qq/view',
+  },
   {
     title: 'Team collaboration platform',
     badge: 'Product',
