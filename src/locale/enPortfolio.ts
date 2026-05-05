@@ -30,7 +30,7 @@ export const site = {
 
 export const stats = [
   { icon: '🎓', value: '4.50', label: 'GPA out of 5' },
-  { icon: '🚀', value: '7+', label: 'Notable projects' },
+  { icon: '🚀', value: '8+', label: 'Notable projects' },
   { icon: '🏆', value: '2', label: 'Awards' },
   { icon: '🤝', value: '700+', label: 'Volunteer hours' },
 ]
@@ -140,27 +140,59 @@ export const projects = [
     href: 'https://drive.google.com/file/d/1ZDMDpL59VROoyvq2PuEZwkGL3vOTa_qq/view',
   },
   {
-    title: 'Team collaboration platform',
-    badge: 'Product',
+    title: 'Maeen (معين) | AI-Powered Multi-Modal Legal Interface',
+    badge: '2nd place — Judicial Intelligence Hackathon',
     summary:
-      'Dashboard, permissions, and real-time notifications—built for speed and clarity so teams can work smoothly.',
-    tags: ['React', 'TypeScript', 'Vite'],
+      'An award-winning solution that humanizes judicial workflows through zero-touch interaction: computer vision for gestures and speech-to-text / NLP for voice, lowering cognitive load and making services faster and more inclusive for older adults and people with disabilities.',
+    tags: ['Computer Vision', 'NLP', 'Accessibility'],
     href: '#',
   },
   {
-    title: 'Multilingual corporate site',
-    badge: 'Frontend',
+    title: 'NIDAA: AI-Powered EMS & Dispatch Optimization',
+    badge: 'Emergency Science & Safety Hackathon',
     summary:
-      'Content architecture, RTL/LTR, and Core Web Vitals tuning so pages load and read well everywhere.',
-    tags: ['Next.js', 'i18n', 'SEO'],
+      'AI-driven EMS concept focused on cutting response times: CV and NLP on calls and patient data, AML for precise caller location, and data links across Seha, Tawakkalna, and EMS so paramedics get context fast—including workflows for peak demand and accessibility for disability reporting. Stack: Microsoft Azure; partners: SRCA, MOH, SDAIA (collaboration context).',
+    tags: ['Azure', 'Computer Vision', 'NLP'],
     href: '#',
   },
   {
-    title: 'Educational web app',
-    badge: 'Experience',
+    title: 'Atqinha | Smart physical therapy at home',
+    badge: 'Mobile app',
     summary:
-      'Learning paths, progress tracking, and responsive layouts across screen sizes.',
-    tags: ['PWA', 'A11y'],
+      'Helps patients do PT exercises correctly at home using the phone camera: pose estimation and real-time correction with computer vision, a customized ChatGPT-based assistant for guidance, and periodic performance reports for physicians. Cross-platform Flutter with Firebase backend.',
+    tags: ['Flutter', 'Firebase', 'ChatGPT API'],
+    href: '#',
+  },
+  {
+    title: 'Maydan (الميدان) | Smart theatre management',
+    badge: 'SaaS',
+    summary:
+      'A cloud platform that bridges art and operations: automated scheduling across people, budgets, and venues; analytics to cut “show failure” risk and revenue leakage; and audience and pricing insights to grow sustainable cultural institutions—data-driven theatre management.',
+    tags: ['SaaS', 'Analytics', 'Cloud'],
+    href: '#',
+  },
+  {
+    title: 'RASD (منظومة رصد) | Drone swarm security & AI',
+    badge: 'Critical infrastructure',
+    summary:
+      'Autonomous drone swarms with flexible formations, dual ground/aerial scanning, YOLOv8 threat classification (weapons, sharp objects, explosives, bags), and spatial change detection vs. a stored visual footprint. Edge AI on a ground station; unified digital alerts with GPS, imagery, and threat levels for command centers.',
+    tags: ['YOLOv8', 'Computer Vision', 'Edge AI'],
+    href: '#',
+  },
+  {
+    title: 'Midhal | A digital memory for Saudi identity',
+    badge: 'Platform',
+    summary:
+      'An integrated platform to collect and archive Saudi history—folk tales, rare documents, archaeological sites, and cultural change—through a modern, interactive experience for researchers and future generations.',
+    tags: ['Archive', 'Heritage', 'Web'],
+    href: '#',
+  },
+  {
+    title: 'AI medical resource allocation & emergency routing',
+    badge: 'SDAIA Athka U Hackathon',
+    summary:
+      'Smart emergency response recommendations that combine live traffic, hospital load, ambulance availability, patient location, and optimized routing to improve allocation—shorter travel, better satisfaction, and higher survival outcomes.',
+    tags: ['Routing', 'Optimization', 'SDAIA'],
     href: '#',
   },
 ]
