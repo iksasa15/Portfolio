@@ -198,7 +198,7 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="journey">
-            الخبرة
+            شغلي
           </p>
           <h2 className="section-title">وين شتغلت</h2>
           <ol className="timeline">

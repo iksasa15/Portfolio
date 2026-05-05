@@ -485,8 +485,7 @@ html[data-theme='light'] .hero__title {
   margin: 0 0 0.35rem;
   font-size: 0.82rem;
   font-weight: 800;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0.02em;
   color: var(--text-dim);
 }
 
@@ -518,7 +517,8 @@ html[data-theme='light'] .hero__title {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-inline-start: 1px solid var(--border);
+  border-inline-start: 1px solid
+    color-mix(in srgb, var(--violet) 22%, var(--border));
   padding-inline-start: 1.25rem;
 }
 
@@ -552,8 +552,8 @@ html[data-theme='light'] .hero__title {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background: var(--amber);
-  box-shadow: 0 0 0 4px rgba(251, 191, 36, 0.2);
+  background: var(--violet);
+  box-shadow: 0 0 0 4px var(--violet-dim);
 }
 
 .timeline__range {
