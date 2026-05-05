@@ -27,6 +27,7 @@ html[data-theme='dark'] {
   --nav-hover-bg: #1a2940;
   --ghost-btn-bg: #121d2e;
   --ghost-btn-border-hover: #f0f4fc;
+  --header-control: 42px;
 }
 
 html[data-theme='light'] {
@@ -56,6 +57,7 @@ html[data-theme='light'] {
   --nav-hover-bg: #d9e4f4;
   --ghost-btn-bg: #ffffff;
   --ghost-btn-border-hover: #0a1628;
+  --header-control: 42px;
 }
 
 *,
@@ -187,9 +189,9 @@ a {
 .locale-toggle {
   display: grid;
   place-items: center;
-  min-width: 42px;
-  height: 42px;
-  padding: 0 0.5rem;
+  min-width: var(--header-control);
+  height: var(--header-control);
+  padding: 0 0.45rem;
   border-radius: var(--radius);
   border: 2px solid var(--border);
   background: var(--ghost-btn-bg);
@@ -226,8 +228,8 @@ a {
 .theme-toggle {
   display: grid;
   place-items: center;
-  width: 42px;
-  height: 42px;
+  width: var(--header-control);
+  height: var(--header-control);
   padding: 0;
   border-radius: var(--radius);
   border: 2px solid var(--border);
@@ -272,12 +274,14 @@ a {
 .brand__mark {
   display: grid;
   place-items: center;
-  width: 38px;
-  height: 38px;
+  flex-shrink: 0;
+  width: var(--header-control);
+  height: var(--header-control);
   border-radius: var(--radius);
   background: var(--accent);
   color: var(--on-accent);
-  font-size: 1.1rem;
+  font-size: 1rem;
+  line-height: 1;
   border: 2px solid var(--neo-ink);
   box-shadow: var(--shadow-sm);
 }
@@ -330,8 +334,10 @@ a {
     align-items: stretch;
   }
 
+  /* أدوات اللغة/الثيم فوق الروابط — يعمل في RTL و LTR */
   .header-tools {
-    align-self: flex-end;
+    order: -1;
+    margin-inline-start: auto;
   }
 
   .nav ul {
