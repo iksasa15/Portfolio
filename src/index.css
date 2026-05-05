@@ -388,6 +388,7 @@ html[data-theme='light'] .nav-backdrop {
   display: none;
   position: relative;
   flex-shrink: 0;
+  direction: ltr;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -432,7 +433,7 @@ html[data-theme='light'] .nav-backdrop {
 .nav-toggle__bar {
   position: absolute;
   top: 50%;
-  inset-inline-start: 50%;
+  left: 50%;
   width: 18px;
   height: 2px;
   margin-top: -1px;
@@ -490,6 +491,22 @@ html[data-theme='light'] .nav-backdrop {
     max-width: 100%;
   }
 
+  /* القائمة تتمدّد مع الهيدر — تحت الأزرار مباشرة، بدون بطاقة معلّقة بالمنتصف */
+  .nav {
+    width: 100%;
+    align-self: stretch;
+  }
+
+  /* مع body overflow: hidden: الهيدر يصير مساحة التمرير حتى تظهر كل الروابط */
+  .site-header:has(.nav.nav--open) {
+    max-height: min(100dvh, 100svh);
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: max(0.65rem, env(safe-area-inset-bottom, 0px));
+  }
+
   .nav-toggle {
     display: inline-flex;
   }
@@ -504,31 +521,31 @@ html[data-theme='light'] .nav-backdrop {
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 0.2rem;
-    position: fixed;
-    z-index: 48;
-    inset-inline-start: max(0.75rem, env(safe-area-inset-left, 0px));
-    inset-inline-end: max(0.75rem, env(safe-area-inset-right, 0px));
-    top: calc(env(safe-area-inset-top, 0px) + 5.25rem);
-    max-height: min(72vh, 30rem);
-    overflow-y: auto;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin-block-start: 0.55rem;
+    margin-inline: 0;
+    max-height: none;
+    overflow: visible;
     padding: 0.55rem;
-    margin: 0;
     list-style: none;
     background: var(--surface);
     border: 2px solid var(--border);
     box-shadow: var(--shadow);
     border-radius: var(--radius-lg);
-    -webkit-overflow-scrolling: touch;
     animation: nav-panel-in 0.24s cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   @keyframes nav-panel-in {
     from {
       opacity: 0;
+      transform: translateY(-6px);
     }
 
     to {
       opacity: 1;
+      transform: translateY(0);
     }
   }
 
