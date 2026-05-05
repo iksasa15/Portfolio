@@ -1,29 +1,53 @@
-type Brand = 'flutter' | 'firebase' | 'openai'
+function emojiForTag(label: string): string | null {
+  const raw = label.trim()
+  const lower = raw.toLowerCase()
 
-function detectBrand(tag: string): Brand | null {
-  const s = tag.trim().toLowerCase()
-  if (s === 'flutter') return 'flutter'
-  if (s === 'firebase') return 'firebase'
-  if (s.includes('chatgpt') || s.includes('gpt')) return 'openai'
+  if (lower === 'flutter') return '📱'
+  if (lower === 'firebase') return '🔥'
+  if (lower.includes('chatgpt') || lower.includes('gpt')) return '🤖'
+
+  if (lower === 'computer vision' || raw === 'رؤية حاسوبية') return '👁️'
+  if (lower === 'nlp') return '💬'
+  if (lower === 'accessibility' || raw === 'إمكانية الوصول') return '♿'
+
+  if (lower === 'azure') return '☁️'
+
+  if (lower === 'saas') return '🏢'
+  if (lower === 'analytics' || raw === 'تحليلات') return '📊'
+  if (lower === 'cloud' || raw === 'سحابة') return '☁️'
+
+  if (lower.includes('yolo')) return '🎯'
+  if (lower === 'edge ai' || raw === 'حافة') return '⚡'
+
+  if (lower === 'archive' || raw === 'أرشفة') return '📚'
+  if (lower === 'heritage' || raw === 'تراث') return '🏛️'
+  if (lower === 'web' || raw === 'ويب') return '🌐'
+
+  if (lower === 'routing' || raw === 'توجيه') return '🛣️'
+  if (lower === 'optimization' || raw === 'تحسين') return '📈'
+  if (lower === 'sdaia') return '🤖'
+
+  if (lower === 'react') return '⚛️'
+  if (lower === 'typescript') return '📘'
+  if (lower === 'vite') return '⚡'
+  if (lower.includes('next.js') || lower === 'next') return '▲'
+  if (lower === 'i18n') return '🌍'
+  if (lower === 'seo') return '🔍'
+  if (lower === 'pwa') return '📲'
+  if (lower === 'a11y') return '♿'
+
   return null
 }
 
-/** إيموجي ملوّن (يظهر بخط Apple Color Emoji على آيفون/ماك) */
-const brandEmoji: Record<Brand, string> = {
-  flutter: '📱',
-  firebase: '🔥',
-  openai: '🤖',
-}
-
 export function ProjectTag({ label }: { label: string }) {
-  const brand = detectBrand(label)
-  if (!brand) {
+  const emoji = emojiForTag(label)
+  if (!emoji) {
     return <li className="tag-row__item tag-row__item--plain">{label}</li>
   }
   return (
     <li className="tag-row__item tag-row__item--plain">
       <span className="tag-row__emoji" aria-hidden>
-        {brandEmoji[brand]}
+        {emoji}
       </span>
       {label}
     </li>
