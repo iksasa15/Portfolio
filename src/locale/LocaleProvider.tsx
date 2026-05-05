@@ -34,7 +34,7 @@ function applyDocumentLocale(locale: Locale) {
   } else {
     root.lang = 'ar'
     root.dir = 'rtl'
-    document.title = 'أحمد الحربي — ملفي'
+    document.title = 'أحمد الحربـي — ملفي'
   }
 }
 

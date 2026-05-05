@@ -74,7 +74,7 @@ const ar: Ui = {
   contactCvLabel: 'السيرة',
   contactCvHint: 'ملف PDF',
   contactMailLabel: 'الإيميل',
-  footerLine: 'صُنع بحب من **أحمد الحربي**',
+  footerLine: 'صُنع بحب من **أحمد الحربـي**',
   levelExpert: 'قوي',
   levelAdvanced: 'زين',
   levelIntermediate: 'عادي',
