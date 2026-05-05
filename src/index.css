@@ -267,7 +267,7 @@ a {
   align-items: center;
   gap: 0.65rem;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 500;
   color: var(--heading);
 }
 
@@ -281,6 +281,7 @@ a {
   background: var(--accent);
   color: var(--on-accent);
   font-size: 1rem;
+  font-weight: 800;
   line-height: 1;
   border: 2px solid var(--neo-ink);
   box-shadow: var(--shadow-sm);
@@ -602,7 +603,7 @@ html[data-theme='light'] .hero__title {
 
 .section-title {
   margin: 0 0 1rem;
-  font-size: clamp(1.55rem, 3vw, 2rem);
+  font-size: clamp(1.9rem, 4.5vw, 2.65rem);
   font-weight: 800;
   color: var(--heading);
 }
@@ -636,16 +637,36 @@ html[data-theme='light'] .hero__title {
 
 /* ——— Timeline ——— */
 .timeline {
+  --timeline-line-w: 2px;
+  --timeline-pad: 1.25rem;
+  --timeline-marker: 10px;
   list-style: none;
   margin: 0;
   padding: 0;
-  border-inline-start: 2px solid var(--border);
-  padding-inline-start: 1.25rem;
+  padding-block-start: 0.35rem;
+  padding-inline-start: var(--timeline-pad);
+  border-inline-start: var(--timeline-line-w) solid var(--border);
+  position: relative;
+  isolation: isolate;
+}
+
+/* إخفاء امتداد الخط تحت آخر عقدة (بدون قص المحتوى) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  inset-inline-start: calc(-1 * var(--timeline-line-w));
+  bottom: 0;
+  width: calc(var(--timeline-line-w) + 4px);
+  height: 1.75rem;
+  background: var(--bg0);
+  pointer-events: none;
+  z-index: 0;
 }
 
 .timeline__item {
   position: relative;
-  padding-bottom: 1.5rem;
+  z-index: 1;
+  padding-bottom: 1.75rem;
 }
 
 .timeline__item:last-child {
@@ -683,14 +704,19 @@ html[data-theme='dark'] .brand-logo--mono-dark {
 .timeline__item::before {
   content: '';
   position: absolute;
-  inset-inline-start: calc(-1.25rem - 6px);
-  top: 0.35rem;
-  width: 10px;
-  height: 10px;
+  /* حافة البداية المنطقية للمربع = مركز خط الحدّ ناقص نصف حجم العلامة */
+  inset-inline-start: calc(
+    -1 * var(--timeline-pad) - var(--timeline-line-w) / 2 -
+      var(--timeline-marker) / 2
+  );
+  top: 0.55rem;
+  width: var(--timeline-marker);
+  height: var(--timeline-marker);
+  transform: translateY(-50%);
   border-radius: 2px;
   background: var(--accent);
   border: 2px solid var(--neo-ink);
-  box-shadow: 0 0 0 2px var(--surface);
+  box-sizing: border-box;
 }
 
 .timeline__range {
