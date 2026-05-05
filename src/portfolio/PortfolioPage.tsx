@@ -454,7 +454,6 @@ export function PortfolioPage() {
             {ui.projectsKicker}
           </p>
           <h2 className="section-title">{ui.projectsTitle}</h2>
-          <p className="lede">{renderInlineBold(ui.projectsLede)}</p>
           <div className="project-grid">
             {p.projects.map((proj) => (
               <article key={proj.title} className="project-card">

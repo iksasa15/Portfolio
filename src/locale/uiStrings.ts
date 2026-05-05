@@ -22,7 +22,6 @@ type Ui = {
   skillsTitle: string
   projectsKicker: string
   projectsTitle: string
-  projectsLede: string
   contactKicker: string
   contactTitle: string
   contactLede: string
@@ -66,8 +65,6 @@ const ar: Ui = {
   skillsTitle: 'شطارتي التقنية',
   projectsKicker: 'المشاريع',
   projectsTitle: 'مشاريعي',
-  projectsLede:
-    'كل بطاقة فيها وسم تقني، وتقرى بسرعة على الجوال والشاشة الكبيرة.',
   contactKicker: 'تواصل',
   contactTitle: 'ياليت نتواصل',
   contactLede: 'تقدر ترسل على الإيميل أو تتابعني بالمنصات تحت.',
@@ -111,8 +108,6 @@ const en: Ui = {
   skillsTitle: 'Technical strengths',
   projectsKicker: 'Projects',
   projectsTitle: 'Selected projects',
-  projectsLede:
-    'Each card has tech tags and reads well on phones and large screens.',
   contactKicker: 'Contact',
   contactTitle: 'Let’s connect',
   contactLede: 'Email me or follow the links below.',
