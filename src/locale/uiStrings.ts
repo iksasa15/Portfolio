@@ -52,7 +52,7 @@ const ar: Ui = {
   educationKicker: 'الدراسة',
   educationTitle: 'شهاداتي ودوراتي',
   journeyKicker: 'شغلي',
-  journeyTitle: 'وين شتغلت',
+  journeyTitle: 'وين اشتغلت',
   skillsKicker: 'المهارات',
   skillsTitle: 'شطارتي التقنية',
   projectsKicker: 'المشاريع',

@@ -250,7 +250,7 @@ export function PortfolioPage() {
           <h2 className="section-title">{ui.journeyTitle}</h2>
           <ol className="timeline">
             {p.journey.map((item) => (
-              <li key={item.range} className="timeline__item">
+              <li key={`${item.range}-${item.org}`} className="timeline__item">
                 <span className="timeline__range">{item.range}</span>
                 <div className="timeline__body">
                   {item.logo ? (
@@ -274,6 +274,9 @@ export function PortfolioPage() {
                     {renderInlineBold(item.role)}
                   </h3>
                   <p className="timeline__org">{renderInlineBold(item.org)}</p>
+                  <p className="timeline__summary">
+                    {renderInlineBold(item.summary)}
+                  </p>
                 </div>
               </li>
             ))}

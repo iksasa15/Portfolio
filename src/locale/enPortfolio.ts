@@ -86,7 +86,6 @@ export const education = [
 
 export const aboutParagraphs = [
   "I'm **Ahmed Alharbi**, an **AI engineer** and a **B.Sc. Computer Science** graduate from the **University of Tabuk** (**4.50/5.0 GPA**, class of **2025**). I **take AI systems into production**: **wiring large language models**, **building computer vision pipelines**, and **activating data-backed automation**.",
-  '**Training and academic experience:** **Ministry of Health** internship on imaging and record pipelines; the **KAUST AI specialization fellowship**; and the **Data Science & AI bootcamp** at **Tuwaiq Academy**.',
 ]
 
 export const journey = [
@@ -94,16 +93,22 @@ export const journey = [
     range: 'Feb 2026 — Present',
     role: 'The Garage Incubator Program',
     org: 'The Garage',
+    summary:
+      'Building a dedicated drone platform in the incubator, running AI workflows on it from idea through UX and scale.',
   },
   {
     range: 'Sep 2025 — Dec 2025',
     role: 'Savvy Incubator Program',
     org: 'Savvy Games',
+    summary:
+      'Incubator work on product narrative and technical integration in games and digital platforms, including development of the **Guardians** game.',
   },
   {
     range: 'Jun 2024 — Aug 2024',
     role: 'AI Specialist (Intern)',
     org: 'Ministry of Health',
+    summary:
+      'Hands-on work on medical imaging and health records, supporting systems that enable AI workflows.',
   },
 ]
 

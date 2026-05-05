@@ -706,6 +706,13 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   color: var(--text);
 }
 
+.timeline__summary {
+  margin: 0.55rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-dim);
+}
+
 /* ——— Education ——— */
 .edu-grid {
   display: grid;
