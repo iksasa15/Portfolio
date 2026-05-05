@@ -143,20 +143,40 @@ export const skillGroups: {
   skills: { name: string; level: SkillLevel }[]
 }[] = [
   {
+    title: 'AI & data',
+    icon: '🧠',
+    skills: [
+      { name: 'Python', level: 'expert' as const },
+      { name: 'LLMs & API integration', level: 'advanced' as const },
+      { name: 'Computer vision', level: 'advanced' as const },
+      { name: 'Machine & deep learning', level: 'expert' as const },
+      { name: 'Data prep & pipelines', level: 'expert' as const },
+    ],
+  },
+  {
     title: 'Web development',
     icon: '💻',
     skills: [
       { name: 'React / TypeScript', level: 'expert' as const },
+      { name: 'Vite & modern tooling', level: 'advanced' as const },
       { name: 'Web performance', level: 'advanced' as const },
       { name: 'REST APIs', level: 'advanced' as const },
+    ],
+  },
+  {
+    title: 'Mobile development',
+    icon: '📱',
+    skills: [
+      { name: 'Flutter', level: 'advanced' as const },
+      { name: 'Swift', level: 'advanced' as const },
     ],
   },
   {
     title: 'User experience',
     icon: '🎨',
     skills: [
-      { name: 'Design systems', level: 'advanced' as const },
-      { name: 'Interactive prototypes', level: 'intermediate' as const },
+      { name: 'Design systems', level: 'expert' as const },
+      { name: 'Interactive prototypes', level: 'expert' as const },
     ],
   },
   {
@@ -164,6 +184,8 @@ export const skillGroups: {
     icon: '⚙️',
     skills: [
       { name: 'Git / CI', level: 'advanced' as const },
+      { name: 'CLI & Linux', level: 'advanced' as const },
+      { name: 'Docker / containers', level: 'intermediate' as const },
       { name: 'Testing', level: 'intermediate' as const },
     ],
   },
@@ -212,9 +234,9 @@ export const projects = [
   },
   {
     title: 'RASD (منظومة رصد) | Drone swarm security & AI',
-    badge: 'Critical infrastructure',
+    badge: 'Top 15 — Absher hackathon · Tuwaiq Academy',
     summary:
-      'Autonomous drone swarms with flexible formations, dual ground/aerial scanning, YOLOv8 threat classification (weapons, sharp objects, explosives, bags), and spatial change detection vs. a stored visual footprint. Edge AI on a ground station; unified digital alerts with GPS, imagery, and threat levels for command centers.',
+      '**Top 15** project at the **Absher** hackathon with **Tuwaiq Academy**, on the **critical security** track: autonomous drone swarms with flexible formations, dual ground/aerial scanning, YOLOv8 threat classification (weapons, sharp objects, explosives, bags), and spatial change detection vs. a stored visual footprint. Edge AI on a ground station; unified digital alerts with GPS, imagery, and threat levels for command centers.',
     tags: ['YOLOv8', 'Computer Vision', 'Edge AI'],
     href: '#',
   },

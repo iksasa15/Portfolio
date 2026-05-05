@@ -172,20 +172,40 @@ export const skillGroups: {
   skills: { name: string; level: SkillLevel }[]
 }[] = [
   {
+    title: 'ذكاء اصطناعي وبيانات',
+    icon: '🧠',
+    skills: [
+      { name: 'Python', level: 'expert' },
+      { name: 'نماذج لغوية كبيرة وواجهات API', level: 'advanced' },
+      { name: 'رؤية حاسوبية', level: 'advanced' },
+      { name: 'تعلّم آلي وتعلّم عميق', level: 'expert' },
+      { name: 'معالجة بيانات وخطوط أنابيب', level: 'expert' },
+    ],
+  },
+  {
     title: 'تطوير الويب',
     icon: '💻',
     skills: [
       { name: 'React / TypeScript', level: 'expert' },
+      { name: 'Vite وأدوات بناء حديثة', level: 'advanced' },
       { name: 'أداء الويب', level: 'advanced' },
       { name: 'واجهات REST', level: 'advanced' },
+    ],
+  },
+  {
+    title: 'تطوير الموبايل',
+    icon: '📱',
+    skills: [
+      { name: 'Flutter', level: 'advanced' },
+      { name: 'Swift', level: 'advanced' },
     ],
   },
   {
     title: 'تجربة المستخدم',
     icon: '🎨',
     skills: [
-      { name: 'أنظمة تصميم', level: 'advanced' },
-      { name: 'نماذج تفاعلية', level: 'intermediate' },
+      { name: 'أنظمة تصميم', level: 'expert' },
+      { name: 'نماذج تفاعلية', level: 'expert' },
     ],
   },
   {
@@ -193,6 +213,8 @@ export const skillGroups: {
     icon: '⚙️',
     skills: [
       { name: 'Git / CI', level: 'advanced' },
+      { name: 'سطر الأوامر وLinux', level: 'advanced' },
+      { name: 'Docker / حاويات', level: 'intermediate' },
       { name: 'اختبارات', level: 'intermediate' },
     ],
   },
@@ -241,9 +263,9 @@ export const projects = [
   },
   {
     title: 'رصد RASD | أمن بطائرات ذاتية وذكاء اصطناعي',
-    badge: 'أمن حرج',
+    badge: 'أفضل ١٥ مشروع — هاكاثون أبشر | أكاديمية طويق',
     summary:
-      'منظومة طائرات بدون طيار تعمل كسرب مرن مع كشف تهديدات مسبق: مسح أرضي وجوي، تصنيف أهداف (سلاح، متفجرات، حقائب مشبوهة) بـ YOLOv8، ومقارنة بصمة بصرية للبيئة مع معالجة على محطة أرضية عالية الأداء وتقارير تنبيه موحّدة بإحداثيات GPS.',
+      'ضمن **أفضل ١٥ مشروعاً** في **هاكاثون أبشر** لدى **أكاديمية طويق**، في مسار **الأمن الحرج**: منظومة طائرات بدون طيار تعمل كسرب مرن مع كشف تهديدات مسبق: مسح أرضي وجوي، تصنيف أهداف (سلاح، متفجرات، حقائب مشبوهة) بـ YOLOv8، ومقارنة بصمة بصرية للبيئة مع معالجة على محطة أرضية عالية الأداء وتقارير تنبيه موحّدة بإحداثيات GPS.',
     tags: ['YOLOv8', 'رؤية حاسوبية', 'حافة'],
     href: '#',
   },
