@@ -6,6 +6,7 @@ import {
   site,
   skillGroups,
   stats,
+  volunteering,
 } from '../content'
 import type { Locale } from './localeContext'
 import { enPortfolio } from './enPortfolio'
@@ -16,6 +17,7 @@ const arPortfolio = {
   education,
   aboutParagraphs,
   journey,
+  volunteering,
   skillGroups,
   projects,
 }

@@ -14,6 +14,8 @@ type Ui = {
   educationTitle: string
   journeyKicker: string
   journeyTitle: string
+  volunteerKicker: string
+  volunteerTitle: string
   skillsKicker: string
   skillsTitle: string
   projectsKicker: string
@@ -39,6 +41,7 @@ const ar: Ui = {
     { id: 'about', label: 'عني' },
     { id: 'education', label: 'دراستي' },
     { id: 'journey', label: 'شغلي' },
+    { id: 'volunteering', label: 'تطوعي' },
     { id: 'skills', label: 'مهاراتي' },
     { id: 'projects', label: 'مشاريعي' },
     { id: 'contact', label: 'تواصل' },
@@ -53,6 +56,8 @@ const ar: Ui = {
   educationTitle: 'شهاداتي ودوراتي',
   journeyKicker: 'شغلي',
   journeyTitle: 'وين اشتغلت',
+  volunteerKicker: 'عطاء',
+  volunteerTitle: 'خبرات تطوعية',
   skillsKicker: 'المهارات',
   skillsTitle: 'شطارتي التقنية',
   projectsKicker: 'المشاريع',
@@ -80,6 +85,7 @@ const en: Ui = {
     { id: 'about', label: 'About' },
     { id: 'education', label: 'Education' },
     { id: 'journey', label: 'Work' },
+    { id: 'volunteering', label: 'Volunteering' },
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
     { id: 'contact', label: 'Contact' },
@@ -94,6 +100,8 @@ const en: Ui = {
   educationTitle: 'Degrees & programs',
   journeyKicker: 'Experience',
   journeyTitle: 'Where I’ve worked',
+  volunteerKicker: 'Giving back',
+  volunteerTitle: 'Volunteer experience',
   skillsKicker: 'Skills',
   skillsTitle: 'Technical strengths',
   projectsKicker: 'Projects',

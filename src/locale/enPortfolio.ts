@@ -1,6 +1,6 @@
 /** English portfolio copy — mirrors `src/content.ts` */
 
-import type { SkillLevel } from '../content'
+import type { JourneyEntry, SkillLevel } from '../content'
 
 export const site = {
   name: 'Ahmed Alharbi',
@@ -112,6 +112,31 @@ export const journey = [
   },
 ]
 
+/** Volunteer track — same shape as `journey`; Google DSC content-committee ladder */
+export const volunteering: JourneyEntry[] = [
+  {
+    range: '1443 AH — start of the path',
+    role: 'Content committee member',
+    org: 'Google Developer Student Club — University of Tabuk',
+    summary:
+      'Content, design, and editing; attending events and meetings; on-the-ground execution for club activities.',
+  },
+  {
+    range: '1444 AH',
+    role: 'Assistant head of the content committee',
+    org: 'Google Developer Student Club — University of Tabuk',
+    summary:
+      'Supporting the committee lead on planning and delivery; workshops such as English-skills development and the Visual 23 challenge; promos and content (e.g. travel club).',
+  },
+  {
+    range: '1444 — 1445 AH',
+    role: 'Head of the content committee',
+    org: 'Google Developer Student Club — University of Tabuk',
+    summary:
+      'Leading the content team, coordinating visual and written output, and aligning work with club goals and the Deanship of Student Affairs.',
+  },
+]
+
 export const skillGroups: {
   title: string
   icon: string
@@ -217,6 +242,7 @@ export const enPortfolio = {
   education,
   aboutParagraphs,
   journey,
+  volunteering,
   skillGroups,
   projects,
 }

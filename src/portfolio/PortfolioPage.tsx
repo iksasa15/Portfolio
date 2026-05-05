@@ -288,6 +288,53 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
+          <p className="kicker" id="volunteering">
+            {ui.volunteerKicker}
+          </p>
+          <h2 className="section-title">{ui.volunteerTitle}</h2>
+          <ol className="timeline timeline--volunteer">
+            {p.volunteering.map((item) => (
+              <li
+                key={`${item.range}-${item.role}-${item.org}`}
+                className="timeline__item"
+              >
+                <span className="timeline__range">{item.range}</span>
+                <div className="timeline__body">
+                  {item.logo ? (
+                    <div className="timeline__logo-wrap">
+                      <img
+                        key={`${theme}-${resolveBrandLogoSrc(item.logo, theme)}`}
+                        className={
+                          'timeline__logo' +
+                          (brandLogoMonochromeDark(item.logo, theme)
+                            ? ' brand-logo--mono-dark'
+                            : '')
+                        }
+                        src={resolveBrandLogoSrc(item.logo, theme)}
+                        alt={item.logo.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ) : null}
+                  <h3 className="timeline__role">
+                    {renderInlineBold(item.role)}
+                  </h3>
+                  <p className="timeline__org">{renderInlineBold(item.org)}</p>
+                  <p className="timeline__summary">
+                    {renderInlineBold(item.summary)}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+        </RevealSection>
+
+        <div className="shell">
+          <div className="rule" aria-hidden />
+        </div>
+
+        <RevealSection className="shell section">
           <p className="kicker" id="skills">
             {ui.skillsKicker}
           </p>
