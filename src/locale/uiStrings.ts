@@ -3,6 +3,8 @@ import type { Locale } from './localeContext'
 type Ui = {
   skipLink: string
   navAria: string
+  navMenuOpen: string
+  navMenuClose: string
   nav: { id: string; label: string }[]
   statRowAria: string
   heroHello: string
@@ -36,6 +38,8 @@ type Ui = {
 const ar: Ui = {
   skipLink: 'تخطّي للمحتوى',
   navAria: 'أجزاء الصفحة',
+  navMenuOpen: 'فتح قائمة الأقسام',
+  navMenuClose: 'إغلاق القائمة',
   nav: [
     { id: 'intro', label: 'البداية' },
     { id: 'about', label: 'عني' },
@@ -79,6 +83,8 @@ const ar: Ui = {
 const en: Ui = {
   skipLink: 'Skip to content',
   navAria: 'Page sections',
+  navMenuOpen: 'Open section menu',
+  navMenuClose: 'Close menu',
   nav: [
     { id: 'intro', label: 'Intro' },
     { id: 'about', label: 'About' },

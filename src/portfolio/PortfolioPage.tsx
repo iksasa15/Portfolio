@@ -1,4 +1,4 @@
-import { useMemo, type ReactNode } from 'react'
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { useSequentialTypewriter } from '../hooks/useSequentialTypewriter'
 import { useReveal } from '../hooks/useReveal'
 import type { SkillLevel } from '../content'
@@ -36,11 +36,41 @@ function RevealSection({
   )
 }
 
+const NAV_DRAWER_BP = 900
+
 export function PortfolioPage() {
   const { theme } = useTheme()
   const { locale } = useLocale()
   const ui = useMemo(() => getUi(locale), [locale])
   const p = useMemo(() => getPortfolio(locale), [locale])
+  const [navOpen, setNavOpen] = useState(false)
+
+  const closeNav = useCallback(() => setNavOpen(false), [])
+
+  useEffect(() => {
+    if (!navOpen) return
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') closeNav()
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [navOpen, closeNav])
+
+  useEffect(() => {
+    if (!navOpen) return
+    const onResize = () => {
+      if (window.innerWidth > NAV_DRAWER_BP) closeNav()
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [navOpen, closeNav])
+
+  useEffect(() => {
+    document.body.style.overflow = navOpen ? 'hidden' : ''
+    return () => {
+      document.body.style.overflow = ''
+    }
+  }, [navOpen])
 
   const levelLabel = (level: SkillLevel) => {
     switch (level) {
@@ -63,6 +93,16 @@ export function PortfolioPage() {
     startDelay: 420,
   })
 
+  const brandSplit = useMemo(() => {
+    const s = p.site.fullName.trim()
+    const m = /\s+/.exec(s)
+    if (!m || m.index === 0) return { first: s, rest: '' as const }
+    return {
+      first: s.slice(0, m.index),
+      rest: s.slice(m.index + m[0].length).trim(),
+    }
+  }, [p.site.fullName])
+
   return (
     <>
       <a className="skip-link" href="#intro">
@@ -71,28 +111,60 @@ export function PortfolioPage() {
 
       <div className="bg-mesh" aria-hidden />
 
+      {navOpen ? (
+        <button
+          type="button"
+          className="nav-backdrop"
+          aria-label={ui.navMenuClose}
+          onClick={closeNav}
+        />
+      ) : null}
+
       <header className="site-header">
         <div className="shell site-header__inner">
           <a className="brand" href="#intro">
             <span className="brand__mark" aria-hidden>
               {p.site.name.replace(/\s/g, '').charAt(0)}
             </span>
-            <span className="brand__text">{p.site.fullName}</span>
+            <span className="brand__text">
+              <span className="brand__given">{brandSplit.first}</span>
+              {brandSplit.rest ? (
+                <span className="brand__family">{brandSplit.rest}</span>
+              ) : null}
+            </span>
           </a>
           <div className="site-header__tray">
-            <nav className="nav" aria-label={ui.navAria}>
+            <div className="header-tools">
+              <button
+                type="button"
+                className="nav-toggle"
+                aria-expanded={navOpen}
+                aria-controls="site-nav"
+                onClick={() => setNavOpen((v) => !v)}
+                aria-label={navOpen ? ui.navMenuClose : ui.navMenuOpen}
+              >
+                <span className="nav-toggle__bar" aria-hidden />
+                <span className="nav-toggle__bar" aria-hidden />
+                <span className="nav-toggle__bar" aria-hidden />
+              </button>
+              <LocaleToggle />
+              <ThemeToggle />
+            </div>
+            <nav
+              id="site-nav"
+              className={`nav${navOpen ? ' nav--open' : ''}`}
+              aria-label={ui.navAria}
+            >
               <ul>
                 {ui.nav.map((item) => (
                   <li key={item.id}>
-                    <a href={`#${item.id}`}>{item.label}</a>
+                    <a href={`#${item.id}`} onClick={closeNav}>
+                      {item.label}
+                    </a>
                   </li>
                 ))}
               </ul>
             </nav>
-            <div className="header-tools">
-              <LocaleToggle />
-              <ThemeToggle />
-            </div>
           </div>
         </div>
       </header>
@@ -442,8 +514,18 @@ export function PortfolioPage() {
               {p.site.social.map((s) => (
                 <li key={s.href}>
                   <a href={s.href} target="_blank" rel="noreferrer noopener">
-                    <span className="social-list__label">{s.label}</span>
-                    <span className="social-list__handle">{s.handle}</span>
+                    <svg
+                      className="social-list__icon"
+                      width={32}
+                      height={32}
+                      aria-hidden
+                    >
+                      <use href={`/icons.svg#${s.iconId}`} />
+                    </svg>
+                    <span className="social-list__text">
+                      <span className="social-list__label">{s.label}</span>
+                      <span className="social-list__handle">{s.handle}</span>
+                    </span>
                   </a>
                 </li>
               ))}

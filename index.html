@@ -24,6 +24,7 @@
           if (t === 'light' || t === 'dark') {
             document.documentElement.setAttribute('data-theme', t)
           } else {
+            /* system أو غير محفوظ: يتبع وضع الجهاز */
             var dark = window.matchMedia('(prefers-color-scheme: dark)')
               .matches
             document.documentElement.setAttribute(
@@ -37,17 +38,11 @@
       })()
     </script>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta id="theme-color-meta" name="theme-color" content="#0c1420" />
     <meta
-      name="theme-color"
-      content="#050a12"
-      media="(prefers-color-scheme: dark)"
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <meta
-      name="theme-color"
-      content="#eef2f8"
-      media="(prefers-color-scheme: light)"
-    />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="ملف أحمد الحربي — تعريف، دراسة، شغل، مهارات، مشاريع، وتواصل."

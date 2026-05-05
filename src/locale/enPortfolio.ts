@@ -7,7 +7,7 @@ export const site = {
   fullName: 'Ahmed Alharbi',
   title: 'AI Engineer',
   tagline:
-    'I take AI systems into production: wiring large language models, building computer vision pipelines, and activating data-backed automation.',
+    'I design and ship production AI: connecting **large language models** to real workflows, building **computer vision** you can rely on, and running **automation** driven by data from the first input.',
   email: 'ahmednalharbii@gmail.com',
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
@@ -19,11 +19,13 @@ export const site = {
       label: 'LinkedIn',
       href: 'https://linkedin.com/in/ahmed014x',
       handle: 'in/ahmed014x',
+      iconId: 'portfolio-linkedin-icon' as const,
     },
     {
       label: 'GitHub',
       href: 'https://github.com/iksasa15',
       handle: 'iksasa15',
+      iconId: 'portfolio-github-icon' as const,
     },
   ],
 }
@@ -85,7 +87,7 @@ export const education = [
 ]
 
 export const aboutParagraphs = [
-  "I'm **Ahmed Alharbi**, an **AI engineer** and a **B.Sc. Computer Science** graduate from the **University of Tabuk** (**4.50/5.0 GPA**, class of **2025**). I **take AI systems into production**: **wiring large language models**, **building computer vision pipelines**, and **activating data-backed automation**.",
+  "**Ahmed Alharbi** — **AI engineer**, **B.Sc. Computer Science** from the **University of Tabuk** with a **4.50/5.0** GPA (**2025**). I focus on **AI that actually runs in the real world**: integrating **large language models** with live systems, designing clear **vision-and-data paths**, and building **automation** grounded in data and business rules so services are faster, sharper, and less error-prone.",
 ]
 
 export const journey = [
@@ -204,7 +206,7 @@ export const projects = [
     title: 'Ayn (عين) | An intelligent eye on your data quality',
     badge: '2nd place — Data Innovation Hackathon · General Authority for Statistics',
     summary:
-      'By God’s grace, **second place** on the winners’ podium at the **Data Innovation Hackathon** organized by the **General Authority for Statistics**, among **132 teams**. **Ayn** is a smart platform for **data quality at the source**: it combines **AI** and **large language models** with **business rules** to surface logical and semantic inconsistencies; **live forms** analyze input in real time with alerts and a **confidence score** per record; and bulk **Excel / CSV** upload scans rows for cross-field conflicts—turning validation from a **“late step”** into a **“live”** part of the workflow.',
+      '**Second place** on the winners’ podium at the **Data Innovation Hackathon** organized by the **General Authority for Statistics**, among **132 teams**. The idea: **Ayn** improves **data quality at the source** by combining **AI**, **large language models**, and **business rules** so validation happens **as data is entered**, not only in a later phase.',
     tags: ['LLMs', 'Data quality', 'Arabic NLP'],
     href: '#',
   },
@@ -222,6 +224,14 @@ export const projects = [
     summary:
       'AI-driven EMS concept focused on cutting response times: CV and NLP on calls and patient data, AML for precise caller location, and data links across Seha, Tawakkalna, and EMS so paramedics get context fast—including workflows for peak demand and accessibility for disability reporting. Stack: Microsoft Azure; partners: SRCA, MOH, and related national entities.',
     tags: ['Azure', 'Computer Vision', 'NLP'],
+    href: '#',
+  },
+  {
+    title: 'Guardians | Immersive strategy vs. desertification',
+    badge: 'Savvy Games Incubator · Game development',
+    summary:
+      '**Guardians** is an immersive **strategy** game that puts the **planet’s future** in your hands. The world stands on the brink of a **barren wasteland**; players must battle the **encroaching sands of desertification** before the last green life is gone. Built on the **Unity engine** with **C#**—scenes, gameplay systems, 3D assets, and UI.',
+    tags: ['Unity', 'C#', 'Game dev'],
     href: '#',
   },
   {

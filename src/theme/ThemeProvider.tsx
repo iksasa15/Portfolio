@@ -5,55 +5,100 @@ import {
   useState,
   type ReactNode,
 } from 'react'
-import { ThemeContext, type Theme, type ThemeContextValue } from './themeContext'
+import {
+  ThemeContext,
+  type Theme,
+  type ThemeContextValue,
+  type ThemePreference,
+} from './themeContext'
 
 const STORAGE_KEY = 'portfolio-theme'
 
-function readThemeFromDom(): Theme | null {
-  const v = document.documentElement.getAttribute('data-theme')
-  return v === 'light' || v === 'dark' ? v : null
-}
+const THEME_COLOR = {
+  dark: '#0c1420',
+  light: '#eef2f9',
+} as const
 
-function readStoredTheme(): Theme | null {
+function readStoredPreference(): ThemePreference | null {
+  if (typeof window === 'undefined') return null
   try {
     const v = localStorage.getItem(STORAGE_KEY)
-    return v === 'light' || v === 'dark' ? v : null
+    if (v === 'light' || v === 'dark' || v === 'system') return v
   } catch {
-    return null
+    /* ignore */
   }
+  return null
 }
 
-function systemTheme(): Theme {
+function systemIsDark(): boolean {
   return window.matchMedia('(prefers-color-scheme: dark)').matches
-    ? 'dark'
-    : 'light'
 }
 
-function getInitialTheme(): Theme {
-  return readThemeFromDom() ?? readStoredTheme() ?? systemTheme()
+function getInitialPreference(): ThemePreference {
+  return readStoredPreference() ?? 'system'
+}
+
+function effectiveTheme(
+  preference: ThemePreference,
+  systemDark: boolean,
+): Theme {
+  return preference === 'system'
+    ? systemDark
+      ? 'dark'
+      : 'light'
+    : preference
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme)
+  const [preference, setPreference] =
+    useState<ThemePreference>(getInitialPreference)
+  const [systemDark, setSystemDark] = useState(() =>
+    typeof window !== 'undefined' ? systemIsDark() : false,
+  )
+
+  const theme = useMemo(
+    () => effectiveTheme(preference, systemDark),
+    [preference, systemDark],
+  )
 
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     try {
-      localStorage.setItem(STORAGE_KEY, theme)
+      localStorage.setItem(STORAGE_KEY, preference)
     } catch {
       /* ignore */
     }
-  }, [theme])
+    const meta = document.getElementById(
+      'theme-color-meta',
+    ) as HTMLMetaElement | null
+    if (meta) {
+      meta.content = THEME_COLOR[theme]
+    }
+  }, [theme, preference])
 
-  const setThemeSafe = useCallback((t: Theme) => setTheme(t), [])
-  const toggleTheme = useCallback(
-    () => setTheme((t) => (t === 'dark' ? 'light' : 'dark')),
-    [],
-  )
+  useEffect(() => {
+    if (preference !== 'system') return
+    const mq = window.matchMedia('(prefers-color-scheme: dark)')
+    const onChange = () => setSystemDark(mq.matches)
+    mq.addEventListener('change', onChange)
+    return () => mq.removeEventListener('change', onChange)
+  }, [preference])
+
+  const setThemeSafe = useCallback((t: Theme) => setPreference(t), [])
+
+  const toggleTheme = useCallback(() => {
+    setPreference((p) => {
+      if (p === 'system') {
+        const cur = systemIsDark() ? 'dark' : 'light'
+        return cur === 'dark' ? 'light' : 'dark'
+      }
+      return p === 'dark' ? 'light' : 'dark'
+    })
+  }, [])
 
   const value = useMemo<ThemeContextValue>(
-    () => ({ theme, setTheme: setThemeSafe, toggleTheme }),
-    [theme, setThemeSafe, toggleTheme],
+    () => ({ theme, preference, setTheme: setThemeSafe, toggleTheme }),
+    [theme, preference, setThemeSafe, toggleTheme],
   )
 
   return (
