@@ -30,7 +30,7 @@ export const site = {
 
 export const stats = [
   { icon: '🎓', value: '4.50', label: 'GPA out of 5' },
-  { icon: '🚀', value: '8+', label: 'Notable projects' },
+  { icon: '🚀', value: '8+', label: 'Completed projects' },
   { icon: '🏆', value: '8+', label: 'Awards' },
   { icon: '🤝', value: '700+', label: 'Volunteer hours' },
 ]
@@ -201,6 +201,14 @@ export const projects = [
     href: 'https://drive.google.com/file/d/1ZDMDpL59VROoyvq2PuEZwkGL3vOTa_qq/view',
   },
   {
+    title: 'Ayn (عين) | An intelligent eye on your data quality',
+    badge: '2nd place — Data Innovation Hackathon · General Authority for Statistics',
+    summary:
+      'By God’s grace, **second place** on the winners’ podium at the **Data Innovation Hackathon** organized by the **General Authority for Statistics**, among **132 teams**. **Ayn** is a smart platform for **data quality at the source**: it combines **AI** and **large language models** with **business rules** to surface logical and semantic inconsistencies; **live forms** analyze input in real time with alerts and a **confidence score** per record; and bulk **Excel / CSV** upload scans rows for cross-field conflicts—turning validation from a **“late step”** into a **“live”** part of the workflow.',
+    tags: ['LLMs', 'Data quality', 'Arabic NLP'],
+    href: '#',
+  },
+  {
     title: 'Maeen (معين) | AI-Powered Multi-Modal Legal Interface',
     badge: '2nd place — Judicial Intelligence Hackathon',
     summary:
@@ -212,15 +220,15 @@ export const projects = [
     title: 'NIDAA: AI-Powered EMS & Dispatch Optimization',
     badge: 'Emergency Science & Safety Hackathon',
     summary:
-      'AI-driven EMS concept focused on cutting response times: CV and NLP on calls and patient data, AML for precise caller location, and data links across Seha, Tawakkalna, and EMS so paramedics get context fast—including workflows for peak demand and accessibility for disability reporting. Stack: Microsoft Azure; partners: SRCA, MOH, SDAIA (collaboration context).',
+      'AI-driven EMS concept focused on cutting response times: CV and NLP on calls and patient data, AML for precise caller location, and data links across Seha, Tawakkalna, and EMS so paramedics get context fast—including workflows for peak demand and accessibility for disability reporting. Stack: Microsoft Azure; partners: SRCA, MOH, and related national entities.',
     tags: ['Azure', 'Computer Vision', 'NLP'],
     href: '#',
   },
   {
     title: 'Atqinha | Smart physical therapy at home',
-    badge: 'Mobile app',
+    badge: 'Capstone — Tuwaiq Academy · Mobile app',
     summary:
-      'Helps patients do PT exercises correctly at home using the phone camera: pose estimation and real-time correction with computer vision, a customized ChatGPT-based assistant for guidance, and periodic performance reports for physicians. Cross-platform Flutter with Firebase backend.',
+      'Capstone project at **Tuwaiq Academy**: a mobile app that helps patients do PT exercises correctly at home using the phone camera—pose estimation and real-time correction with computer vision, a customized ChatGPT-based assistant for guidance, and periodic performance reports for physicians. Cross-platform Flutter with Firebase backend.',
     tags: ['Flutter', 'Firebase', 'ChatGPT API'],
     href: '#',
   },
@@ -250,10 +258,10 @@ export const projects = [
   },
   {
     title: 'AI medical resource allocation & emergency routing',
-    badge: 'SDAIA Athka U Hackathon',
+    badge: 'Athka U Hackathon — Sdaya',
     summary:
       'Smart emergency response recommendations that combine live traffic, hospital load, ambulance availability, patient location, and optimized routing to improve allocation—shorter travel, better satisfaction, and higher survival outcomes.',
-    tags: ['Routing', 'Optimization', 'SDAIA'],
+    tags: ['Routing', 'Optimization', 'Azure'],
     href: '#',
   },
 ]

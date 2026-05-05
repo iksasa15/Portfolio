@@ -25,7 +25,6 @@ function emojiForTag(label: string): string | null {
 
   if (lower === 'routing' || raw === 'توجيه') return '🛣️'
   if (lower === 'optimization' || raw === 'تحسين') return '📈'
-  if (lower === 'sdaia') return '🤖'
 
   if (lower === 'react') return '⚛️'
   if (lower === 'typescript') return '📘'
