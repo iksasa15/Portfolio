@@ -565,6 +565,17 @@ html[data-theme='light'] .hero__title {
   margin-bottom: 0;
 }
 
+.prose strong,
+.hero__tagline strong,
+.edu-card strong,
+.timeline__body strong,
+.skill-card strong,
+.project-card strong,
+.lede strong {
+  font-weight: 800;
+  color: var(--heading);
+}
+
 /* ——— Timeline ——— */
 .timeline {
   list-style: none;

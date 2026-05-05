@@ -1,5 +1,4 @@
-import type { ReactNode } from 'react'
-import { useMemo } from 'react'
+import { useMemo, type ReactNode } from 'react'
 import { useReveal } from '../hooks/useReveal'
 import type { SkillLevel } from '../content'
 import { getPortfolio } from '../locale/portfolioBundle'
@@ -13,6 +12,7 @@ import {
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
 import { ProjectTag } from './ProjectTag'
+import { renderInlineBold } from '../renderInlineBold'
 
 function RevealSection({
   children,
@@ -96,7 +96,7 @@ export function PortfolioPage() {
           </p>
           <h1 className="hero__name">{p.site.name}</h1>
           <p className="hero__title">{p.site.title}</p>
-          <p className="hero__tagline">{p.site.tagline}</p>
+          <p className="hero__tagline">{renderInlineBold(p.site.tagline)}</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href="#projects">
               {ui.heroCtaWork}
@@ -136,7 +136,7 @@ export function PortfolioPage() {
           <h2 className="section-title">{ui.aboutTitle}</h2>
           <div className="prose">
             {p.aboutParagraphs.map((para, i) => (
-              <p key={`about-${i}`}>{para}</p>
+              <p key={`about-${i}`}>{renderInlineBold(para)}</p>
             ))}
           </div>
         </RevealSection>
@@ -174,9 +174,11 @@ export function PortfolioPage() {
                   </div>
                 ) : null}
                 <span className="edu-card__range">{item.range}</span>
-                <h3 className="edu-card__title">{item.title}</h3>
+                <h3 className="edu-card__title">
+                  {renderInlineBold(item.title)}
+                </h3>
                 {item.org ? (
-                  <p className="edu-card__org">{item.org}</p>
+                  <p className="edu-card__org">{renderInlineBold(item.org)}</p>
                 ) : null}
                 <p
                   className={
@@ -186,12 +188,14 @@ export function PortfolioPage() {
                   }
                   aria-hidden={item.meta ? undefined : true}
                 >
-                  {item.meta ?? '\u00a0'}
+                  {item.meta
+                    ? renderInlineBold(item.meta)
+                    : '\u00a0'}
                 </p>
                 {item.highlights?.length ? (
                   <ul className="edu-card__list">
                     {item.highlights.map((line, i) => (
-                      <li key={i}>{line}</li>
+                      <li key={i}>{renderInlineBold(line)}</li>
                     ))}
                   </ul>
                 ) : null}
@@ -231,8 +235,10 @@ export function PortfolioPage() {
                       />
                     </div>
                   ) : null}
-                  <h3 className="timeline__role">{item.role}</h3>
-                  <p className="timeline__org">{item.org}</p>
+                  <h3 className="timeline__role">
+                    {renderInlineBold(item.role)}
+                  </h3>
+                  <p className="timeline__org">{renderInlineBold(item.org)}</p>
                 </div>
               </li>
             ))}
@@ -255,12 +261,14 @@ export function PortfolioPage() {
                   <span className="skill-card__icon" aria-hidden>
                     {group.icon}
                   </span>
-                  <h3>{group.title}</h3>
+                  <h3>{renderInlineBold(group.title)}</h3>
                 </header>
                 <ul className="skill-list">
                   {group.skills.map((sk) => (
                     <li key={sk.name}>
-                      <span className="skill-list__name">{sk.name}</span>
+                      <span className="skill-list__name">
+                        {renderInlineBold(sk.name)}
+                      </span>
                       <span
                         className={`skill-pill skill-pill--${sk.level}`}
                         title={levelLabel(sk.level)}
@@ -289,12 +297,14 @@ export function PortfolioPage() {
             {ui.projectsKicker}
           </p>
           <h2 className="section-title">{ui.projectsTitle}</h2>
-          <p className="lede">{ui.projectsLede}</p>
+          <p className="lede">{renderInlineBold(ui.projectsLede)}</p>
           <div className="project-grid">
             {p.projects.map((proj) => (
               <article key={proj.title} className="project-card">
                 <div className="project-card__visual" aria-hidden />
-                <span className="project-card__badge">{proj.badge}</span>
+                <span className="project-card__badge">
+                  {renderInlineBold(proj.badge)}
+                </span>
                 <h3 className="project-card__title">
                   <a
                     href={proj.href}
@@ -305,10 +315,12 @@ export function PortfolioPage() {
                         }
                       : {})}
                   >
-                    {proj.title}
+                    {renderInlineBold(proj.title)}
                   </a>
                 </h3>
-                <p className="project-card__summary">{proj.summary}</p>
+                <p className="project-card__summary">
+                  {renderInlineBold(proj.summary)}
+                </p>
                 <ul className="tag-row">
                   {proj.tags.map((t) => (
                     <ProjectTag key={t} label={t} />
@@ -326,7 +338,7 @@ export function PortfolioPage() {
         <RevealSection className="shell section section--contact" id="contact">
           <p className="kicker">{ui.contactKicker}</p>
           <h2 className="section-title">{ui.contactTitle}</h2>
-          <p className="lede">{ui.contactLede}</p>
+          <p className="lede">{renderInlineBold(ui.contactLede)}</p>
           <div className="contact-panel">
             <a
               className="contact-cv"

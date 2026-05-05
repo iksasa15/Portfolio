@@ -7,7 +7,7 @@ export const site = {
   fullName: 'Ahmed Alharbi',
   title: 'AI Engineer',
   tagline:
-    'I build production-ready AI systems—LLM integration, computer vision pipelines, and automation grounded in real data.',
+    'I take AI systems into production: wiring large language models, building computer vision pipelines, and activating data-backed automation.',
   email: 'ahmednalharbii@gmail.com',
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
@@ -85,8 +85,8 @@ export const education = [
 ]
 
 export const aboutParagraphs = [
-  "I'm Ahmed Alharbi, an AI engineer and a B.Sc. Computer Science graduate from the University of Tabuk (4.50/5.0 GPA, class of 2025). I design, ship, and run production AI—LLMs, computer vision, and data-backed automation.",
-  'MoH internship on imaging and records; the KAUST AI specialization fellowship and the Data Science & AI bootcamp at Tuwaiq Academy. From my project work: NextEd, Maeen (judicial intelligence), NIDAA for EMS, Atqinha for PT—plus security, analytics, and hackathon builds. Measured: a Python spatial optimization cut API latency roughly 75–85% in a real deployment.',
+  "I'm **Ahmed Alharbi**, an **AI engineer** and a **B.Sc. Computer Science** graduate from the **University of Tabuk** (**4.50/5.0 GPA**, class of **2025**). I **take AI systems into production**: **wiring large language models**, **building computer vision pipelines**, and **activating data-backed automation**.",
+  '**Training and academic experience:** **Ministry of Health** internship on imaging and record pipelines; the **KAUST AI specialization fellowship**; and the **Data Science & AI bootcamp** at **Tuwaiq Academy**.',
 ]
 
 export const journey = [
