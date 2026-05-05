@@ -1,8 +1,20 @@
+import { useLocale } from '../locale/useLocale'
 import { useTheme } from './useTheme'
 
 export function ThemeToggle() {
   const { theme, toggleTheme } = useTheme()
+  const { locale } = useLocale()
   const isDark = theme === 'dark'
+  const isEn = locale === 'en'
+
+  const ariaLabel = isDark
+    ? isEn
+      ? 'Switch to light mode'
+      : 'حوّل للوضع الفاتح'
+    : isEn
+      ? 'Switch to dark mode'
+      : 'حوّل للوضع الغامق'
+  const title = isDark ? (isEn ? 'Light mode' : 'وضع فاتح') : isEn ? 'Dark mode' : 'وضع غامق'
 
   return (
     <button
@@ -10,8 +22,8 @@ export function ThemeToggle() {
       className="theme-toggle"
       onClick={toggleTheme}
       aria-pressed={isDark}
-      aria-label={isDark ? 'حوّل للوضع الفاتح' : 'حوّل للوضع الغامق'}
-      title={isDark ? 'وضع فاتح' : 'وضع غامق'}
+      aria-label={ariaLabel}
+      title={title}
     >
       {isDark ? <IconSun /> : <IconMoon />}
     </button>

@@ -180,6 +180,47 @@ a {
   gap: 0.65rem 1rem;
 }
 
+.header-tools {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 0.65rem;
+}
+
+.locale-toggle {
+  display: grid;
+  place-items: center;
+  min-width: 42px;
+  height: 42px;
+  padding: 0 0.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--ghost-btn-bg);
+  color: var(--heading);
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.locale-toggle:hover {
+  border-color: var(--ghost-btn-border-hover);
+  background: var(--nav-hover-bg);
+}
+
+.locale-toggle:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+}
+
+.locale-toggle__text {
+  line-height: 1;
+}
+
 .theme-toggle {
   display: grid;
   place-items: center;
@@ -278,7 +319,7 @@ a {
     align-items: stretch;
   }
 
-  .theme-toggle {
+  .header-tools {
     align-self: flex-end;
   }
 
@@ -581,6 +622,7 @@ html[data-theme='light'] .hero__title {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
 @media (max-width: 900px) {
@@ -590,6 +632,10 @@ html[data-theme='light'] .hero__title {
 }
 
 .edu-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.15rem 1.25rem 1.2rem;
@@ -605,7 +651,8 @@ html[data-theme='light'] .hero__title {
 }
 
 .edu-card__logo-wrap {
-  min-height: 44px;
+  flex-shrink: 0;
+  height: 52px;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
@@ -614,9 +661,10 @@ html[data-theme='light'] .hero__title {
 
 .edu-card__logo {
   display: block;
-  max-height: 44px;
-  width: auto;
+  max-height: 100%;
   max-width: min(100%, 220px);
+  width: auto;
+  height: auto;
   object-fit: contain;
   object-position: start center;
 }
@@ -650,10 +698,17 @@ html[data-theme='light'] .hero__title {
   font-size: 0.92rem;
   font-weight: 700;
   color: var(--text-dim);
+  min-height: calc(0.92rem * 1.45);
+}
+
+.edu-card__meta--placeholder {
+  visibility: hidden;
 }
 
 .edu-card__list {
+  flex: 1 1 auto;
   margin: 0;
+  margin-top: auto;
   padding: 0;
   padding-inline-start: 1.15rem;
   display: flex;
@@ -662,6 +717,11 @@ html[data-theme='light'] .hero__title {
   font-size: 0.88rem;
   color: var(--text-dim);
   line-height: 1.55;
+}
+
+.edu-card__list li {
+  min-height: calc(1.55em * 2);
+  box-sizing: border-box;
 }
 
 .edu-card__list li::marker {

@@ -1,39 +1,14 @@
 import type { ReactNode } from 'react'
+import { useMemo } from 'react'
 import { useReveal } from '../hooks/useReveal'
+import type { SkillLevel } from '../content'
+import { getPortfolio } from '../locale/portfolioBundle'
+import { getUi } from '../locale/uiStrings'
+import { LocaleToggle } from '../locale/LocaleToggle'
+import { useLocale } from '../locale/useLocale'
 import { resolveBrandLogoSrc } from '../theme/resolveBrandLogo'
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
-import {
-  aboutParagraphs,
-  education,
-  journey,
-  projects,
-  site,
-  skillGroups,
-  stats,
-  type SkillLevel,
-} from '../content'
-
-const nav = [
-  { id: 'intro', label: 'البداية' },
-  { id: 'about', label: 'عني' },
-  { id: 'education', label: 'دراستي' },
-  { id: 'journey', label: 'شغلي' },
-  { id: 'skills', label: 'مهاراتي' },
-  { id: 'projects', label: 'مشاريعي' },
-  { id: 'contact', label: 'تواصل' },
-]
-
-function levelLabel(level: SkillLevel): string {
-  switch (level) {
-    case 'expert':
-      return 'قوي'
-    case 'advanced':
-      return 'زين'
-    default:
-      return 'عادي'
-  }
-}
 
 function RevealSection({
   children,
@@ -58,11 +33,25 @@ function RevealSection({
 
 export function PortfolioPage() {
   const { theme } = useTheme()
+  const { locale } = useLocale()
+  const ui = useMemo(() => getUi(locale), [locale])
+  const p = useMemo(() => getPortfolio(locale), [locale])
+
+  const levelLabel = (level: SkillLevel) => {
+    switch (level) {
+      case 'expert':
+        return ui.levelExpert
+      case 'advanced':
+        return ui.levelAdvanced
+      default:
+        return ui.levelIntermediate
+    }
+  }
 
   return (
     <>
       <a className="skip-link" href="#intro">
-        تخطّي للمحتوى
+        {ui.skipLink}
       </a>
 
       <div className="bg-mesh" aria-hidden />
@@ -71,21 +60,24 @@ export function PortfolioPage() {
         <div className="shell site-header__inner">
           <a className="brand" href="#intro">
             <span className="brand__mark" aria-hidden>
-              {site.name.replace(/\s/g, '').charAt(0)}
+              {p.site.name.replace(/\s/g, '').charAt(0)}
             </span>
-            <span className="brand__text">{site.fullName}</span>
+            <span className="brand__text">{p.site.fullName}</span>
           </a>
           <div className="site-header__tray">
-            <nav className="nav" aria-label="أجزاء الصفحة">
+            <nav className="nav" aria-label={ui.navAria}>
               <ul>
-                {nav.map((item) => (
+                {ui.nav.map((item) => (
                   <li key={item.id}>
                     <a href={`#${item.id}`}>{item.label}</a>
                   </li>
                 ))}
               </ul>
             </nav>
-            <ThemeToggle />
+            <div className="header-tools">
+              <LocaleToggle />
+              <ThemeToggle />
+            </div>
           </div>
         </div>
       </header>
@@ -96,28 +88,28 @@ export function PortfolioPage() {
             <span className="wave" aria-hidden>
               👋
             </span>{' '}
-            هلا، أنا
+            {ui.heroHello}
           </p>
-          <h1 className="hero__name">{site.name}</h1>
-          <p className="hero__title">{site.title}</p>
-          <p className="hero__tagline">{site.tagline}</p>
+          <h1 className="hero__name">{p.site.name}</h1>
+          <p className="hero__title">{p.site.title}</p>
+          <p className="hero__tagline">{p.site.tagline}</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href="#projects">
-              من أعمالي
+              {ui.heroCtaWork}
             </a>
             <a className="btn btn--ghost" href="#contact">
-              كلمّني
+              {ui.heroCtaContact}
             </a>
             <a
               className="btn btn--ghost"
-              href={site.cv.href}
-              download={site.cv.downloadFileName}
+              href={p.site.cv.href}
+              download={p.site.cv.downloadFileName}
             >
-              {site.cv.label}
+              {p.site.cv.label}
             </a>
           </div>
-          <ul className="stat-row" aria-label="أرقام على السريع">
-            {stats.map((s) => (
+          <ul className="stat-row" aria-label={ui.statRowAria}>
+            {p.stats.map((s) => (
               <li key={s.label} className="stat-card">
                 <span className="stat-card__icon" aria-hidden>
                   {s.icon}
@@ -135,12 +127,12 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="about">
-            عني
+            {ui.aboutKicker}
           </p>
-          <h2 className="section-title">كلمتين عني</h2>
+          <h2 className="section-title">{ui.aboutTitle}</h2>
           <div className="prose">
-            {aboutParagraphs.map((p, i) => (
-              <p key={`about-${i}`}>{p}</p>
+            {p.aboutParagraphs.map((para, i) => (
+              <p key={`about-${i}`}>{para}</p>
             ))}
           </div>
         </RevealSection>
@@ -151,11 +143,11 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="education">
-            الدراسة
+            {ui.educationKicker}
           </p>
-          <h2 className="section-title">شهاداتي ودوراتي</h2>
+          <h2 className="section-title">{ui.educationTitle}</h2>
           <div className="edu-grid">
-            {education.map((item) => (
+            {p.education.map((item) => (
               <article
                 key={`${item.range}-${item.title}`}
                 className="edu-card"
@@ -177,9 +169,16 @@ export function PortfolioPage() {
                 {item.org ? (
                   <p className="edu-card__org">{item.org}</p>
                 ) : null}
-                {item.meta ? (
-                  <p className="edu-card__meta">{item.meta}</p>
-                ) : null}
+                <p
+                  className={
+                    item.meta
+                      ? 'edu-card__meta'
+                      : 'edu-card__meta edu-card__meta--placeholder'
+                  }
+                  aria-hidden={item.meta ? undefined : true}
+                >
+                  {item.meta ?? '\u00a0'}
+                </p>
                 {item.highlights?.length ? (
                   <ul className="edu-card__list">
                     {item.highlights.map((line, i) => (
@@ -198,11 +197,11 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="journey">
-            شغلي
+            {ui.journeyKicker}
           </p>
-          <h2 className="section-title">وين شتغلت</h2>
+          <h2 className="section-title">{ui.journeyTitle}</h2>
           <ol className="timeline">
-            {journey.map((item) => (
+            {p.journey.map((item) => (
               <li key={item.range} className="timeline__item">
                 <span className="timeline__range">{item.range}</span>
                 <div className="timeline__body">
@@ -232,11 +231,11 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="skills">
-            المهارات
+            {ui.skillsKicker}
           </p>
-          <h2 className="section-title">شطارتي التقنية</h2>
+          <h2 className="section-title">{ui.skillsTitle}</h2>
           <div className="skill-grid">
-            {skillGroups.map((group) => (
+            {p.skillGroups.map((group) => (
               <article key={group.title} className="skill-card">
                 <header className="skill-card__head">
                   <span className="skill-card__icon" aria-hidden>
@@ -273,23 +272,21 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="projects">
-            المشاريع
+            {ui.projectsKicker}
           </p>
-          <h2 className="section-title">مشاريعي</h2>
-          <p className="lede">
-            كل بطاقة فيها وسم تقني، وتقرى بسرعة على الجوال والشاشة الكبيرة.
-          </p>
+          <h2 className="section-title">{ui.projectsTitle}</h2>
+          <p className="lede">{ui.projectsLede}</p>
           <div className="project-grid">
-            {projects.map((p) => (
-              <article key={p.title} className="project-card">
+            {p.projects.map((proj) => (
+              <article key={proj.title} className="project-card">
                 <div className="project-card__visual" aria-hidden />
-                <span className="project-card__badge">{p.badge}</span>
+                <span className="project-card__badge">{proj.badge}</span>
                 <h3 className="project-card__title">
-                  <a href={p.href}>{p.title}</a>
+                  <a href={proj.href}>{proj.title}</a>
                 </h3>
-                <p className="project-card__summary">{p.summary}</p>
+                <p className="project-card__summary">{proj.summary}</p>
                 <ul className="tag-row">
-                  {p.tags.map((t) => (
+                  {proj.tags.map((t) => (
                     <li key={t}>{t}</li>
                   ))}
                 </ul>
@@ -303,27 +300,25 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section section--contact" id="contact">
-          <p className="kicker">تواصل</p>
-          <h2 className="section-title">ياليت نتواصل</h2>
-          <p className="lede">
-            تقدر ترسل على الإيميل أو تتابعني بالمنصات تحت.
-          </p>
+          <p className="kicker">{ui.contactKicker}</p>
+          <h2 className="section-title">{ui.contactTitle}</h2>
+          <p className="lede">{ui.contactLede}</p>
           <div className="contact-panel">
             <a
               className="contact-cv"
-              href={site.cv.href}
-              download={site.cv.downloadFileName}
+              href={p.site.cv.href}
+              download={p.site.cv.downloadFileName}
             >
-              <span className="contact-cv__label">السيرة</span>
-              <span className="contact-cv__value">{site.cv.label}</span>
-              <span className="contact-cv__hint">ملف PDF</span>
+              <span className="contact-cv__label">{ui.contactCvLabel}</span>
+              <span className="contact-cv__value">{p.site.cv.label}</span>
+              <span className="contact-cv__hint">{ui.contactCvHint}</span>
             </a>
-            <a className="contact-mail" href={`mailto:${site.email}`}>
-              <span className="contact-mail__label">الإيميل</span>
-              <span className="contact-mail__value">{site.email}</span>
+            <a className="contact-mail" href={`mailto:${p.site.email}`}>
+              <span className="contact-mail__label">{ui.contactMailLabel}</span>
+              <span className="contact-mail__value">{p.site.email}</span>
             </a>
             <ul className="social-list">
-              {site.social.map((s) => (
+              {p.site.social.map((s) => (
                 <li key={s.href}>
                   <a href={s.href} target="_blank" rel="noreferrer noopener">
                     <span className="social-list__label">{s.label}</span>
@@ -338,8 +333,7 @@ export function PortfolioPage() {
 
       <footer className="site-footer shell">
         <p>
-          © {new Date().getFullYear()} {site.name}. التصميم هادئ شوي ولونه كحلي
-          مع لمسة خفيفة.
+          © {new Date().getFullYear()} {p.site.name}. {ui.footerLine}
         </p>
       </footer>
     </>
