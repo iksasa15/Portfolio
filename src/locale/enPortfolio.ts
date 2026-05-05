@@ -29,7 +29,8 @@ export const site = {
 export const stats = [
   { icon: '🎓', value: '4.50', label: 'GPA out of 5' },
   { icon: '🚀', value: '7+', label: 'Notable projects' },
-  { icon: '🏆', value: '2', label: 'Courses & bootcamps' },
+  { icon: '🏆', value: '2', label: 'Awards' },
+  { icon: '🤝', value: '700+', label: 'Volunteer hours' },
 ]
 
 export const education = [

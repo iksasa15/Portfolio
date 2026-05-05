@@ -29,7 +29,8 @@ export const site = {
 export const stats = [
   { icon: '🎓', value: '٤٫٥٠', label: 'معدلي من ٥' },
   { icon: '🚀', value: '7+', label: 'مشاريع لافتة' },
-  { icon: '🏆', value: '2', label: 'دورات ومعسكرات' },
+  { icon: '🏆', value: '2', label: 'الجوائز' },
+  { icon: '🤝', value: '٧٠٠+', label: 'ساعات التطوع' },
 ]
 
 export type BrandLogo = {
