@@ -154,9 +154,6 @@ export function PortfolioPage() {
             التعليم
           </p>
           <h2 className="section-title">مؤهلات وتدريب</h2>
-          <p className="lede">
-            درجة الجامعة وزمالة كاوست ومعسكر طويق — كما وردت في السيرة الذاتية.
-          </p>
           <div className="edu-grid">
             {education.map((item) => (
               <article
@@ -238,10 +235,6 @@ export function PortfolioPage() {
             المهارات
           </p>
           <h2 className="section-title">خريطة خبرات</h2>
-          <p className="lede">
-            مجموعات مهارات مع مستوى تقريبي — مستوحى من فكرة «شجرة المهارات»
-            بعرض أوضح للقراءة.
-          </p>
           <div className="skill-grid">
             {skillGroups.map((group) => (
               <article key={group.title} className="skill-card">
