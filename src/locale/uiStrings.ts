@@ -57,7 +57,7 @@ const ar: Ui = {
   aboutKicker: 'عني',
   aboutTitle: 'كلمتين عني',
   educationKicker: 'الدراسة',
-  educationTitle: 'شهاداتي ودوراتي',
+  educationTitle: 'شهاداتي',
   journeyKicker: 'شغلي',
   journeyTitle: 'وين اشتغلت',
   volunteerKicker: 'عطاء',
