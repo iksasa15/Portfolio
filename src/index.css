@@ -1442,13 +1442,20 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   color: var(--heading);
 }
 
-/* ——— Scroll reveal ——— */
+/* ——— Scroll reveal: down-scroll enters from below, up-scroll from above ——— */
 .reveal {
   opacity: 0;
-  transform: translateY(16px);
   transition:
-    opacity 0.55s ease,
-    transform 0.55s ease;
+    opacity 0.55s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal:not(.reveal--in) {
+  transform: translateY(1.1rem);
+}
+
+.reveal:not(.reveal--in).reveal--from-up {
+  transform: translateY(-1.1rem);
 }
 
 .reveal--in {

@@ -20,7 +20,7 @@ export const site = {
       iconId: 'portfolio-linkedin-icon' as const,
     },
     {
-      label: 'جيت هاب',
+      label: 'قيت هاب',
       href: 'https://github.com/iksasa15',
       handle: 'iksasa15',
       iconId: 'portfolio-github-icon' as const,

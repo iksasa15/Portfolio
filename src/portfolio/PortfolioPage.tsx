@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
 import { useSequentialTypewriter } from '../hooks/useSequentialTypewriter'
 import { useReveal } from '../hooks/useReveal'
+import { subscribeScrollDirection } from '../scrollDirection'
 import type { SkillLevel } from '../content'
 import { getPortfolio } from '../locale/portfolioBundle'
 import { getUi } from '../locale/uiStrings'
@@ -24,12 +25,12 @@ function RevealSection({
   className?: string
   id?: string
 }) {
-  const { ref, visible } = useReveal<HTMLElement>()
+  const { ref, visible, enterFromUp } = useReveal<HTMLElement>()
   return (
     <section
       id={id}
       ref={ref}
-      className={`reveal ${visible ? 'reveal--in' : ''} ${className}`.trim()}
+      className={`reveal${enterFromUp ? ' reveal--from-up' : ''}${visible ? ' reveal--in' : ''} ${className}`.trim()}
     >
       {children}
     </section>
@@ -44,6 +45,8 @@ export function PortfolioPage() {
   const ui = useMemo(() => getUi(locale), [locale])
   const p = useMemo(() => getPortfolio(locale), [locale])
   const [navOpen, setNavOpen] = useState(false)
+
+  useEffect(() => subscribeScrollDirection(), [])
 
   const closeNav = useCallback(() => setNavOpen(false), [])
 

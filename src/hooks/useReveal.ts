@@ -1,10 +1,12 @@
 import { useEffect, useRef, useState } from 'react'
+import { getScrollDirection } from '../scrollDirection'
 
 export function useReveal<T extends HTMLElement = HTMLDivElement>(
   options?: IntersectionObserverInit,
 ) {
   const ref = useRef<T | null>(null)
   const [visible, setVisible] = useState(false)
+  const [enterFromUp, setEnterFromUp] = useState(false)
 
   useEffect(() => {
     const el = ref.current
@@ -13,6 +15,7 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     const obs = new IntersectionObserver(
       ([entry]) => {
         if (entry?.isIntersecting) {
+          setEnterFromUp(getScrollDirection() === 'up')
           setVisible(true)
           obs.disconnect()
         }
@@ -28,5 +31,5 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
     return () => obs.disconnect()
   }, [options])
 
-  return { ref, visible }
+  return { ref, visible, enterFromUp }
 }
