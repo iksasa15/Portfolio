@@ -181,6 +181,11 @@ a {
   border-bottom: 2px solid var(--border);
   background: var(--surface);
   padding-top: env(safe-area-inset-top, 0px);
+  font-family: var(--font);
+}
+
+.site-header button {
+  font-family: var(--font);
 }
 
 .site-header__inner {
@@ -206,80 +211,47 @@ a {
   gap: 0.65rem;
 }
 
-.locale-toggle {
-  display: grid;
-  place-items: center;
-  min-width: var(--header-control);
-  height: var(--header-control);
-  padding: 0 0.45rem;
-  border-radius: var(--radius);
-  border: 2px solid var(--border);
-  background: var(--ghost-btn-bg);
-  color: var(--heading);
-  cursor: pointer;
-  flex-shrink: 0;
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  box-shadow: var(--shadow-sm);
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
-}
-
-.locale-toggle:hover {
-  border-color: var(--ghost-btn-border-hover);
-  background: var(--nav-hover-bg);
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 0 var(--neo-ink);
-}
-
-.locale-toggle:focus-visible {
-  outline: 2px solid var(--amber);
-  outline-offset: 2px;
-}
-
-.locale-toggle__text {
-  line-height: 1;
-}
-
+.locale-toggle,
 .theme-toggle {
   display: grid;
   place-items: center;
-  width: var(--header-control);
+  min-width: 0;
+  min-height: var(--header-control);
   height: var(--header-control);
-  padding: 0;
+  padding: 0 0.65rem;
   border-radius: var(--radius);
-  border: 2px solid var(--border);
-  background: var(--ghost-btn-bg);
-  color: var(--heading);
+  border: 2px solid transparent;
+  background: transparent;
+  color: var(--text-dim);
   cursor: pointer;
   flex-shrink: 0;
-  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  box-shadow: none;
   transition:
-    transform 0.15s ease,
-    box-shadow 0.15s ease,
-    border-color 0.2s ease,
-    background 0.2s ease;
+    color 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
 }
 
+.locale-toggle:hover,
 .theme-toggle:hover {
-  border-color: var(--ghost-btn-border-hover);
+  color: var(--heading);
   background: var(--nav-hover-bg);
-  transform: translate(2px, 2px);
-  box-shadow: 1px 1px 0 0 var(--neo-ink);
+  border-color: var(--border);
 }
 
+.locale-toggle:focus-visible,
 .theme-toggle:focus-visible {
   outline: 2px solid var(--amber);
   outline-offset: 2px;
 }
 
-.theme-toggle__icon {
-  width: 22px;
-  height: 22px;
+.locale-toggle__text,
+.theme-toggle__text {
+  line-height: 1;
 }
 
 .brand {
@@ -288,6 +260,7 @@ a {
   gap: 0.65rem;
   text-decoration: none;
   color: var(--heading);
+  font-family: var(--font);
 }
 
 .brand__text {
@@ -299,17 +272,15 @@ a {
   line-height: 1.25;
 }
 
-/* الاسم الثاني (مثل «الحربـي»): وزن أوضح + تباعد أحرف يفرّغ الحروف */
 .brand__given {
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.01em;
 }
 
 .brand__family {
-  /* وزن متوسط + حجم أكبر قليلاً يوسّع حرف الباء والنقطة */
-  font-weight: 500;
-  font-size: 1.12em;
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 1.05em;
+  letter-spacing: 0.04em;
   font-feature-settings: 'kern' 1;
   -webkit-font-smoothing: subpixel-antialiased;
   text-rendering: optimizeLegibility;
@@ -334,16 +305,25 @@ html[data-theme='light'] .brand__family {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 0.35rem 0.75rem;
   justify-content: flex-end;
 }
 
 .nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: var(--header-control);
+  height: auto;
+  min-width: 0;
+  padding: 0 0.65rem;
   text-decoration: none;
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   font-weight: 600;
+  line-height: 1.2;
   color: var(--text-dim);
-  padding: 0.35rem 0.55rem;
   border-radius: var(--radius);
   border: 2px solid transparent;
   transition:
@@ -491,13 +471,11 @@ html[data-theme='light'] .nav-backdrop {
     max-width: 100%;
   }
 
-  /* القائمة تتمدّد مع الهيدر — تحت الأزرار مباشرة، بدون بطاقة معلّقة بالمنتصف */
   .nav {
     width: 100%;
     align-self: stretch;
   }
 
-  /* مع body overflow: hidden: الهيدر يصير مساحة التمرير حتى تظهر كل الروابط */
   .site-header:has(.nav.nav--open) {
     max-height: min(100dvh, 100svh);
     overflow-y: auto;
@@ -550,8 +528,11 @@ html[data-theme='light'] .nav-backdrop {
   }
 
   .nav.nav--open a {
-    display: block;
-    padding: 0.6rem 0.75rem;
+    display: flex;
+    align-items: center;
+    min-height: var(--header-control);
+    height: auto;
+    padding: 0.45rem 0.75rem;
     white-space: normal;
     font-size: 0.92rem;
   }
