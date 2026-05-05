@@ -1,4 +1,5 @@
 import { useMemo, type ReactNode } from 'react'
+import { useSequentialTypewriter } from '../hooks/useSequentialTypewriter'
 import { useReveal } from '../hooks/useReveal'
 import type { SkillLevel } from '../content'
 import { getPortfolio } from '../locale/portfolioBundle'
@@ -52,6 +53,16 @@ export function PortfolioPage() {
     }
   }
 
+  const heroTypingLines = useMemo(
+    () => [p.site.name, p.site.title, p.site.tagline],
+    [p.site.name, p.site.title, p.site.tagline],
+  )
+  const heroTyping = useSequentialTypewriter(heroTypingLines, {
+    msPerChar: 22,
+    linePause: 260,
+    startDelay: 420,
+  })
+
   return (
     <>
       <a className="skip-link" href="#intro">
@@ -88,16 +99,37 @@ export function PortfolioPage() {
 
       <main>
         <section id="intro" className="hero shell">
-          <p className="hero__hello">
+          <p className="hero__hello hero-intro-enter">
             <span className="wave" aria-hidden>
               👋
             </span>{' '}
             {ui.heroHello}
           </p>
-          <h1 className="hero__name">{p.site.name}</h1>
-          <p className="hero__title">{p.site.title}</p>
-          <p className="hero__tagline">{renderInlineBold(p.site.tagline)}</p>
-          <div className="hero__actions">
+          <h1 className="hero__name">
+            {renderInlineBold(heroTyping.lines[0] ?? '')}
+            {!heroTyping.done && heroTyping.cursorLine === 0 ? (
+              <span className="type-cursor" aria-hidden>
+                |
+              </span>
+            ) : null}
+          </h1>
+          <p className="hero__title">
+            {renderInlineBold(heroTyping.lines[1] ?? '')}
+            {!heroTyping.done && heroTyping.cursorLine === 1 ? (
+              <span className="type-cursor" aria-hidden>
+                |
+              </span>
+            ) : null}
+          </p>
+          <p className="hero__tagline">
+            {renderInlineBold(heroTyping.lines[2] ?? '')}
+            {!heroTyping.done && heroTyping.cursorLine === 2 ? (
+              <span className="type-cursor" aria-hidden>
+                |
+              </span>
+            ) : null}
+          </p>
+          <div className="hero__actions hero-intro-enter hero-intro-enter--d1">
             <a className="btn btn--primary" href="#projects">
               {ui.heroCtaWork}
             </a>
@@ -112,7 +144,10 @@ export function PortfolioPage() {
               {p.site.cv.label}
             </a>
           </div>
-          <ul className="stat-row" aria-label={ui.statRowAria}>
+          <ul
+            className="stat-row hero-intro-enter hero-intro-enter--d2"
+            aria-label={ui.statRowAria}
+          >
             {p.stats.map((s) => (
               <li key={s.label} className="stat-card">
                 <span className="stat-card__icon" aria-hidden>

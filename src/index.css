@@ -84,6 +84,16 @@ html {
   .wave {
     animation: none !important;
   }
+
+  .hero-intro-enter {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  .type-cursor {
+    animation: none !important;
+    opacity: 0.55;
+  }
 }
 
 body {
@@ -353,6 +363,45 @@ main {
   color: var(--text-dim);
   font-weight: 600;
   font-size: 1.05rem;
+}
+
+.hero-intro-enter {
+  opacity: 0;
+  animation: hero-intro-enter 0.55s ease forwards;
+}
+
+.hero-intro-enter--d1 {
+  animation-delay: 0.12s;
+}
+
+.hero-intro-enter--d2 {
+  animation-delay: 0.22s;
+}
+
+@keyframes hero-intro-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.type-cursor {
+  display: inline-block;
+  font-weight: 300;
+  color: var(--violet);
+  margin-inline-start: 2px;
+  animation: type-cursor-blink 0.85s step-end infinite;
+}
+
+@keyframes type-cursor-blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 .wave {
