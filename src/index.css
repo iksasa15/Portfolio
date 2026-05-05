@@ -1,20 +1,23 @@
 html[data-theme='dark'] {
   color-scheme: dark;
-  --bg0: #07080b;
-  --bg1: #0e1016;
-  --surface: #141722;
-  --surface2: #1b2030;
+  /* خلفيات مائلة للكحلي */
+  --bg0: #050a12;
+  --bg1: #0a1422;
+  --surface: #0f1a2c;
+  --surface2: #15243a;
   --border: rgba(255, 255, 255, 0.08);
   --text: #c8cad4;
-  --text-dim: #8b90a1;
-  --heading: #f4f5f8;
-  --violet: #a855f7;
-  --violet-dim: rgba(168, 85, 247, 0.35);
-  --amber: #fbbf24;
-  --amber-dim: rgba(251, 191, 36, 0.2);
+  --text-dim: #8b95a8;
+  --heading: #f0f4fc;
+  /* كحلي — لون تمييز أساسي */
+  --violet: #7eb0e0;
+  --violet-deep: #1e3a5f;
+  --violet-dim: rgba(100, 150, 210, 0.38);
+  --amber: #e8c87a;
+  --amber-dim: rgba(232, 200, 122, 0.2);
   --glow: radial-gradient(
     60% 50% at 50% 0%,
-    rgba(168, 85, 247, 0.22),
+    rgba(60, 100, 160, 0.28),
     transparent 70%
   );
   --radius: 14px;
@@ -29,21 +32,22 @@ html[data-theme='dark'] {
 
 html[data-theme='light'] {
   color-scheme: light;
-  --bg0: #f4f5f9;
-  --bg1: #e8eaf2;
+  --bg0: #eef2f8;
+  --bg1: #e2e8f4;
   --surface: #ffffff;
-  --surface2: #eef0f7;
-  --border: rgba(15, 18, 28, 0.1);
-  --text: #3a3f52;
-  --text-dim: #5a6074;
-  --heading: #0b0d12;
-  --violet: #7c3aed;
-  --violet-dim: rgba(124, 58, 237, 0.2);
-  --amber: #b45309;
-  --amber-dim: rgba(180, 83, 9, 0.14);
+  --surface2: #e8edf6;
+  --border: rgba(15, 30, 55, 0.1);
+  --text: #334155;
+  --text-dim: #526077;
+  --heading: #0c1929;
+  --violet: #1e4976;
+  --violet-deep: #0f2744;
+  --violet-dim: rgba(30, 73, 118, 0.22);
+  --amber: #9a6b1a;
+  --amber-dim: rgba(154, 107, 26, 0.14);
   --glow: radial-gradient(
     55% 45% at 50% 0%,
-    rgba(124, 58, 237, 0.14),
+    rgba(30, 73, 118, 0.12),
     transparent 70%
   );
   --radius: 14px;
@@ -139,7 +143,7 @@ a {
     ),
     radial-gradient(
       45% 40% at 85% 10%,
-      rgba(168, 85, 247, 0.12),
+      rgba(50, 90, 150, 0.14),
       transparent 55%
     ),
     linear-gradient(180deg, var(--bg1), var(--bg0));
@@ -223,7 +227,7 @@ a {
   width: 38px;
   height: 38px;
   border-radius: 11px;
-  background: linear-gradient(135deg, var(--violet), #6d28d9);
+  background: linear-gradient(135deg, var(--violet), var(--violet-deep));
   color: #fff;
   font-size: 1.1rem;
   box-shadow: 0 8px 24px var(--violet-dim);
@@ -387,7 +391,7 @@ html[data-theme='light'] .hero__title {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--violet), #7c3aed);
+  background: linear-gradient(135deg, var(--violet), var(--violet-deep));
   color: #fff;
   box-shadow: 0 12px 34px var(--violet-dim);
 }
@@ -441,7 +445,7 @@ html[data-theme='light'] .hero__title {
 
 .stat-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(168, 85, 247, 0.35);
+  border-color: var(--violet-dim);
 }
 
 .stat-card__icon {
@@ -596,7 +600,7 @@ html[data-theme='light'] .hero__title {
 }
 
 .edu-card:hover {
-  border-color: rgba(168, 85, 247, 0.35);
+  border-color: var(--violet-dim);
   transform: translateY(-2px);
 }
 
@@ -688,7 +692,7 @@ html[data-theme='light'] .hero__title {
 }
 
 .skill-card:hover {
-  border-color: rgba(168, 85, 247, 0.35);
+  border-color: var(--violet-dim);
   transform: translateY(-2px);
 }
 
@@ -810,9 +814,9 @@ html[data-theme='light'] .hero__title {
   background:
     linear-gradient(
       120deg,
-      rgba(168, 85, 247, 0.35),
-      rgba(251, 191, 36, 0.2),
-      rgba(59, 130, 246, 0.15)
+      rgba(50, 95, 150, 0.38),
+      rgba(200, 165, 90, 0.18),
+      rgba(40, 85, 140, 0.2)
     ),
     rgba(255, 255, 255, 0.04);
 }
@@ -955,7 +959,7 @@ html[data-theme='light'] .hero__title {
 }
 
 .contact-mail:hover {
-  border-color: rgba(168, 85, 247, 0.45);
+  border-color: color-mix(in srgb, var(--violet) 55%, transparent);
 }
 
 .contact-mail__label {
@@ -1048,7 +1052,7 @@ html[data-theme='light'] .bg-mesh {
     ),
     radial-gradient(
       45% 40% at 85% 10%,
-      rgba(124, 58, 237, 0.1),
+      rgba(30, 73, 118, 0.12),
       transparent 55%
     ),
     linear-gradient(180deg, var(--bg1), var(--bg0));
@@ -1079,9 +1083,9 @@ html[data-theme='light'] .project-card__visual {
   background:
     linear-gradient(
       120deg,
-      rgba(124, 58, 237, 0.2),
-      rgba(180, 83, 9, 0.1),
-      rgba(59, 130, 246, 0.08)
+      rgba(30, 73, 118, 0.22),
+      rgba(154, 107, 26, 0.1),
+      rgba(40, 90, 140, 0.1)
     ),
     rgba(0, 0, 0, 0.03);
 }

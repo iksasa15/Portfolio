@@ -10,8 +10,8 @@ export function ThemeToggle() {
       className="theme-toggle"
       onClick={toggleTheme}
       aria-pressed={isDark}
-      aria-label={isDark ? 'التبديل إلى الوضع النهاري' : 'التبديل إلى الوضع الليلي'}
-      title={isDark ? 'وضع نهاري' : 'وضع ليلي'}
+      aria-label={isDark ? 'حوّل للوضع الفاتح' : 'حوّل للوضع الغامق'}
+      title={isDark ? 'وضع فاتح' : 'وضع غامق'}
     >
       {isDark ? <IconSun /> : <IconMoon />}
     </button>

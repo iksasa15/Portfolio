@@ -15,23 +15,23 @@ import {
 } from '../content'
 
 const nav = [
-  { id: 'intro', label: 'المقدمة' },
-  { id: 'about', label: 'نبذة' },
-  { id: 'education', label: 'التعليم' },
-  { id: 'journey', label: 'المسيرة' },
-  { id: 'skills', label: 'المهارات' },
-  { id: 'projects', label: 'المشاريع' },
+  { id: 'intro', label: 'البداية' },
+  { id: 'about', label: 'عني' },
+  { id: 'education', label: 'دراستي' },
+  { id: 'journey', label: 'شغلي' },
+  { id: 'skills', label: 'مهاراتي' },
+  { id: 'projects', label: 'مشاريعي' },
   { id: 'contact', label: 'تواصل' },
 ]
 
 function levelLabel(level: SkillLevel): string {
   switch (level) {
     case 'expert':
-      return 'خبير'
+      return 'قوي'
     case 'advanced':
-      return 'متقدم'
+      return 'زين'
     default:
-      return 'متوسط'
+      return 'عادي'
   }
 }
 
@@ -62,7 +62,7 @@ export function PortfolioPage() {
   return (
     <>
       <a className="skip-link" href="#intro">
-        تخطي إلى المحتوى
+        تخطّي للمحتوى
       </a>
 
       <div className="bg-mesh" aria-hidden />
@@ -76,7 +76,7 @@ export function PortfolioPage() {
             <span className="brand__text">{site.fullName}</span>
           </a>
           <div className="site-header__tray">
-            <nav className="nav" aria-label="أقسام الصفحة">
+            <nav className="nav" aria-label="أجزاء الصفحة">
               <ul>
                 {nav.map((item) => (
                   <li key={item.id}>
@@ -96,17 +96,17 @@ export function PortfolioPage() {
             <span className="wave" aria-hidden>
               👋
             </span>{' '}
-            مرحباً، أنا
+            هلا، أنا
           </p>
           <h1 className="hero__name">{site.name}</h1>
           <p className="hero__title">{site.title}</p>
           <p className="hero__tagline">{site.tagline}</p>
           <div className="hero__actions">
             <a className="btn btn--primary" href="#projects">
-              أعمال مختارة
+              من أعمالي
             </a>
             <a className="btn btn--ghost" href="#contact">
-              تواصل
+              كلمّني
             </a>
             <a
               className="btn btn--ghost"
@@ -116,7 +116,7 @@ export function PortfolioPage() {
               {site.cv.label}
             </a>
           </div>
-          <ul className="stat-row" aria-label="أرقام سريعة">
+          <ul className="stat-row" aria-label="أرقام على السريع">
             {stats.map((s) => (
               <li key={s.label} className="stat-card">
                 <span className="stat-card__icon" aria-hidden>
@@ -135,9 +135,9 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="about">
-            عنّي
+            عني
           </p>
-          <h2 className="section-title">قصة مختصرة</h2>
+          <h2 className="section-title">كلمتين عني</h2>
           <div className="prose">
             {aboutParagraphs.map((p, i) => (
               <p key={`about-${i}`}>{p}</p>
@@ -151,9 +151,9 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="education">
-            التعليم
+            الدراسة
           </p>
-          <h2 className="section-title">مؤهلات وتدريب</h2>
+          <h2 className="section-title">شهاداتي ودوراتي</h2>
           <div className="edu-grid">
             {education.map((item) => (
               <article
@@ -198,9 +198,9 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section">
           <p className="kicker" id="journey">
-            المسيرة
+            الخبرة
           </p>
-          <h2 className="section-title">محطات في الطريق</h2>
+          <h2 className="section-title">وين شتغلت</h2>
           <ol className="timeline">
             {journey.map((item) => (
               <li key={item.range} className="timeline__item">
@@ -234,7 +234,7 @@ export function PortfolioPage() {
           <p className="kicker" id="skills">
             المهارات
           </p>
-          <h2 className="section-title">خريطة خبرات</h2>
+          <h2 className="section-title">شطارتي التقنية</h2>
           <div className="skill-grid">
             {skillGroups.map((group) => (
               <article key={group.title} className="skill-card">
@@ -275,10 +275,9 @@ export function PortfolioPage() {
           <p className="kicker" id="projects">
             المشاريع
           </p>
-          <h2 className="section-title">مشاريع مميزة</h2>
+          <h2 className="section-title">مشاريعي</h2>
           <p className="lede">
-            بطاقات مختصرة مع وسوم تقنية — سريعة القراءة على الجوال والشاشات
-            العريضة.
+            كل بطاقة فيها وسم تقني، وتقرى بسرعة على الجوال والشاشة الكبيرة.
           </p>
           <div className="project-grid">
             {projects.map((p) => (
@@ -305,9 +304,9 @@ export function PortfolioPage() {
 
         <RevealSection className="shell section section--contact" id="contact">
           <p className="kicker">تواصل</p>
-          <h2 className="section-title">خلّينا على تواصل</h2>
+          <h2 className="section-title">ياليت نتواصل</h2>
           <p className="lede">
-            يمكنك مراسلتي مباشرة أو متابعة أعمالي على المنصات التالية.
+            تقدر ترسل على الإيميل أو تتابعني بالمنصات تحت.
           </p>
           <div className="contact-panel">
             <a
@@ -315,12 +314,12 @@ export function PortfolioPage() {
               href={site.cv.href}
               download={site.cv.downloadFileName}
             >
-              <span className="contact-cv__label">سيرة ذاتية</span>
+              <span className="contact-cv__label">السيرة</span>
               <span className="contact-cv__value">{site.cv.label}</span>
               <span className="contact-cv__hint">ملف PDF</span>
             </a>
             <a className="contact-mail" href={`mailto:${site.email}`}>
-              <span className="contact-mail__label">بريد</span>
+              <span className="contact-mail__label">الإيميل</span>
               <span className="contact-mail__value">{site.email}</span>
             </a>
             <ul className="social-list">
@@ -339,8 +338,8 @@ export function PortfolioPage() {
 
       <footer className="site-footer shell">
         <p>
-          © {new Date().getFullYear()} {site.name}. صُمِّم بدمج تجربة تحريرية
-          هادئة مع طاقة بصرية خفيفة.
+          © {new Date().getFullYear()} {site.name}. التصميم هادئ شوي ولونه كحلي
+          مع لمسة خفيفة.
         </p>
       </footer>
     </>

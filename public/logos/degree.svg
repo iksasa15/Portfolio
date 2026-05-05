@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-  <path fill="rgba(168,85,247,0.9)" d="M32 8 4 22l28 14 28-14L32 8Z"/>
-  <path fill="rgba(251,191,36,0.85)" d="M10 26v12c0 6 10 10 22 10s22-4 22-10V26L32 36 10 26Z"/>
+  <path fill="rgba(55,100,155,0.95)" d="M32 8 4 22l28 14 28-14L32 8Z"/>
+  <path fill="rgba(200,165,95,0.88)" d="M10 26v12c0 6 10 10 22 10s22-4 22-10V26L32 36 10 26Z"/>
   <path stroke="rgba(255,255,255,0.35)" stroke-width="2" d="M44 34v8"/>
   <circle cx="44" cy="48" r="4" fill="rgba(255,255,255,0.9)"/>
 </svg>
