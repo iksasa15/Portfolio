@@ -114,14 +114,14 @@ export const journey = [
   },
 ]
 
-/** Volunteer track — same shape as `journey`; Google DSC content-committee ladder */
+/** Volunteer track — same order as journey: newest first, start of path at bottom */
 export const volunteering: JourneyEntry[] = [
   {
-    range: '1443 AH — start of the path',
-    role: 'Content committee member',
+    range: '1444 — 1445 AH',
+    role: 'Head of the content committee',
     org: 'Google Developer Student Club — University of Tabuk',
     summary:
-      'Content, design, and editing; attending events and meetings; on-the-ground execution for club activities.',
+      'Leading the content team, coordinating visual and written output, and aligning work with club goals and the Deanship of Student Affairs.',
   },
   {
     range: '1444 AH',
@@ -131,11 +131,11 @@ export const volunteering: JourneyEntry[] = [
       'Supporting the committee lead on planning and delivery; workshops such as English-skills development and the Visual 23 challenge; promos and content (e.g. travel club).',
   },
   {
-    range: '1444 — 1445 AH',
-    role: 'Head of the content committee',
+    range: '1443 AH — start of the path',
+    role: 'Content committee member',
     org: 'Google Developer Student Club — University of Tabuk',
     summary:
-      'Leading the content team, coordinating visual and written output, and aligning work with club goals and the Deanship of Student Affairs.',
+      'Content, design, and editing; attending events and meetings; on-the-ground execution for club activities.',
   },
 ]
 
