@@ -123,9 +123,6 @@ export function PortfolioPage() {
       <header className="site-header">
         <div className="shell site-header__inner">
           <a className="brand" href="#intro">
-            <span className="brand__mark" aria-hidden>
-              {p.site.name.replace(/\s/g, '').charAt(0)}
-            </span>
             <span className="brand__text">
               <span className="brand__given">{brandSplit.first}</span>
               {brandSplit.rest ? (
