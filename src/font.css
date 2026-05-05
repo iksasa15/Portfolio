@@ -1,41 +1,65 @@
 /**
- * IBM Plex Sans Arabic — محلي من /font
- * أداء: الإبقاء على الأوزان المستخدمة في الواجهة فقط (400، 600، 700، 800)
- * لتقليل التحميل وتحسين FCP/LCP مقارنةً بتحميل كل أوزان العائلة.
+ * Thmanyah Sans — من حزمة خط ثمانية الرسمية (نسخة 1.2 على font.thmanyah.com)
+ * مرخّص للاستخدام التجاري والويب: https://font.thmanyah.com/licenses
+ * الملفات محلية من /public/font/thmanyah لتفادي الاعتماد على CDN خارجي.
  */
 
 @font-face {
-  font-family: 'IBM Plex Sans Arabic';
+  font-family: 'Thmanyah Sans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('/font/thmanyah/sans-300.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url('../font/IBMPlexSansArabic-Regular.ttf') format('truetype');
+  src: url('/font/thmanyah/sans-400.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans Arabic';
+  font-family: 'Thmanyah Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('/font/thmanyah/sans-500.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url('../font/IBMPlexSansArabic-SemiBold.ttf') format('truetype');
+  src: url('/font/thmanyah/sans-500.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans Arabic';
+  font-family: 'Thmanyah Sans';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url('../font/IBMPlexSansArabic-Bold.ttf') format('truetype');
+  src: url('/font/thmanyah/sans-700.woff2') format('woff2');
 }
 
 @font-face {
-  font-family: 'IBM Plex Sans Arabic';
+  font-family: 'Thmanyah Sans';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
-  src: url('../font/IBMPlexSansArabic-Bold.ttf') format('truetype');
+  src: url('/font/thmanyah/sans-900.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Thmanyah Sans';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('/font/thmanyah/sans-900.woff2') format('woff2');
 }
 
 :root {
-  --font: 'IBM Plex Sans Arabic', system-ui, sans-serif;
+  --font: 'Thmanyah Sans', system-ui, sans-serif;
 }
