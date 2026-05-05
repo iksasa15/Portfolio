@@ -7,7 +7,7 @@ export const site = {
   fullName: 'Ahmed Alharbi',
   title: 'AI Engineer',
   tagline:
-    'I build AI systems that ship to production: large language model integration, computer vision pipelines, and data-driven automation.',
+    'I build production-ready AI systems—LLM integration, computer vision pipelines, and automation grounded in real data.',
   email: 'ahmednalharbii@gmail.com',
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
@@ -31,7 +31,7 @@ export const site = {
 export const stats = [
   { icon: '🎓', value: '4.50', label: 'GPA out of 5' },
   { icon: '🚀', value: '8+', label: 'Notable projects' },
-  { icon: '🏆', value: '2', label: 'Awards' },
+  { icon: '🏆', value: '8+', label: 'Awards' },
   { icon: '🤝', value: '700+', label: 'Volunteer hours' },
 ]
 
@@ -85,12 +85,21 @@ export const education = [
 ]
 
 export const aboutParagraphs = [
-  "I'm Ahmed Alharbi, an AI engineer and a B.Sc. Computer Science graduate from the University of Tabuk with a 4.50/5.0 GPA (class of 2025). I design, build, and deploy production-ready AI systems, focusing on large language model integration, computer vision, and data-backed automation—and I turn stakeholder needs into scalable, dependable products.",
-  "Hands-on experience includes large-scale text processing, algorithm efficiency, and wiring complex models into apps through REST APIs with attention to data integrity and stability. Measured impact: a Python spatial optimization cut real-world API latency by roughly 75–85%, improving throughput and UX.",
-  'I interned at the Ministry of Health as an AI specialist, improving imaging and record pipelines with computer vision and NLP; projects ranged from real-time threat detection and health CV apps to custom analytics with language models and ops automation. I completed the AI specialization fellowship at KAUST and the Data Science & AI bootcamp at Tuwaiq Academy.',
+  "I'm Ahmed Alharbi, an AI engineer and a B.Sc. Computer Science graduate from the University of Tabuk (4.50/5.0 GPA, class of 2025). I design, ship, and run production AI—LLMs, computer vision, and data-backed automation.",
+  'MoH internship on imaging and records; the KAUST AI specialization fellowship and the Data Science & AI bootcamp at Tuwaiq Academy. From my project work: NextEd, Maeen (judicial intelligence), NIDAA for EMS, Atqinha for PT—plus security, analytics, and hackathon builds. Measured: a Python spatial optimization cut API latency roughly 75–85% in a real deployment.',
 ]
 
 export const journey = [
+  {
+    range: 'Feb 2026 — Present',
+    role: 'The Garage Incubator Program',
+    org: 'The Garage',
+  },
+  {
+    range: 'Sep 2025 — Dec 2025',
+    role: 'Savvy Incubator Program',
+    org: 'Savvy Games',
+  },
   {
     range: 'Jun 2024 — Aug 2024',
     role: 'AI Specialist (Intern)',

@@ -586,15 +586,30 @@ html[data-theme='light'] .hero__title {
 
 .timeline__logo-wrap {
   margin-bottom: 0.55rem;
+  height: 48px;
+  width: 168px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.timeline__logo {
+/* شعارات موحّدة الحجم: مسار مهني + تعليم (داخل صندوق 168×48) */
+.timeline__logo,
+.edu-card__logo {
   display: block;
-  height: 48px;
+  max-height: 48px;
+  max-width: 168px;
   width: auto;
-  max-width: 140px;
+  height: auto;
+  min-width: 0;
   object-fit: contain;
-  object-position: start center;
+  object-position: left center;
+}
+
+/* شعارات ملوّنة → أبيض في الوضع الليلي (مع `monochromeOnDark` في المحتوى) */
+html[data-theme='dark'] .brand-logo--mono-dark {
+  filter: brightness(0) invert(1);
+  opacity: 0.92;
 }
 
 .timeline__item::before {
@@ -664,21 +679,12 @@ html[data-theme='light'] .hero__title {
 
 .edu-card__logo-wrap {
   flex-shrink: 0;
-  height: 52px;
+  height: 48px;
+  width: 168px;
   margin-bottom: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
-}
-
-.edu-card__logo {
-  display: block;
-  max-height: 100%;
-  max-width: min(100%, 220px);
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  object-position: start center;
 }
 
 .edu-card__range {

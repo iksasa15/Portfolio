@@ -6,7 +6,10 @@ import { getPortfolio } from '../locale/portfolioBundle'
 import { getUi } from '../locale/uiStrings'
 import { LocaleToggle } from '../locale/LocaleToggle'
 import { useLocale } from '../locale/useLocale'
-import { resolveBrandLogoSrc } from '../theme/resolveBrandLogo'
+import {
+  brandLogoMonochromeDark,
+  resolveBrandLogoSrc,
+} from '../theme/resolveBrandLogo'
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
 import { ProjectTag } from './ProjectTag'
@@ -157,7 +160,12 @@ export function PortfolioPage() {
                   <div className="edu-card__logo-wrap">
                     <img
                       key={`${theme}-${resolveBrandLogoSrc(item.logo, theme)}`}
-                      className="edu-card__logo"
+                      className={
+                        'edu-card__logo' +
+                        (brandLogoMonochromeDark(item.logo, theme)
+                          ? ' brand-logo--mono-dark'
+                          : '')
+                      }
                       src={resolveBrandLogoSrc(item.logo, theme)}
                       alt={item.logo.alt}
                       loading="lazy"
@@ -210,7 +218,12 @@ export function PortfolioPage() {
                     <div className="timeline__logo-wrap">
                       <img
                         key={`${theme}-${resolveBrandLogoSrc(item.logo, theme)}`}
-                        className="timeline__logo"
+                        className={
+                          'timeline__logo' +
+                          (brandLogoMonochromeDark(item.logo, theme)
+                            ? ' brand-logo--mono-dark'
+                            : '')
+                        }
                         src={resolveBrandLogoSrc(item.logo, theme)}
                         alt={item.logo.alt}
                         loading="lazy"
