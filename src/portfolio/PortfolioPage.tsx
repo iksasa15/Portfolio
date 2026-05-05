@@ -1,7 +1,11 @@
 import type { ReactNode } from 'react'
 import { useReveal } from '../hooks/useReveal'
+import { resolveBrandLogoSrc } from '../theme/resolveBrandLogo'
+import { ThemeToggle } from '../theme/ThemeToggle'
+import { useTheme } from '../theme/useTheme'
 import {
   aboutParagraphs,
+  education,
   journey,
   projects,
   site,
@@ -13,6 +17,7 @@ import {
 const nav = [
   { id: 'intro', label: 'المقدمة' },
   { id: 'about', label: 'نبذة' },
+  { id: 'education', label: 'التعليم' },
   { id: 'journey', label: 'المسيرة' },
   { id: 'skills', label: 'المهارات' },
   { id: 'projects', label: 'المشاريع' },
@@ -52,6 +57,8 @@ function RevealSection({
 }
 
 export function PortfolioPage() {
+  const { theme } = useTheme()
+
   return (
     <>
       <a className="skip-link" href="#intro">
@@ -68,15 +75,18 @@ export function PortfolioPage() {
             </span>
             <span className="brand__text">{site.fullName}</span>
           </a>
-          <nav className="nav" aria-label="أقسام الصفحة">
-            <ul>
-              {nav.map((item) => (
-                <li key={item.id}>
-                  <a href={`#${item.id}`}>{item.label}</a>
-                </li>
-              ))}
-            </ul>
-          </nav>
+          <div className="site-header__tray">
+            <nav className="nav" aria-label="أقسام الصفحة">
+              <ul>
+                {nav.map((item) => (
+                  <li key={item.id}>
+                    <a href={`#${item.id}`}>{item.label}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <ThemeToggle />
+          </div>
         </div>
       </header>
 
@@ -140,6 +150,56 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
+          <p className="kicker" id="education">
+            التعليم
+          </p>
+          <h2 className="section-title">مؤهلات وتدريب</h2>
+          <p className="lede">
+            درجة الجامعة وزمالة كاوست ومعسكر طويق — كما وردت في السيرة الذاتية.
+          </p>
+          <div className="edu-grid">
+            {education.map((item) => (
+              <article
+                key={`${item.range}-${item.title}`}
+                className="edu-card"
+              >
+                {item.logo ? (
+                  <div className="edu-card__logo-wrap">
+                    <img
+                      key={`${theme}-${resolveBrandLogoSrc(item.logo, theme)}`}
+                      className="edu-card__logo"
+                      src={resolveBrandLogoSrc(item.logo, theme)}
+                      alt={item.logo.alt}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ) : null}
+                <span className="edu-card__range">{item.range}</span>
+                <h3 className="edu-card__title">{item.title}</h3>
+                {item.org ? (
+                  <p className="edu-card__org">{item.org}</p>
+                ) : null}
+                {item.meta ? (
+                  <p className="edu-card__meta">{item.meta}</p>
+                ) : null}
+                {item.highlights?.length ? (
+                  <ul className="edu-card__list">
+                    {item.highlights.map((line, i) => (
+                      <li key={i}>{line}</li>
+                    ))}
+                  </ul>
+                ) : null}
+              </article>
+            ))}
+          </div>
+        </RevealSection>
+
+        <div className="shell">
+          <div className="rule" aria-hidden />
+        </div>
+
+        <RevealSection className="shell section">
           <p className="kicker" id="journey">
             المسيرة
           </p>
@@ -149,6 +209,18 @@ export function PortfolioPage() {
               <li key={item.range} className="timeline__item">
                 <span className="timeline__range">{item.range}</span>
                 <div className="timeline__body">
+                  {item.logo ? (
+                    <div className="timeline__logo-wrap">
+                      <img
+                        key={`${theme}-${resolveBrandLogoSrc(item.logo, theme)}`}
+                        className="timeline__logo"
+                        src={resolveBrandLogoSrc(item.logo, theme)}
+                        alt={item.logo.alt}
+                        loading="lazy"
+                        decoding="async"
+                      />
+                    </div>
+                  ) : null}
                   <h3 className="timeline__role">{item.role}</h3>
                   <p className="timeline__org">{item.org}</p>
                 </div>
