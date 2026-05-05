@@ -1198,6 +1198,11 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   margin: 0;
 }
 
+.site-footer strong {
+  font-weight: 800;
+  color: var(--heading);
+}
+
 /* ——— Scroll reveal ——— */
 .reveal {
   opacity: 0;

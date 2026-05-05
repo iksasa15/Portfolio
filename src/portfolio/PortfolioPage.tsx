@@ -454,7 +454,7 @@ export function PortfolioPage() {
 
       <footer className="site-footer shell">
         <p>
-          © {new Date().getFullYear()} {p.site.name}. {ui.footerLine}
+          © {new Date().getFullYear()}. {renderInlineBold(ui.footerLine)}
         </p>
       </footer>
     </>

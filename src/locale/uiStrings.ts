@@ -70,8 +70,7 @@ const ar: Ui = {
   contactCvLabel: 'السيرة',
   contactCvHint: 'ملف PDF',
   contactMailLabel: 'الإيميل',
-  footerLine:
-    'التصميم هادئ شوي ولونه كحلي مع لمسة خفيفة.',
+  footerLine: 'صُنع بحب من **أحمد الحربي**',
   levelExpert: 'قوي',
   levelAdvanced: 'زين',
   levelIntermediate: 'عادي',
@@ -114,7 +113,7 @@ const en: Ui = {
   contactCvLabel: 'Résumé',
   contactCvHint: 'PDF file',
   contactMailLabel: 'Email',
-  footerLine: 'Quiet layout in deep navy with subtle accents.',
+  footerLine: 'Made with love by **Ahmed Alharbi**',
   levelExpert: 'Strong',
   levelAdvanced: 'Solid',
   levelIntermediate: 'Familiar',
