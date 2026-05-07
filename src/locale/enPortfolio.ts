@@ -246,6 +246,22 @@ const atqinhaGalleryEn: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const OPTIMUM_ALT_EN = [
+  'Optimum — home dashboard, today’s plan, and quick stats',
+  'Optimum — camera view with pose skeleton, joint angles, and live feedback',
+  'Optimum — last session summary, smart alert, and advanced performance ring',
+  'Optimum — exercise catalog with search and sport filters',
+  'Optimum — exercise detail: benefits, steps, and common mistakes',
+  'Optimum — record now or upload video flow',
+  'Optimum — archive & growth plus player safety indicators',
+  'Optimum — reports with movement notes and smart next-session tips',
+] as const
+
+const optimumGalleryEn: ProjectGalleryImage[] = OPTIMUM_ALT_EN.map((alt, i) => ({
+  src: `/projects/optimum/slide-${String(i + 1).padStart(2, '0')}.png`,
+  alt,
+}))
+
 const NIDAA_SLIDE_COUNT = 9
 const nidaaGalleryEn: ProjectGalleryImage[] = Array.from(
   { length: NIDAA_SLIDE_COUNT },
@@ -429,6 +445,18 @@ export const projects: ProjectEntry[] = [
     href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A3%D8%AA%D8%B4%D8%B1%D9%81-%D8%A8%D9%85%D8%B4%D8%A7%D8%B1%D9%83%D8%AA%D9%83%D9%85-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%AE%D8%A8%D8%B1-%D8%A5%D8%AA%D9%85%D8%A7%D9%85%D9%8A-%D9%84%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-ugcPost-7409584346459918337-Q-ok',
     coverSrc: '/projects/atqinha/cover.png',
     gallery: atqinhaGalleryEn,
+  },
+  {
+    title: 'Optimum | Smart sports app for player movement analysis',
+    badge: 'Mobile app · Sports AI',
+    summary:
+      'A smart sports app that analyzes player movement with **computer vision** and **AI**—**real-time performance scoring**, **automatic detection of movement errors**, and **analytical reports** that help athletes improve with clear, data-backed feedback.',
+    detail:
+      '**Optimum** is an **RTL Arabic** mobile concept for athletic training: a **home** hub with daily plans and KPIs, a **camera** experience with pose estimation, joint angles, risk/tip readouts, **exercises** with search and rich drill pages, **reports** with movement observations and smart recommendations, plus **archive / progression** and **player safety** panels. Gallery screenshots are UI exports from the project.',
+    tags: ['Computer Vision', 'AI', 'Mobile'],
+    href: '#',
+    coverSrc: '/projects/optimum/cover.png',
+    gallery: optimumGalleryEn,
   },
   {
     title: 'Maydan (الميدان) | Smart theatre management',

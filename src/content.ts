@@ -288,6 +288,22 @@ const atqinhaGalleryAr: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const OPTIMUM_ALT_AR = [
+  'Optimum — الرئيسية وخطة اليوم والإحصائيات السريعة',
+  'Optimum — الكاميرا وهيكل عظمي وزوايا مفصلية وتقييم لحظي',
+  'Optimum — ملخص آخر جلسة وتنبيه ذكي ولوحة أداء متقدمة',
+  'Optimum — قائمة التمارين والبحث والتصنيفات',
+  'Optimum — تفاصيل التمرين والفائدة والتنفيذ والأخطاء الشائعة',
+  'Optimum — تصوير الآن أو رفع فيديو ومسار الجلسة',
+  'Optimum — الأرشيف والتطور وسلامة اللاعب',
+  'Optimum — التقارير وملاحظات الحركة والتوصيات الذكية',
+] as const
+
+const optimumGalleryAr: ProjectGalleryImage[] = OPTIMUM_ALT_AR.map((alt, i) => ({
+  src: `/projects/optimum/slide-${String(i + 1).padStart(2, '0')}.png`,
+  alt,
+}))
+
 const NIDAA_SLIDE_COUNT = 9
 const nidaaGalleryAr: ProjectGalleryImage[] = Array.from(
   { length: NIDAA_SLIDE_COUNT },
@@ -471,6 +487,18 @@ export const projects: ProjectEntry[] = [
     href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A3%D8%AA%D8%B4%D8%B1%D9%81-%D8%A8%D9%85%D8%B4%D8%A7%D8%B1%D9%83%D8%AA%D9%83%D9%85-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%AE%D8%A8%D8%B1-%D8%A5%D8%AA%D9%85%D8%A7%D9%85%D9%8A-%D9%84%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-ugcPost-7409584346459918337-Q-ok',
     coverSrc: '/projects/atqinha/cover.png',
     gallery: atqinhaGalleryAr,
+  },
+  {
+    title: 'Optimum | تطبيق رياضي ذكي لتحليل حركة اللاعبين',
+    badge: 'تطبيق موبايل · رؤية حاسوبية',
+    summary:
+      'تطبيق رياضي ذكي لتحليل حركة اللاعبين باستخدام **تقنيات الرؤية الحاسوبية** و**الذكاء الاصطناعي**، يوفّر **تقييمًا لحظيًا للأداء** و**اكتشافًا للأخطاء الحركية**، مع **تقارير تحليلية** تدعم تحسين أداء اللاعب.',
+    detail:
+      '**Optimum** واجهة **عربية (RTL)** للرياضة: **رئيسية** بخطة يوم وإحصائيات، **كاميرا** مع تتبّع وضعية وهيكل عظمي ومؤشرات (زوايا، درجة خطر، نصائح)، **تمارين** مع بحث وتفاصيل تنفيذ، **تقارير** بملاحظات حركة وتوصيات ذكية، وأقسام **أرشيف وتطور** و**سلامة اللاعب**. اللقطات من نموذج واجهات المشروع.',
+    tags: ['رؤية حاسوبية', 'ذكاء اصطناعي', 'موبايل'],
+    href: '#',
+    coverSrc: '/projects/optimum/cover.png',
+    gallery: optimumGalleryAr,
   },
   {
     title: 'الميدان Maydan | إدارة مسرح ذكية بالبيانات',

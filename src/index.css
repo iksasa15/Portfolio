@@ -615,19 +615,24 @@ main {
 }
 
 @keyframes wave {
+
   0%,
   100% {
     transform: rotate(0deg);
   }
+
   15% {
     transform: rotate(14deg);
   }
+
   30% {
     transform: rotate(-8deg);
   }
+
   45% {
     transform: rotate(12deg);
   }
+
   60% {
     transform: rotate(0deg);
   }
@@ -900,10 +905,7 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   content: '';
   position: absolute;
   /* حافة البداية المنطقية للمربع = مركز خط الحدّ ناقص نصف حجم العلامة */
-  inset-inline-start: calc(
-    -1 * var(--timeline-pad) - var(--timeline-line-w) / 2 -
-      var(--timeline-marker) / 2
-  );
+  inset-inline-start: calc(-1 * var(--timeline-pad) - var(--timeline-line-w) / 2 - var(--timeline-marker) / 2);
   top: 0.55rem;
   width: var(--timeline-marker);
   height: var(--timeline-marker);
@@ -1311,8 +1313,7 @@ html[data-theme='dark'] .brand-logo--mono-dark {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding: max(0.5rem, env(safe-area-inset-top, 0px)) 1rem
-    max(0.5rem, env(safe-area-inset-bottom, 0px));
+  padding: max(0.5rem, env(safe-area-inset-top, 0px)) 1rem max(0.5rem, env(safe-area-inset-bottom, 0px));
   background: rgba(5, 10, 18, 0.55);
   animation: project-modal-in 0.2s ease;
 }
