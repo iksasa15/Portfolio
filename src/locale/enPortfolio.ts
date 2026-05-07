@@ -229,6 +229,14 @@ const maeenGalleryEn: ProjectGalleryImage[] = [
   },
 ]
 
+const nextedGalleryEn: ProjectGalleryImage[] = Array.from(
+  { length: 35 },
+  (_, i) => ({
+    src: `/projects/nexted/slide-${String(i + 1).padStart(2, '0')}.png`,
+    alt: `NextEd — app UI screen (${i + 1} of 35)`,
+  }),
+)
+
 const aynGalleryEn: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -278,8 +286,12 @@ export const projects: ProjectEntry[] = [
     badge: 'Graduation project',
     summary:
       'NextEd is an AI learning platform that summarizes lectures, builds quizzes and flashcards, and handles tasks, calendars, reminders, and study analytics. It analyzes performance from grades and completion, visualizes insights, and proposes a tailored improvement plan—review cadence, pacing, and weak-spot focus—to raise scores with clear steps, so students study smarter, not harder.',
+    detail:
+      '**NextEd** is a **graduation project** built with **Flutter**, **Firebase**, and **ChatGPT** for LLM-powered features. The screens below are exported from the app UI deck. The project was presented at the **4th International Conference on Computing and Information Technology** — see the linked post for context.',
     tags: ['Flutter', 'Firebase', 'ChatGPT API'],
-    href: 'https://drive.google.com/file/d/1ZDMDpL59VROoyvq2PuEZwkGL3vOTa_qq/view',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%B9%D8%B1%D8%B6-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%AE%D8%B1%D8%AC%D9%8A-%D8%B6%D9%85%D9%86-%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D9%84%D9%84%D8%AD%D9%88%D8%B3%D8%A8%D8%A9%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-activity-7317561159111303169-ma34',
+    coverSrc: '/projects/nexted/cover.png',
+    gallery: nextedGalleryEn,
   },
   {
     title: 'Ayn (عين) | An intelligent eye on your data quality',

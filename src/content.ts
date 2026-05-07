@@ -271,6 +271,14 @@ const maeenGalleryAr: ProjectGalleryImage[] = [
   },
 ]
 
+const nextedGalleryAr: ProjectGalleryImage[] = Array.from(
+  { length: 35 },
+  (_, i) => ({
+    src: `/projects/nexted/slide-${String(i + 1).padStart(2, '0')}.png`,
+    alt: `NextEd — لقطة من واجهات التطبيق (${i + 1} من 35)`,
+  }),
+)
+
 const aynGalleryAr: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -320,8 +328,12 @@ export const projects: ProjectEntry[] = [
     badge: 'مشروع تخرج',
     summary:
       'منصة تعليمية بالذكاء الاصطناعي: تلخّص المحاضرات، وتولّد اختبارات وبطاقات مراجعة، وتدير المهام والجداول والتذكيرات، وتعرض إحصائيات وتقدّم دراسي. فوق كذا يحلّل الأداء من الدرجات ومعدّل إنجاز المهام، يبيّن الرؤى بصرياً، ويطلع خطة تحسين (مراجعة، وتوقيت، وتركيز على النقاط الضعيفة) عشان يرفع الدرجات بخطوات واضحة — يذاكر أذكى مو أصعب.',
+    detail:
+      '**NextEd** تطبيق **مشروع تخرج** مبني بـ **Flutter** و**Firebase** مع دمج **ChatGPT** لخدمات لغوية. الواجهات أدناه مستخرجة من ملف عرض واجهات التطبيق. عُرض المشروع ضمن فعاليات **المؤتمر الدولي الرابع للحوسبة وتقنية المعلومات** — للمزيد يمكن متابعة المنشور المرتبط.',
     tags: ['Flutter', 'Firebase', 'ChatGPT API'],
-    href: 'https://drive.google.com/file/d/1ZDMDpL59VROoyvq2PuEZwkGL3vOTa_qq/view',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%B9%D8%B1%D8%B6-%D9%85%D8%B4%D8%B1%D9%88%D8%B9-%D8%AA%D8%AE%D8%B1%D8%AC%D9%8A-%D8%B6%D9%85%D9%86-%D9%81%D8%B9%D8%A7%D9%84%D9%8A%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%A4%D8%AA%D9%85%D8%B1%D8%A7%D9%84%D8%AF%D9%88%D9%84%D9%8A%D8%A7%D9%84%D8%B1%D8%A7%D8%A8%D8%B9%D9%84%D9%84%D8%AD%D9%88%D8%B3%D8%A8%D8%A9%D9%88%D8%AA%D9%82%D9%86%D9%8A%D8%A9%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A7%D8%AA-activity-7317561159111303169-ma34',
+    coverSrc: '/projects/nexted/cover.png',
+    gallery: nextedGalleryAr,
   },
   {
     title: 'عين Ayn | عينٌ ذكية على جودة بياناتك',
