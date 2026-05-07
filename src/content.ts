@@ -297,6 +297,15 @@ const nidaaGalleryAr: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const RASD_SLIDE_COUNT = 8
+const rasdGalleryAr: ProjectGalleryImage[] = Array.from(
+  { length: RASD_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/rasd/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `رصد RASD — صورة من منشور لينكدإن (${i + 1} من ${RASD_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryAr: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -386,7 +395,7 @@ export const projects: ProjectEntry[] = [
       '**نداء (NIDAA)** ضمن **أفضل 10 مشاريع** في **هاكاثون علوم الطوارئ والسلامة** (كلية الأمير سلطان للخدمات الطبية الطارئة)، انطلاقاً من **تحدي 30 يوم برمجة**. منظومة متكاملة (تطبيق + لوحة تحكم) هدفت لتقصير زمن الاستجابة؛ وُصف في المنشور تقريباً من **13 دقيقة إلى 8 دقائق**. يدمج **Flutter وFirebase**، **ذكاء اصطناعي توليدي** لفرز البلاغات وتوليد تقارير، و**خوارزمية مسار** لتوجيه الإسعاف. الصور من **منشور لينكدإن**.',
     tags: ['Azure', 'رؤية حاسوبية', 'NLP'],
     href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A7%D9%84%D8%AD%D9%85%D8%AF-%D9%84%D9%84%D9%87-%D8%A8%D8%AE%D8%AA%D8%A7%D9%85-%D9%85%D9%83%D9%84%D9%84-%D8%A8%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%AA%D8%B1%D8%B4%D9%8A%D8%AD-activity-7426614569072152576-JtbG',
-    coverSrc: '/projects/nidaa/cover.jpg',
+    coverSrc: '/projects/nidaa/cover.png',
     gallery: nidaaGalleryAr,
   },
   {
@@ -422,8 +431,12 @@ export const projects: ProjectEntry[] = [
     badge: 'أفضل 15 مشروع — هاكاثون أبشر | أكاديمية طويق',
     summary:
       'ضمن **أفضل 15 مشروعاً** في **هاكاثون أبشر** لدى **أكاديمية طويق**، في مسار **الأمن الحرج**: منظومة طائرات بدون طيار تعمل كسرب مرن مع كشف تهديدات مسبق: مسح أرضي وجوي، تصنيف أهداف (سلاح، متفجرات، حقائب مشبوهة) بـ YOLOv8، ومقارنة بصمة بصرية للبيئة مع معالجة على محطة أرضية عالية الأداء وتقارير تنبيه موحّدة بإحداثيات GPS.',
+    detail:
+      '**رصد (RASD)** تأهّل للنهائيات في **هاكاثون أبشر طويق** ضمن مسار **الأمن الحرج**؛ منظومة أمن بطائرات ذاتية و**YOLOv8** لمسح أرضي وجوي وتصنيف تهديدات، مع معالجة على محطة أرضية وتنبيهات موحّدة بـ **GPS**. الصور من **منشور لينكدإن** عن التأهل والمشروع.',
     tags: ['YOLOv8', 'رؤية حاسوبية', 'حافة'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_aevaepaeraepaetaewaeuabraelaeqaecaezabraefaewaeyaeq-activity-7405975907363950592-UODn',
+    coverSrc: '/projects/rasd/cover.jpg',
+    gallery: rasdGalleryAr,
   },
   {
     title: 'مدهال Midhal | ذاكرة رقمية للهوية السعودية',

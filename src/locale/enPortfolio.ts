@@ -255,6 +255,15 @@ const nidaaGalleryEn: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const RASD_SLIDE_COUNT = 8
+const rasdGalleryEn: ProjectGalleryImage[] = Array.from(
+  { length: RASD_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/rasd/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `RASD — image from the LinkedIn post (${i + 1} of ${RASD_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryEn: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -344,7 +353,7 @@ export const projects: ProjectEntry[] = [
       '**NIDAA** was shortlisted among the **top 10** projects in the **Emergency & Safety Sciences Hackathon** (Prince Sultan College for Emergency Medical Services), born from a **30-day coding challenge**. The team shipped an integrated **mobile app + dashboard** aimed at faster EMS response—the post highlights roughly **13 minutes down to 8**. The stack combines **Flutter & Firebase**, **generative AI** for triage and report generation, and a **pathfinding** approach for ambulance routing. Gallery images are from the **LinkedIn announcement**.',
     tags: ['Azure', 'Computer Vision', 'NLP'],
     href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A7%D9%84%D8%AD%D9%85%D8%AF-%D9%84%D9%84%D9%87-%D8%A8%D8%AE%D8%AA%D8%A7%D9%85-%D9%85%D9%83%D9%84%D9%84-%D8%A8%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%AA%D8%B1%D8%B4%D9%8A%D8%AD-activity-7426614569072152576-JtbG',
-    coverSrc: '/projects/nidaa/cover.jpg',
+    coverSrc: '/projects/nidaa/cover.png',
     gallery: nidaaGalleryEn,
   },
   {
@@ -380,8 +389,12 @@ export const projects: ProjectEntry[] = [
     badge: 'Top 15 — Absher hackathon · Tuwaiq Academy',
     summary:
       '**Top 15** project at the **Absher** hackathon with **Tuwaiq Academy**, on the **critical security** track: autonomous drone swarms with flexible formations, dual ground/aerial scanning, YOLOv8 threat classification (weapons, sharp objects, explosives, bags), and spatial change detection vs. a stored visual footprint. Edge AI on a ground station; unified digital alerts with GPS, imagery, and threat levels for command centers.',
+    detail:
+      '**RASD** qualified for the **Absher Tuwaiq Hackathon** finals on the **critical security** track: drone-based perimeter security with **YOLOv8** for ground/aerial scanning and threat classification, ground-station processing, and unified **GPS**-tagged alerts. Gallery images are from the **LinkedIn** announcement.',
     tags: ['YOLOv8', 'Computer Vision', 'Edge AI'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_aevaepaeraepaetaewaeuabraelaeqaecaezabraefaewaeyaeq-activity-7405975907363950592-UODn',
+    coverSrc: '/projects/rasd/cover.jpg',
+    gallery: rasdGalleryEn,
   },
   {
     title: 'Midhal | A digital memory for Saudi identity',
