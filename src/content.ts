@@ -222,7 +222,56 @@ export const skillGroups: {
   },
 ]
 
-export const projects = [
+export type ProjectGalleryImage = {
+  src: string
+  alt: string
+}
+
+export type ProjectEntry = {
+  title: string
+  badge: string
+  summary: string
+  /** نص أطول يظهر في نافذة تفاصيل المشروع */
+  detail?: string
+  /** صورة الغلاف أعلى بطاقة المشروع */
+  coverSrc?: string
+  tags: string[]
+  href: string
+  gallery?: ProjectGalleryImage[]
+}
+
+const maeenGalleryAr: ProjectGalleryImage[] = [
+  {
+    src: '/projects/maeen/01-gesture-fist.png',
+    alt: 'معين — تتبّع هيكل اليد بالرؤية الحاسوبية وقائمة الجمل الرئيسية والردود السريعة (قبضة)',
+  },
+  {
+    src: '/projects/maeen/02-gesture-four-fingers.png',
+    alt: 'معين — إيماء أربع أصابع مع مخرج نصي قانوني في الشريط العلوي',
+  },
+  {
+    src: '/projects/maeen/03-gesture-index.png',
+    alt: 'معين — إيماء سبابة فقط مع جملة تعريفية للمستفيد',
+  },
+  {
+    src: '/projects/maeen/04-mobile-chat.png',
+    alt: 'معين — المساعد الذكي على الجوال مع محادثة وصوت',
+  },
+  {
+    src: '/projects/maeen/05-mobile-form.png',
+    alt: 'معين — نموذج بيانات مع أزرار إمكانية وصول وإدخال صوتي',
+  },
+  {
+    src: '/projects/maeen/06-mobile-judgments.png',
+    alt: 'معين — عرض الأحكام ومنطوق الحكم للمستفيد',
+  },
+  {
+    src: '/projects/maeen/07-award.png',
+    alt: 'معين — المركز الثاني في هاكاثون ذكاء القضاء لدى ديوان المظالم',
+  },
+]
+
+export const projects: ProjectEntry[] = [
   {
     title: 'NextEd: تعلّم ذكي لأداء متميز',
     badge: 'مشروع تخرج',
@@ -244,8 +293,12 @@ export const projects = [
     badge: 'المركز الثاني — هاكاثون ذكاء القضاء',
     summary:
       'حلّ فائز بالمركز الثاني يبسّط الإجراءات القضائية: تفاعل بدون لمس بالإيماءات والصوت عبر الرؤية الحاسوبية ونماذج تحويل الكلام لنص، عشان يخفّف الحمل التقني والإدراكي ويوصّل الخدمة القضائية لكبار السن وذوي الإعاقة بشكل أسرع وأوضح.',
+    detail:
+      '**معين** منصّة واجهة قانونية متعددة الوسائط فازت بالمركز الثاني في **هاكاثون ذكاء القضاء** لدى **ديوان المظالم**. تجمع بين **تتبّع الإيماء بالرؤية الحاسوبية** (هيكل اليد والجمل الرئيسية)، و**المساعد الصوتي/النصي**، وواجهات **موبايل** لمسار المستفيد: محادثة ذكية، نماذج بإدخال صوتي، واستعراض **الأحكام** ومنطوقها — مع أدوات **إمكانية وصول** (تكبير نص، تبسيط تفاعل).',
     tags: ['رؤية حاسوبية', 'NLP', 'إمكانية الوصول'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_aevaepaeraetaewaeuabraeyaeraepaejabraepaesaeqaeeaepaej-ugcPost-7425600028704083968-Rug_',
+    coverSrc: '/projects/maeen/cover.png',
+    gallery: maeenGalleryAr,
   },
   {
     title: 'نداء NIDAA | خدمات طوارئ وذكاء في التوجيه',

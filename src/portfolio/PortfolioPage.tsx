@@ -1,8 +1,15 @@
-import { useCallback, useEffect, useMemo, useState, type ReactNode } from 'react'
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useState,
+  type KeyboardEvent as ReactKeyboardEvent,
+  type ReactNode,
+} from 'react'
 import { useSequentialTypewriter } from '../hooks/useSequentialTypewriter'
 import { useReveal } from '../hooks/useReveal'
 import { subscribeScrollDirection } from '../scrollDirection'
-import type { SkillLevel } from '../content'
+import type { ProjectEntry, SkillLevel } from '../content'
 import { getPortfolio } from '../locale/portfolioBundle'
 import { getUi } from '../locale/uiStrings'
 import { LocaleToggle } from '../locale/LocaleToggle'
@@ -13,6 +20,7 @@ import {
 } from '../theme/resolveBrandLogo'
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
+import { ProjectDetailModal } from './ProjectDetailModal'
 import { ProjectTag } from './ProjectTag'
 import { renderInlineBold } from '../renderInlineBold'
 
@@ -45,6 +53,9 @@ export function PortfolioPage() {
   const ui = useMemo(() => getUi(locale), [locale])
   const p = useMemo(() => getPortfolio(locale), [locale])
   const [navOpen, setNavOpen] = useState(false)
+  const [projectDetail, setProjectDetail] = useState<ProjectEntry | null>(
+    null,
+  )
 
   useEffect(() => subscribeScrollDirection(), [])
 
@@ -52,7 +63,7 @@ export function PortfolioPage() {
 
   useEffect(() => {
     if (!navOpen) return
-    const onKey = (e: KeyboardEvent) => {
+    const onKey = (e: globalThis.KeyboardEvent) => {
       if (e.key === 'Escape') closeNav()
     }
     window.addEventListener('keydown', onKey)
@@ -455,35 +466,75 @@ export function PortfolioPage() {
           </p>
           <h2 className="section-title">{ui.projectsTitle}</h2>
           <div className="project-grid">
-            {p.projects.map((proj) => (
-              <article key={proj.title} className="project-card">
-                <div className="project-card__visual" aria-hidden />
-                <span className="project-card__badge">
-                  {renderInlineBold(proj.badge)}
-                </span>
-                <h3 className="project-card__title">
-                  <a
-                    href={proj.href}
-                    {...(proj.href.startsWith('http')
-                      ? {
-                          target: '_blank',
-                          rel: 'noreferrer noopener',
-                        }
-                      : {})}
-                  >
-                    {renderInlineBold(proj.title)}
-                  </a>
-                </h3>
-                <p className="project-card__summary">
-                  {renderInlineBold(proj.summary)}
-                </p>
-                <ul className="tag-row">
-                  {proj.tags.map((t) => (
-                    <ProjectTag key={t} label={t} />
-                  ))}
-                </ul>
-              </article>
-            ))}
+            {p.projects.map((proj) => {
+              const hasGallery = Boolean(proj.gallery?.length)
+              return (
+                <article
+                  key={proj.title}
+                  className={
+                    'project-card' + (hasGallery ? ' project-card--detail' : '')
+                  }
+                  {...(hasGallery
+                    ? {
+                        role: 'button' as const,
+                        tabIndex: 0,
+                        onClick: () => setProjectDetail(proj),
+                        onKeyDown: (e: ReactKeyboardEvent) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault()
+                            setProjectDetail(proj)
+                          }
+                        },
+                      }
+                    : {})}
+                >
+                  <div
+                    className={
+                      'project-card__visual' +
+                      (proj.coverSrc ? ' project-card__visual--cover' : '')
+                    }
+                    style={
+                      proj.coverSrc
+                        ? {
+                            backgroundImage: `url("${proj.coverSrc}")`,
+                          }
+                        : undefined
+                    }
+                    aria-hidden
+                  />
+                  <span className="project-card__badge">
+                    {renderInlineBold(proj.badge)}
+                  </span>
+                  <h3 className="project-card__title">
+                    {hasGallery ? (
+                      <span className="project-card__title-text">
+                        {renderInlineBold(proj.title)}
+                      </span>
+                    ) : (
+                      <a
+                        href={proj.href}
+                        {...(proj.href.startsWith('http')
+                          ? {
+                              target: '_blank',
+                              rel: 'noreferrer noopener',
+                            }
+                          : {})}
+                      >
+                        {renderInlineBold(proj.title)}
+                      </a>
+                    )}
+                  </h3>
+                  <p className="project-card__summary">
+                    {renderInlineBold(proj.summary)}
+                  </p>
+                  <ul className="tag-row">
+                    {proj.tags.map((t) => (
+                      <ProjectTag key={t} label={t} />
+                    ))}
+                  </ul>
+                </article>
+              )
+            })}
           </div>
         </RevealSection>
 
@@ -538,6 +589,14 @@ export function PortfolioPage() {
           © {new Date().getFullYear()}. {renderInlineBold(ui.footerLine)}
         </p>
       </footer>
+
+      {projectDetail ? (
+        <ProjectDetailModal
+          project={projectDetail}
+          ui={ui}
+          onClose={() => setProjectDetail(null)}
+        />
+      ) : null}
     </>
   )
 }

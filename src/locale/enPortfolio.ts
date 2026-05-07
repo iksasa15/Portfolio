@@ -1,6 +1,11 @@
 /** English portfolio copy — mirrors `src/content.ts` */
 
-import type { JourneyEntry, SkillLevel } from '../content'
+import type {
+  JourneyEntry,
+  ProjectEntry,
+  ProjectGalleryImage,
+  SkillLevel,
+} from '../content'
 
 export const site = {
   name: 'Ahmed Alharbi',
@@ -193,7 +198,38 @@ export const skillGroups: {
   },
 ]
 
-export const projects = [
+const maeenGalleryEn: ProjectGalleryImage[] = [
+  {
+    src: '/projects/maeen/01-gesture-fist.png',
+    alt: 'Maeen — hand skeleton tracking with main phrases and quick responses (closed fist)',
+  },
+  {
+    src: '/projects/maeen/02-gesture-four-fingers.png',
+    alt: 'Maeen — four-finger gesture with legal sentence output in the top bar',
+  },
+  {
+    src: '/projects/maeen/03-gesture-index.png',
+    alt: 'Maeen — index-only gesture with beneficiary intro sentence',
+  },
+  {
+    src: '/projects/maeen/04-mobile-chat.png',
+    alt: 'Maeen — mobile smart assistant chat and voice UI',
+  },
+  {
+    src: '/projects/maeen/05-mobile-form.png',
+    alt: 'Maeen — profile form with accessibility controls and voice input',
+  },
+  {
+    src: '/projects/maeen/06-mobile-judgments.png',
+    alt: 'Maeen — judgments list and ruling text for beneficiaries',
+  },
+  {
+    src: '/projects/maeen/07-award.png',
+    alt: 'Maeen — 2nd place trophy and prize check, Judicial Intelligence Hackathon',
+  },
+]
+
+export const projects: ProjectEntry[] = [
   {
     title: 'NextEd: Smart Learning for Outstanding Performance',
     badge: 'Graduation project',
@@ -215,8 +251,12 @@ export const projects = [
     badge: '2nd place — Judicial Intelligence Hackathon',
     summary:
       'An award-winning solution that humanizes judicial workflows through zero-touch interaction: computer vision for gestures and speech-to-text / NLP for voice, lowering cognitive load and making services faster and more inclusive for older adults and people with disabilities.',
+    detail:
+      '**Maeen** is a multi-modal legal interface that placed **2nd** at the **Judicial Intelligence Hackathon** (Board of Grievances). It combines **hand-gesture tracking** (pose-to-phrase mapping), **voice and conversational AI**, and **mobile** flows for beneficiaries—smart chat, voice-enabled forms, and **judgments** review with ruling text—plus **accessibility** controls (text scaling, simplified interaction).',
     tags: ['Computer Vision', 'NLP', 'Accessibility'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_aevaepaeraetaewaeuabraeyaeraepaejabraepaesaeqaeeaepaej-ugcPost-7425600028704083968-Rug_',
+    coverSrc: '/projects/maeen/cover.png',
+    gallery: maeenGalleryEn,
   },
   {
     title: 'NIDAA: AI-Powered EMS & Dispatch Optimization',

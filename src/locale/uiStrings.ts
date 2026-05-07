@@ -1,6 +1,6 @@
 import type { Locale } from './localeContext'
 
-type Ui = {
+export type Ui = {
   skipLink: string
   navAria: string
   navMenuOpen: string
@@ -22,6 +22,10 @@ type Ui = {
   skillsTitle: string
   projectsKicker: string
   projectsTitle: string
+  projectDetailClose: string
+  projectDetailPrev: string
+  projectDetailNext: string
+  projectDetailOpenLink: string
   contactKicker: string
   contactTitle: string
   contactLede: string
@@ -65,6 +69,10 @@ const ar: Ui = {
   skillsTitle: 'شطارتي التقنية',
   projectsKicker: 'المشاريع',
   projectsTitle: 'مشاريعي',
+  projectDetailClose: 'إغلاق',
+  projectDetailPrev: 'السابق',
+  projectDetailNext: 'التالي',
+  projectDetailOpenLink: 'فتح الرابط',
   contactKicker: 'تواصل',
   contactTitle: 'ياليت نتواصل',
   contactLede: 'تقدر ترسل على الإيميل أو تتابعني بالمنصات تحت.',
@@ -108,6 +116,10 @@ const en: Ui = {
   skillsTitle: 'Technical strengths',
   projectsKicker: 'Projects',
   projectsTitle: 'Selected projects',
+  projectDetailClose: 'Close',
+  projectDetailPrev: 'Previous',
+  projectDetailNext: 'Next',
+  projectDetailOpenLink: 'Open link',
   contactKicker: 'Contact',
   contactTitle: 'Let’s connect',
   contactLede: 'Email me or follow the links below.',
