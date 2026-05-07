@@ -279,6 +279,15 @@ const nextedGalleryAr: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const ATQINHA_SLIDE_COUNT = 14
+const atqinhaGalleryAr: ProjectGalleryImage[] = Array.from(
+  { length: ATQINHA_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/atqinha/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `أتقنها — صورة من منشور لينكدإن عن المعسكر والمشروع (${i + 1} من ${ATQINHA_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryAr: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -380,8 +389,12 @@ export const projects: ProjectEntry[] = [
     badge: 'مشروع تخرج — أكاديمية طويق · تطبيق موبايل',
     summary:
       'مشروع تخرج في **أكاديمية طويق**: تطبيق موبايل يساعد المرضى يمارسون تمارين العلاج الطبيعي في البيت بدقة عبر الكاميرا — تقدير وضعية الجسم وتصحيح لحظي بالرؤية الحاسوبية، ومساعد محادثة مبني على ChatGPT للإرشاد، وتقارير دورية للطبيب لمتابعة التقدّم. مبني بـ Flutter وFirebase.',
+    detail:
+      '**أتقنها** مشروع تخرج في **معسكر علوم البيانات والذكاء الاصطناعي** في **أكاديمية طويق** (10 أسابيع). يركّز على **العلاج الطبيعي في المنزل** عبر كاميرا الجوال: **تقدير الوضعية** وتصحيح لحظي، **ChatGPT** كمساعد إرشادي، وتقارير للطبيب. الصور أدناه مأخوذة من **منشور لينكدإن** يشرح المعسكر والفريق والركائز التقنية.',
     tags: ['Flutter', 'Firebase', 'ChatGPT API'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A3%D8%AA%D8%B4%D8%B1%D9%81-%D8%A8%D9%85%D8%B4%D8%A7%D8%B1%D9%83%D8%AA%D9%83%D9%85-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%AE%D8%A8%D8%B1-%D8%A5%D8%AA%D9%85%D8%A7%D9%85%D9%8A-%D9%84%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-ugcPost-7409584346459918337-Q-ok',
+    coverSrc: '/projects/atqinha/cover.png',
+    gallery: atqinhaGalleryAr,
   },
   {
     title: 'الميدان Maydan | إدارة مسرح ذكية بالبيانات',

@@ -237,6 +237,15 @@ const nextedGalleryEn: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const ATQINHA_SLIDE_COUNT = 14
+const atqinhaGalleryEn: ProjectGalleryImage[] = Array.from(
+  { length: ATQINHA_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/atqinha/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `Atqinha — image from the LinkedIn post on the bootcamp and project (${i + 1} of ${ATQINHA_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryEn: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -338,8 +347,12 @@ export const projects: ProjectEntry[] = [
     badge: 'Capstone — Tuwaiq Academy · Mobile app',
     summary:
       'Capstone project at **Tuwaiq Academy**: a mobile app that helps patients do PT exercises correctly at home using the phone camera—pose estimation and real-time correction with computer vision, a customized ChatGPT-based assistant for guidance, and periodic performance reports for physicians. Cross-platform Flutter with Firebase backend.',
+    detail:
+      '**Atqinha** is the **Data Science & AI Bootcamp** capstone at **Tuwaiq Academy** (10 weeks). It targets **at-home physical therapy** with the phone camera: **pose estimation** and live correction, a **ChatGPT**-based guidance assistant, and **physician-facing reports**. The gallery images are exported from the **LinkedIn post** that describes the bootcamp journey, team, and technical pillars.',
     tags: ['Flutter', 'Firebase', 'ChatGPT API'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A3%D8%AA%D8%B4%D8%B1%D9%81-%D8%A8%D9%85%D8%B4%D8%A7%D8%B1%D9%83%D8%AA%D9%83%D9%85-%D8%A7%D9%84%D9%8A%D9%88%D9%85-%D8%AE%D8%A8%D8%B1-%D8%A5%D8%AA%D9%85%D8%A7%D9%85%D9%8A-%D9%84%D9%85%D8%AA%D8%B7%D9%84%D8%A8%D8%A7%D8%AA-ugcPost-7409584346459918337-Q-ok',
+    coverSrc: '/projects/atqinha/cover.png',
+    gallery: atqinhaGalleryEn,
   },
   {
     title: 'Maydan (الميدان) | Smart theatre management',
