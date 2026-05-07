@@ -229,6 +229,49 @@ const maeenGalleryEn: ProjectGalleryImage[] = [
   },
 ]
 
+const aynGalleryEn: ProjectGalleryImage[] = [
+  {
+    src: '/projects/ayn/01-dashboard-kpi.png',
+    alt: 'Ayn — data quality KPI dashboard, end-of-analysis report, and charts',
+  },
+  {
+    src: '/projects/ayn/02-data-grid.png',
+    alt: 'Ayn — data grid with error/warning highlighting and per-row confidence',
+  },
+  {
+    src: '/projects/ayn/03-details-modal.png',
+    alt: 'Ayn — row detail modal with issues, suggestions, rules and AI context',
+  },
+  {
+    src: '/projects/ayn/04-analysis-insights.png',
+    alt: 'Ayn — top field/message repetition, interpretations, and practical suggestions',
+  },
+  {
+    src: '/projects/ayn/05-alerts-grid.png',
+    alt: 'Ayn — filterable alerts grid by severity and alert type',
+  },
+  {
+    src: '/projects/ayn/06-form-demographic.png',
+    alt: 'Ayn — demographic form with real-time rule validation',
+  },
+  {
+    src: '/projects/ayn/07-realtime-verify.png',
+    alt: 'Ayn — real-time verification summary with LLM narrative and rule violations',
+  },
+  {
+    src: '/projects/ayn/08-form-economic.png',
+    alt: 'Ayn — operational/economic fields with contradiction and salary/hours checks',
+  },
+  {
+    src: '/projects/ayn/09-award-check-gastat.png',
+    alt: 'Ayn — 2nd place ceremonial check, UN World Data Forum Riyadh & GASTAT',
+  },
+  {
+    src: '/projects/ayn/10-team-award.png',
+    alt: 'Ayn — team with award check at the data forum',
+  },
+]
+
 export const projects: ProjectEntry[] = [
   {
     title: 'NextEd: Smart Learning for Outstanding Performance',
@@ -243,8 +286,12 @@ export const projects: ProjectEntry[] = [
     badge: '2nd place — Data Innovation Hackathon · General Authority for Statistics',
     summary:
       '**Second place** on the winners’ podium at the **Data Innovation Hackathon** organized by the **General Authority for Statistics**, among **132 teams**. The idea: **Ayn** improves **data quality at the source** by combining **AI**, **large language models**, and **business rules** so validation happens **as data is entered**, not only in a later phase.',
+    detail:
+      '**Ayn** is a **data-quality-at-capture** platform: KPI dashboards, color-coded grids, **filterable alerts**, and **analysis reports** with LLM-assisted narrative alongside a **business-rules layer**. It supports **real-time validation** on forms (demographic and economic) with clear issue text and suggestions, plus a **row detail** view for deep review. The project placed **2nd** at the GASTAT hackathon and is tied to recognition at the **UN World Data Forum** in Riyadh.',
     tags: ['LLMs', 'Data quality', 'Arabic NLP'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A8%D9%81%D8%B6%D9%84-%D8%A7%D9%84%D9%84%D9%87-%D9%88%D8%AA%D9%88%D9%81%D9%8A%D9%82%D9%87-%D8%A7%D8%B3%D8%B7%D8%A7%D8%B9-%D9%81%D8%B1%D9%8A%D9%82%D9%86%D8%A7-%D8%A7%D8%B9%D8%AA%D9%84%D8%A7%D8%A1-%D9%85%D9%86%D8%B5%D8%A9-activity-7452363902543204352-Kw0C',
+    coverSrc: '/projects/ayn/cover.png',
+    gallery: aynGalleryEn,
   },
   {
     title: 'Maeen (معين) | AI-Powered Multi-Modal Legal Interface',
