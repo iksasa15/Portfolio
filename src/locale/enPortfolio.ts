@@ -264,6 +264,57 @@ const rasdGalleryEn: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const MAYDAN_ALT_EN = [
+  'Maydan — landing page, search, and featured events',
+  'Maydan — booking confirmation, order details, and digital tickets',
+  'Maydan — checkout with order summary and buyer information',
+  'Maydan — digital ticket, countdown, download and calendar actions',
+  'Maydan — ticket & sales analytics, channels, and conversion KPIs',
+  'Maydan — operations & staff efficiency and crowd heatmap',
+  'Maydan — IoT asset health and preventive maintenance schedule',
+  'Maydan — security module, violations, and fines log',
+  'Maydan — live command center and emergency quick actions',
+  'Maydan — executive overview, revenue trends, and show performance',
+  'Maydan — AI decision center with sentiment and strategic recommendations',
+  'Maydan — explore categories and about section',
+  'Maydan — finance dashboard, budget vs actual, and break-even analysis',
+] as const
+
+const maydanGalleryEn: ProjectGalleryImage[] = MAYDAN_ALT_EN.map((alt, i) => ({
+  src: `/projects/maydan/slide-${String(i + 1).padStart(2, '0')}.png`,
+  alt,
+}))
+
+const MIDHAL_ALT_EN = [
+  'Midhal — home hero, Saudi heritage positioning, and primary CTAs',
+  'Midhal — navigation, hero, and start of the heritage discovery section',
+  'Midhal — heritage discovery cards: proverbs, anthropology, mythology, and poetry',
+  'Midhal — folk poems listing with a featured poet card',
+  'Midhal — detail modal with portrait and long-form archival biography',
+  'Midhal — interactive Leaflet map with a heritage site marker and popup',
+] as const
+
+const midhalGalleryEn: ProjectGalleryImage[] = MIDHAL_ALT_EN.map((alt, i) => ({
+  src: `/projects/midhal/slide-${String(i + 1).padStart(2, '0')}.png`,
+  alt,
+}))
+
+const MEDINMIND_ALT_EN = [
+  'MedinMind Ai — title slide for AI-powered emergency medical resource allocation (SDAIA Athka U, Tabuk University, Azure)',
+  'Objectives — dynamic resource allocation, faster critical response, saving lives',
+  'Technology stack — Azure AI Services, Azure Database, Speech Services',
+  'Pre-model analysis — urban/rural time, utilization, peak hours, idle time',
+  'Post-model analysis — metrics after training',
+  'Outcomes — survival, satisfaction, dynamic allocation, reduced travel distance',
+  'Lean canvas — problem, solution, UVP, metrics, channels, segments',
+  'Dispatcher UI — map with optimized ambulance route, distance and ETA summary',
+] as const
+
+const medinmindGalleryEn: ProjectGalleryImage[] = MEDINMIND_ALT_EN.map((alt, i) => ({
+  src: `/projects/medinmind/slide-${String(i + 1).padStart(2, '0')}.png`,
+  alt,
+}))
+
 const aynGalleryEn: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -361,8 +412,10 @@ export const projects: ProjectEntry[] = [
     badge: 'Savvy Games Incubator · Game development',
     summary:
       '**Guardians** is an immersive **strategy** game that puts the **planet’s future** in your hands. The world stands on the brink of a **barren wasteland**; players must battle the **encroaching sands of desertification** before the last green life is gone. Built on the **Unity engine** with **C#**—scenes, gameplay systems, 3D assets, and UI.',
-    tags: ['Unity', 'C#', 'Game dev'],
-    href: '#',
+    detail:
+      'Product narrative, mechanics overview, and visual pitch for **Guardians** are available as a hosted **PDF** deck—the project link opens the file in the browser.',
+    tags: ['🎮 Unity', '🔷 C#', '🕹️ Game dev'],
+    href: '/projects/guardians/Guardians-2.pdf',
   },
   {
     title: 'Atqinha | Smart physical therapy at home',
@@ -381,8 +434,12 @@ export const projects: ProjectEntry[] = [
     badge: 'SaaS',
     summary:
       'A cloud platform that bridges art and operations: automated scheduling across people, budgets, and venues; analytics to cut “show failure” risk and revenue leakage; and audience and pricing insights to grow sustainable cultural institutions—data-driven theatre management.',
+    detail:
+      '**Maydan** pairs a **public booking experience** (discover events, search, checkout, confirmation, digital tickets) with a dark **executive command center**—sales, finance, security, **IoT asset health**, operations, and an **AI decision center**. Gallery screenshots are high-fidelity UI exports from the project.',
     tags: ['SaaS', 'Analytics', 'Cloud'],
     href: '#',
+    coverSrc: '/projects/maydan/cover.png',
+    gallery: maydanGalleryEn,
   },
   {
     title: 'RASD (منظومة رصد) | Drone swarm security & AI',
@@ -401,16 +458,24 @@ export const projects: ProjectEntry[] = [
     badge: 'Platform',
     summary:
       'An integrated platform to collect and archive Saudi history—folk tales, rare documents, archaeological sites, and cultural change—through a modern, interactive experience for researchers and future generations.',
+    detail:
+      '**Midhal** is an Arabic **RTL** heritage site: a **marketing home** for discovery, a **heritage grid** (proverbs, anthropology, mythology, poetry), **folk poems** with cards plus a **read-more modal** for long biographies, and an **interactive map** (Leaflet / OpenStreetMap) with pins and popups for historic places. Gallery shots are UI exports from the project.',
     tags: ['Archive', 'Heritage', 'Web'],
     href: '#',
+    coverSrc: '/projects/midhal/cover.png',
+    gallery: midhalGalleryEn,
   },
   {
     title: 'AI medical resource allocation & emergency routing',
     badge: 'Athka U Hackathon — Sdaya',
     summary:
       'Smart emergency response recommendations that combine live traffic, hospital load, ambulance availability, patient location, and optimized routing to improve allocation—shorter travel, better satisfaction, and higher survival outcomes.',
+    detail:
+      '**MedinMind Ai** for **SDAIA Athka U**: dynamic EMS resource allocation with **Azure AI** and **Azure Maps**, pre/post model analytics, outcome metrics, a lean-canvas narrative, and a **Dispatcher** prototype with map-based routing and ETA summaries. Gallery slides are from the pitch deck and demo UI.',
     tags: ['Routing', 'Optimization', 'Azure'],
     href: '#',
+    coverSrc: '/projects/medinmind/cover.png',
+    gallery: medinmindGalleryEn,
   },
 ]
 
