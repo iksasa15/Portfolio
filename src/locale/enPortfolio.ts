@@ -246,6 +246,15 @@ const atqinhaGalleryEn: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const NIDAA_SLIDE_COUNT = 9
+const nidaaGalleryEn: ProjectGalleryImage[] = Array.from(
+  { length: NIDAA_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/nidaa/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `NIDAA — image from the LinkedIn post (${i + 1} of ${NIDAA_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryEn: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -331,8 +340,12 @@ export const projects: ProjectEntry[] = [
     badge: 'Emergency Science & Safety Hackathon',
     summary:
       'AI-driven EMS concept focused on cutting response times: CV and NLP on calls and patient data, AML for precise caller location, and data links across Seha, Tawakkalna, and EMS so paramedics get context fast—including workflows for peak demand and accessibility for disability reporting. Stack: Microsoft Azure; partners: SRCA, MOH, and related national entities.',
+    detail:
+      '**NIDAA** was shortlisted among the **top 10** projects in the **Emergency & Safety Sciences Hackathon** (Prince Sultan College for Emergency Medical Services), born from a **30-day coding challenge**. The team shipped an integrated **mobile app + dashboard** aimed at faster EMS response—the post highlights roughly **13 minutes down to 8**. The stack combines **Flutter & Firebase**, **generative AI** for triage and report generation, and a **pathfinding** approach for ambulance routing. Gallery images are from the **LinkedIn announcement**.',
     tags: ['Azure', 'Computer Vision', 'NLP'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A7%D9%84%D8%AD%D9%85%D8%AF-%D9%84%D9%84%D9%87-%D8%A8%D8%AE%D8%AA%D8%A7%D9%85-%D9%85%D9%83%D9%84%D9%84-%D8%A8%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%AA%D8%B1%D8%B4%D9%8A%D8%AD-activity-7426614569072152576-JtbG',
+    coverSrc: '/projects/nidaa/cover.jpg',
+    gallery: nidaaGalleryEn,
   },
   {
     title: 'Guardians | Immersive strategy vs. desertification',

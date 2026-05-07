@@ -288,6 +288,15 @@ const atqinhaGalleryAr: ProjectGalleryImage[] = Array.from(
   }),
 )
 
+const NIDAA_SLIDE_COUNT = 9
+const nidaaGalleryAr: ProjectGalleryImage[] = Array.from(
+  { length: NIDAA_SLIDE_COUNT },
+  (_, i) => ({
+    src: `/projects/nidaa/slide-${String(i + 1).padStart(2, '0')}.jpg`,
+    alt: `نداء NIDAA — صورة من منشور لينكدإن (${i + 1} من ${NIDAA_SLIDE_COUNT})`,
+  }),
+)
+
 const aynGalleryAr: ProjectGalleryImage[] = [
   {
     src: '/projects/ayn/01-dashboard-kpi.png',
@@ -373,8 +382,12 @@ export const projects: ProjectEntry[] = [
     badge: 'هاكاثون العلوم والسلامة في الطوارئ',
     summary:
       'منصة تستهدف تقصير زمن الاستجابة الطارئة عبر تحليل المكالمات والبيانات بموديلات رؤية ولغة طبيعية، وتوجيه ذكي مع تقنية تحديد الموقع المتقدم (AML)، وتكامل بيانات بين منظومات مثل «صحة» و«توكلنا» والإسعاف عشان القرار والوصول أسرع، مع دعم بلاغات لذوي الإعاقة.',
+    detail:
+      '**نداء (NIDAA)** ضمن **أفضل 10 مشاريع** في **هاكاثون علوم الطوارئ والسلامة** (كلية الأمير سلطان للخدمات الطبية الطارئة)، انطلاقاً من **تحدي 30 يوم برمجة**. منظومة متكاملة (تطبيق + لوحة تحكم) هدفت لتقصير زمن الاستجابة؛ وُصف في المنشور تقريباً من **13 دقيقة إلى 8 دقائق**. يدمج **Flutter وFirebase**، **ذكاء اصطناعي توليدي** لفرز البلاغات وتوليد تقارير، و**خوارزمية مسار** لتوجيه الإسعاف. الصور من **منشور لينكدإن**.',
     tags: ['Azure', 'رؤية حاسوبية', 'NLP'],
-    href: '#',
+    href: 'https://www.linkedin.com/posts/ahmed014x_%D8%A7%D9%84%D8%AD%D9%85%D8%AF-%D9%84%D9%84%D9%87-%D8%A8%D8%AE%D8%AA%D8%A7%D9%85-%D9%85%D9%83%D9%84%D9%84-%D8%A8%D8%A7%D9%84%D9%86%D8%AC%D8%A7%D8%AD-%D8%B3%D8%B9%D8%AF%D8%AA-%D8%A8%D8%AA%D8%B1%D8%B4%D9%8A%D8%AD-activity-7426614569072152576-JtbG',
+    coverSrc: '/projects/nidaa/cover.jpg',
+    gallery: nidaaGalleryAr,
   },
   {
     title: 'Guardians | لعبة استراتيجية ضد التصحّر',
