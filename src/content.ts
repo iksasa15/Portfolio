@@ -16,8 +16,20 @@ export const site = {
     {
       label: 'لينكدإن',
       href: 'https://linkedin.com/in/ahmed014x',
-      handle: 'in/ahmed014x',
+      handle: 'ahmed014x',
       iconId: 'portfolio-linkedin-icon' as const,
+    },
+    {
+      label: 'إكس',
+      href: 'https://x.com/ahmed014x',
+      handle: '@ahmed014x',
+      iconId: 'portfolio-x-icon' as const,
+    },
+    {
+      label: 'إنستقرام',
+      href: 'https://www.instagram.com/ahmed014x/',
+      handle: '@ahmed014x',
+      iconId: 'portfolio-instagram-icon' as const,
     },
     {
       label: 'قيت هاب',

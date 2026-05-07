@@ -23,8 +23,20 @@ export const site = {
     {
       label: 'LinkedIn',
       href: 'https://linkedin.com/in/ahmed014x',
-      handle: 'in/ahmed014x',
+      handle: 'ahmed014x',
       iconId: 'portfolio-linkedin-icon' as const,
+    },
+    {
+      label: 'X',
+      href: 'https://x.com/ahmed014x',
+      handle: '@ahmed014x',
+      iconId: 'portfolio-x-icon' as const,
+    },
+    {
+      label: 'Instagram',
+      href: 'https://www.instagram.com/ahmed014x/',
+      handle: '@ahmed014x',
+      iconId: 'portfolio-instagram-icon' as const,
     },
     {
       label: 'GitHub',
