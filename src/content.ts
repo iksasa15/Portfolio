@@ -7,6 +7,14 @@ export const site = {
   tagline:
     'أصمّم وأطلق حلول ذكاء اصطناعي للإنتاج: أربط **موديلات لغوية ضخمة** بمسارات العمل، أبني **رؤية حاسوبية** يُعتمد عليها، وأشغّل **أتمتة** تقودها البيانات من أول إدخال.',
   email: 'ahmednalharbii@gmail.com',
+  /** عرض محلي؛ الرابط tel بصيغة دولية */
+  phone: {
+    display: '+966 54 096 6063',
+    tel: '+966540966063',
+  },
+  whatsapp: {
+    href: 'https://wa.me/966540966063',
+  },
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
     downloadFileName: 'Ahmed-Alharbi-CV.pdf',

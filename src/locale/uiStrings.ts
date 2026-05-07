@@ -32,6 +32,8 @@ export type Ui = {
   contactCvLabel: string
   contactCvHint: string
   contactMailLabel: string
+  contactPhoneLabel: string
+  contactWhatsappLabel: string
   footerLine: string
   levelExpert: string
   levelAdvanced: string
@@ -79,6 +81,8 @@ const ar: Ui = {
   contactCvLabel: 'السيرة',
   contactCvHint: 'ملف PDF',
   contactMailLabel: 'الإيميل',
+  contactPhoneLabel: 'الجوال',
+  contactWhatsappLabel: 'واتساب',
   footerLine: 'صُنع بحب من **أحمد الحربـي**',
   levelExpert: 'قوي',
   levelAdvanced: 'زين',
@@ -126,6 +130,8 @@ const en: Ui = {
   contactCvLabel: 'Résumé',
   contactCvHint: 'PDF file',
   contactMailLabel: 'Email',
+  contactPhoneLabel: 'Phone',
+  contactWhatsappLabel: 'WhatsApp',
   footerLine: 'Made with love by **Ahmed Alharbi**',
   levelExpert: 'Strong',
   levelAdvanced: 'Solid',

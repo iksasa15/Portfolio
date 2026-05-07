@@ -556,10 +556,39 @@ export function PortfolioPage() {
               <span className="contact-cv__value">{p.site.cv.label}</span>
               <span className="contact-cv__hint">{ui.contactCvHint}</span>
             </a>
-            <a className="contact-mail" href={`mailto:${p.site.email}`}>
-              <span className="contact-mail__label">{ui.contactMailLabel}</span>
-              <span className="contact-mail__value">{p.site.email}</span>
-            </a>
+            <div className="contact-stack">
+              <a className="contact-mail" href={`mailto:${p.site.email}`}>
+                <span className="contact-mail__label">{ui.contactMailLabel}</span>
+                <span className="contact-mail__value">{p.site.email}</span>
+              </a>
+              <a
+                className="contact-mail"
+                href={`tel:${p.site.phone.tel}`}
+              >
+                <span className="contact-mail__label">
+                  {ui.contactPhoneLabel}
+                </span>
+                <span className="contact-mail__value" dir="ltr">
+                  {p.site.phone.display}
+                </span>
+              </a>
+              <a
+                className="btn btn--ghost contact-whatsapp"
+                href={p.site.whatsapp.href}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <svg
+                  className="contact-whatsapp__icon"
+                  width={22}
+                  height={22}
+                  aria-hidden
+                >
+                  <use href="/icons.svg#portfolio-whatsapp-icon" />
+                </svg>
+                {ui.contactWhatsappLabel}
+              </a>
+            </div>
             <ul className="social-list">
               {p.site.social.map((s) => (
                 <li key={s.href}>

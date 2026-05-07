@@ -14,6 +14,13 @@ export const site = {
   tagline:
     'I design and ship production AI: connecting **large language models** to real workflows, building **computer vision** you can rely on, and running **automation** driven by data from the first input.',
   email: 'ahmednalharbii@gmail.com',
+  phone: {
+    display: '+966 54 096 6063',
+    tel: '+966540966063',
+  },
+  whatsapp: {
+    href: 'https://wa.me/966540966063',
+  },
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
     downloadFileName: 'Ahmed-Alharbi-CV.pdf',
