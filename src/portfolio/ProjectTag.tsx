@@ -5,9 +5,13 @@ function emojiForTag(label: string): string | null {
   if (lower === 'flutter') return '📱'
   if (lower === 'firebase') return '🔥'
   if (lower.includes('chatgpt') || lower.includes('gpt')) return '🤖'
+  if (lower === 'llm' || lower === 'llms') return '🧠'
+
+  if (raw === 'جودة البيانات' || lower === 'data quality') return '📊'
+  if (raw === 'نماذج لغوية') return '🔤'
 
   if (lower === 'computer vision' || raw === 'رؤية حاسوبية') return '👁️'
-  if (lower === 'nlp') return '💬'
+  if (lower === 'nlp' || lower.endsWith(' nlp')) return '💬'
   if (lower === 'accessibility' || raw === 'إمكانية الوصول') return '♿'
 
   if (lower === 'azure') return '☁️'
