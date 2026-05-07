@@ -1425,19 +1425,29 @@ html[data-theme='light'] .project-modal {
 
 .project-modal__carousel {
   touch-action: pan-y pinch-zoom;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  width: 100%;
+  /* Fixed frame between slides; image scales inside via object-fit */
+  height: min(52dvh, 440px);
+  min-height: min(52dvh, 440px);
+  background: #0c1420;
 }
 
 .project-modal__img {
   display: block;
-  width: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
   height: auto;
-  max-height: min(52dvh, 440px);
   object-fit: contain;
-  object-position: top center;
-  background: #0c1420;
+  object-position: center;
 }
 
-html[data-theme='light'] .project-modal__img {
+html[data-theme='light'] .project-modal__carousel {
   background: #e8ecf4;
 }
 

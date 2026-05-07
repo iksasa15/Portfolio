@@ -458,6 +458,7 @@ export const projects: ProjectEntry[] = [
       'عرض المنتج والفكرة والّقطات البصرية للعبة متاحة كملف **PDF** (عرض Guardians) — الرابط يفتح الملف من الموقع.',
     tags: ['🎮 Unity', '🔷 C#', '🕹️ ألعاب'],
     href: '/projects/guardians/Guardians-2.pdf',
+    coverSrc: '/projects/guardians/cover.png',
   },
   {
     title: 'أتقنها Atqinha | علاج طبيعي ذكي بالموبايل',

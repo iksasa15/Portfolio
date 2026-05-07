@@ -416,6 +416,7 @@ export const projects: ProjectEntry[] = [
       'Product narrative, mechanics overview, and visual pitch for **Guardians** are available as a hosted **PDF** deck—the project link opens the file in the browser.',
     tags: ['🎮 Unity', '🔷 C#', '🕹️ Game dev'],
     href: '/projects/guardians/Guardians-2.pdf',
+    coverSrc: '/projects/guardians/cover.png',
   },
   {
     title: 'Atqinha | Smart physical therapy at home',
