@@ -1,11 +1,13 @@
 import {
   useCallback,
   useEffect,
+  useLayoutEffect,
   useMemo,
   useState,
   type KeyboardEvent as ReactKeyboardEvent,
   type ReactNode,
 } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { useSequentialTypewriter } from '../hooks/useSequentialTypewriter'
 import { useReveal } from '../hooks/useReveal'
 import { subscribeScrollDirection } from '../scrollDirection'
@@ -50,6 +52,7 @@ const NAV_DRAWER_BP = 900
 export function PortfolioPage() {
   const { theme } = useTheme()
   const { locale } = useLocale()
+  const location = useLocation()
   const ui = useMemo(() => getUi(locale), [locale])
   const p = useMemo(() => getPortfolio(locale), [locale])
   const [navOpen, setNavOpen] = useState(false)
@@ -85,6 +88,13 @@ export function PortfolioPage() {
       document.body.style.overflow = ''
     }
   }, [navOpen])
+
+  useLayoutEffect(() => {
+    if (location.hash !== '#contact') return
+    const el = document.getElementById('contact')
+    if (!el) return
+    el.scrollIntoView({ block: 'start' })
+  }, [location.pathname, location.hash])
 
   const levelLabel = (level: SkillLevel) => {
     switch (level) {
@@ -175,6 +185,30 @@ export function PortfolioPage() {
                   </li>
                 ))}
               </ul>
+              <div
+                className="nav-drawer-services"
+                role="region"
+                aria-labelledby="nav-drawer-services-heading"
+              >
+                <Link
+                  id="nav-drawer-services-heading"
+                  className="btn btn--primary nav-drawer-services__heading-btn"
+                  to="/services"
+                  onClick={closeNav}
+                >
+                  {ui.navDrawerServicesTitle}
+                </Link>
+                <p className="nav-drawer-services__blurb">
+                  {ui.navDrawerServicesBlurb}
+                </p>
+                <Link
+                  className="nav-drawer-services__cta"
+                  to="/#contact"
+                  onClick={closeNav}
+                >
+                  {ui.navDrawerServicesCta}
+                </Link>
+              </div>
             </nav>
           </div>
         </div>
