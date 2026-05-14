@@ -751,6 +751,26 @@ html[data-theme='light'] .nav-backdrop {
   align-items: stretch;
 }
 
+.refunds-page__preamble {
+  margin: 0 0 1.75rem;
+  max-width: 52rem;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.refunds-page__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 52rem;
+}
+
+.refunds-page__card-body .svc-card__body + .svc-card__body {
+  margin-top: 0.85rem;
+}
+
 /* ——— Hero ——— */
 main {
   flex: 1;
@@ -1028,7 +1048,8 @@ html[data-theme='light'] .hero__title {
 .timeline__body strong,
 .skill-card strong,
 .project-card strong,
-.lede strong {
+.lede strong,
+.svc-card__body strong {
   font-weight: 800;
   color: var(--heading);
 }
