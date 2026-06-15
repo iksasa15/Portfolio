@@ -17,7 +17,7 @@ export const site = {
   },
   cv: {
     href: '/ahmed-n-alharbi-cv.pdf',
-    downloadFileName: 'Ahmed-Alharbi-CV.pdf',
+    downloadFileName: 'Ahmed_N_Alharbi.pdf',
     label: 'نزّل السيرة (PDF)',
   },
   social: [
