@@ -250,6 +250,11 @@ a {
     border-color 0.2s ease;
 }
 
+.theme-toggle {
+  width: var(--header-control);
+  padding: 0;
+}
+
 .theme-toggle__icon {
   flex-shrink: 0;
   display: block;
@@ -269,8 +274,7 @@ a {
   outline-offset: 2px;
 }
 
-.locale-toggle__text,
-.theme-toggle__text {
+.locale-toggle__text {
   line-height: 1;
 }
 

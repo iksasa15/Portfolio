@@ -23,8 +23,6 @@ export function ThemeToggle() {
       ? 'مظهر فاتح'
       : 'مظهر غامق'
 
-  const label = isEn ? (isDark ? 'Light' : 'Dark') : isDark ? 'مظهر فاتح' : 'مظهر غامق'
-
   return (
     <button
       type="button"
@@ -35,7 +33,6 @@ export function ThemeToggle() {
       title={title}
     >
       {isDark ? <ThemeIconLight /> : <ThemeIconDark />}
-      <span className="theme-toggle__text">{label}</span>
     </button>
   )
 }
