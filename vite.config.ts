@@ -2,6 +2,8 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+import { cloudflare } from "@cloudflare/vite-plugin";
+
 /**
  * خطة تحسين الأداء (Lighthouse / Core Web Vitals) — ما يُطبَّق هنا:
  *
@@ -15,7 +17,7 @@ import react from '@vitejs/plugin-react'
  * - ضغط Brotli/Gzip من خادم الإنتاج (مثلاً Vercel يفعّلها تلقائياً).
  */
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
+  plugins: [tailwindcss(), react(), cloudflare()],
   build: {
     target: 'es2022',
     rollupOptions: {
