@@ -1,3 +1,4 @@
+import { ThemeIconDark, ThemeIconLight } from '../brand/ThemeIcon'
 import { useLocale } from '../locale/useLocale'
 import { useTheme } from './useTheme'
 
@@ -33,6 +34,7 @@ export function ThemeToggle() {
       aria-label={ariaLabel}
       title={title}
     >
+      {isDark ? <ThemeIconLight /> : <ThemeIconDark />}
       <span className="theme-toggle__text">{label}</span>
     </button>
   )
