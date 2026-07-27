@@ -26,6 +26,7 @@ import { BrandIcon, resolveBrandIcon } from '../brand/BrandIcon'
 import { SignalMark } from '../brand/SignalMark'
 import { ProjectDetailModal } from './ProjectDetailModal'
 import { ProjectTag } from './ProjectTag'
+import { SectionHead } from './SectionHead'
 import { renderInlineBold } from '../renderInlineBold'
 
 function RevealSection({
@@ -292,10 +293,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="about">
-            {ui.aboutKicker}
-          </p>
-          <h2 className="section-title">{ui.aboutTitle}</h2>
+          <SectionHead
+            id="about"
+            index="01"
+            kicker={ui.aboutKicker}
+            title={ui.aboutTitle}
+          />
           <div className="prose">
             {p.aboutParagraphs.map((para, i) => (
               <p key={`about-${i}`}>{renderInlineBold(para)}</p>
@@ -308,10 +311,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="education">
-            {ui.educationKicker}
-          </p>
-          <h2 className="section-title">{ui.educationTitle}</h2>
+          <SectionHead
+            id="education"
+            index="02"
+            kicker={ui.educationKicker}
+            title={ui.educationTitle}
+          />
           <div className="edu-grid">
             {p.education.map((item) => (
               <article
@@ -371,10 +376,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="journey">
-            {ui.journeyKicker}
-          </p>
-          <h2 className="section-title">{ui.journeyTitle}</h2>
+          <SectionHead
+            id="journey"
+            index="03"
+            kicker={ui.journeyKicker}
+            title={ui.journeyTitle}
+          />
           <ol className="timeline">
             {p.journey.map((item) => (
               <li key={`${item.range}-${item.org}`} className="timeline__item">
@@ -415,10 +422,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="volunteering">
-            {ui.volunteerKicker}
-          </p>
-          <h2 className="section-title">{ui.volunteerTitle}</h2>
+          <SectionHead
+            id="volunteering"
+            index="04"
+            kicker={ui.volunteerKicker}
+            title={ui.volunteerTitle}
+          />
           <ol className="timeline timeline--volunteer">
             {p.volunteering.map((item) => (
               <li
@@ -462,10 +471,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="skills">
-            {ui.skillsKicker}
-          </p>
-          <h2 className="section-title">{ui.skillsTitle}</h2>
+          <SectionHead
+            id="skills"
+            index="05"
+            kicker={ui.skillsKicker}
+            title={ui.skillsTitle}
+          />
           <div className="skill-grid">
             {p.skillGroups.map((group) => {
               const brandIcon = resolveBrandIcon(group.icon)
@@ -512,10 +523,12 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section">
-          <p className="kicker" id="projects">
-            {ui.projectsKicker}
-          </p>
-          <h2 className="section-title">{ui.projectsTitle}</h2>
+          <SectionHead
+            id="projects"
+            index="06"
+            kicker={ui.projectsKicker}
+            title={ui.projectsTitle}
+          />
           <div className="project-grid">
             {p.projects.map((proj) => {
               const hasGallery = Boolean(proj.gallery?.length)
@@ -594,8 +607,11 @@ export function PortfolioPage() {
         </div>
 
         <RevealSection className="shell section section--contact" id="contact">
-          <p className="kicker">{ui.contactKicker}</p>
-          <h2 className="section-title">{ui.contactTitle}</h2>
+          <SectionHead
+            index="07"
+            kicker={ui.contactKicker}
+            title={ui.contactTitle}
+          />
           <p className="lede">{renderInlineBold(ui.contactLede)}</p>
           <div className="contact-panel">
             <a
