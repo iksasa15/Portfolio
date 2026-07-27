@@ -15,8 +15,8 @@ import {
 const STORAGE_KEY = 'portfolio-theme'
 
 const THEME_COLOR = {
-  dark: '#0c1420',
-  light: '#eef2f9',
+  dark: '#0B0D10',
+  light: '#F2F4F6',
 } as const
 
 function readStoredPreference(): ThemePreference | null {

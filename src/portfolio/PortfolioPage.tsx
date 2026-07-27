@@ -22,6 +22,9 @@ import {
 } from '../theme/resolveBrandLogo'
 import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
+import { BrandIcon, resolveBrandIcon } from '../brand/BrandIcon'
+import { SignalMark } from '../brand/SignalMark'
+import { SignalOrnament } from '../brand/SignalOrnament'
 import { ProjectDetailModal } from './ProjectDetailModal'
 import { ProjectTag } from './ProjectTag'
 import { renderInlineBold } from '../renderInlineBold'
@@ -147,6 +150,7 @@ export function PortfolioPage() {
       <header className="site-header">
         <div className="shell site-header__inner">
           <a className="brand" href="#intro">
+            <SignalMark />
             <span className="brand__text">
               <span className="brand__given">{brandSplit.first}</span>
               {brandSplit.rest ? (
@@ -216,6 +220,7 @@ export function PortfolioPage() {
 
       <main>
         <section id="intro" className="hero shell">
+          <SignalOrnament className="hero__ornament" />
           <p className="hero__hello hero-intro-enter">
             <span className="wave" aria-hidden>
               👋
@@ -265,15 +270,22 @@ export function PortfolioPage() {
             className="stat-row hero-intro-enter hero-intro-enter--d2"
             aria-label={ui.statRowAria}
           >
-            {p.stats.map((s) => (
+            {p.stats.map((s) => {
+              const brandIcon = resolveBrandIcon(s.icon)
+              return (
               <li key={s.label} className="stat-card">
                 <span className="stat-card__icon" aria-hidden>
-                  {s.icon}
+                  {brandIcon ? (
+                    <BrandIcon name={brandIcon} size={28} />
+                  ) : (
+                    s.icon
+                  )}
                 </span>
                 <span className="stat-card__value">{s.value}</span>
                 <span className="stat-card__label">{s.label}</span>
               </li>
-            ))}
+              )
+            })}
           </ul>
         </section>
 
@@ -457,11 +469,17 @@ export function PortfolioPage() {
           </p>
           <h2 className="section-title">{ui.skillsTitle}</h2>
           <div className="skill-grid">
-            {p.skillGroups.map((group) => (
+            {p.skillGroups.map((group) => {
+              const brandIcon = resolveBrandIcon(group.icon)
+              return (
               <article key={group.title} className="skill-card">
                 <header className="skill-card__head">
                   <span className="skill-card__icon" aria-hidden>
-                    {group.icon}
+                    {brandIcon ? (
+                      <BrandIcon name={brandIcon} size={26} />
+                    ) : (
+                      group.icon
+                    )}
                   </span>
                   <h3>{renderInlineBold(group.title)}</h3>
                 </header>
@@ -486,7 +504,8 @@ export function PortfolioPage() {
                   ))}
                 </ul>
               </article>
-            ))}
+              )
+            })}
           </div>
         </RevealSection>
 
@@ -648,6 +667,7 @@ export function PortfolioPage() {
       </main>
 
       <footer className="site-footer shell">
+        <SignalMark className="site-footer__mark" />
         <p>
           © {new Date().getFullYear()}. {renderInlineBold(ui.footerLine)}
         </p>

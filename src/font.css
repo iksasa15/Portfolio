@@ -62,4 +62,5 @@
 
 :root {
   --font: 'Thmanyah Sans', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
 }
