@@ -11,7 +11,7 @@ const stroke = {
   strokeLinejoin: 'round' as const,
 }
 
-/** قمر — من brand-package/svg/icons-sheet (Stroke 7 · Round) */
+/** هلال — من دليل الهوية «وضع داكن» (Stroke 7 · Round + عقدة تركواز) */
 export function ThemeIconDark({
   className = 'theme-toggle__icon',
   size = 20,
@@ -25,10 +25,8 @@ export function ThemeIconDark({
       aria-hidden
       focusable="false"
     >
-      <path
-        {...stroke}
-        d="M62 16a22 22 0 0 0-22 22c0 3 .6 5.8 1.6 8.4L16 72v8h12l4-8h8l4-8h8l3-6a22 22 0 1 0 7-42z"
-      />
+      <path {...stroke} d="M42 14a26 26 0 1 0 40 40 30 30 0 1 1-40-40z" />
+      <circle cx="70" cy="24" r="5" fill="var(--accent)" stroke="none" />
     </svg>
   )
 }
