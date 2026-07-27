@@ -1,38 +1,37 @@
+import { useTheme } from '../theme/useTheme'
+
 type SignalMarkProps = {
   className?: string
   title?: string
+  size?: number
 }
 
-/** Approved mark 1c — الإشارة (two offset bars + node). */
-export function SignalMark({ className = 'brand__mark', title }: SignalMarkProps) {
+/**
+ * رمز الإشارة من brand-package:
+ * - داكن: logo-mark.svg (تركواز + أبيض)
+ * - فاتح: logo-mark-on-light.svg (تركواز + ليل)
+ */
+export function SignalMark({
+  className = 'brand__mark',
+  title = 'احمد الحربي',
+  size = 28,
+}: SignalMarkProps) {
+  const { theme } = useTheme()
+  const src =
+    theme === 'light'
+      ? '/brand/logo-mark-on-light.svg'
+      : '/brand/logo-mark.svg'
+
   return (
-    <svg
+    <img
       className={className}
-      viewBox="0 0 96 96"
-      width={28}
-      height={28}
-      aria-hidden={title ? undefined : true}
-      role={title ? 'img' : undefined}
-      focusable="false"
-    >
-      {title ? <title>{title}</title> : null}
-      <rect
-        x="16"
-        y="30"
-        width="44"
-        height="12"
-        rx="6"
-        fill="var(--mark-bar)"
-      />
-      <rect
-        x="36"
-        y="54"
-        width="44"
-        height="12"
-        rx="6"
-        fill="var(--mark-light)"
-      />
-      <circle cx="74" cy="36" r="7" fill="var(--mark-light)" />
-    </svg>
+      src={src}
+      width={size}
+      height={size}
+      alt=""
+      title={title}
+      decoding="async"
+      draggable={false}
+    />
   )
 }
