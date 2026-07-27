@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="2540" viewBox="0 0 1600 2540" font-family="Thmanyah Sans">
+<rect width="1600" height="2540" fill="#0B0D10"></rect>
+
+<g transform="translate(1460,60) scale(1.1)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4FD8C4"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#F2F4F6"></rect><circle cx="74" cy="36" r="7" fill="#F2F4F6"></circle></g>
+<text x="1420" y="105" text-anchor="end" font-size="44" font-weight="700" fill="#F2F4F6">احمد الحربي — الهوية البصرية</text>
+<text x="1420" y="150" text-anchor="end" font-size="24" fill="#8A93A0">مهندس ذكاء اصطناعي · @Ahmed014x · الإصدار 1.0</text>
+<line x1="60" y1="200" x2="1540" y2="200" stroke="rgba(255,255,255,.1)"></line>
+
+
+<text x="1540" y="270" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">01 · الشعار ونسخه</text>
+<rect x="1180" y="300" width="360" height="260" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect><g transform="translate(1264,340) scale(1.8)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4FD8C4"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#F2F4F6"></rect><circle cx="74" cy="36" r="7" fill="#F2F4F6"></circle></g><text x="1360" y="530" text-anchor="middle" font-size="22" fill="#8A93A0">الرمز الرئيسي</text>
+<rect x="790" y="300" width="360" height="260" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect><g transform="translate(1030,370)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4FD8C4"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#F2F4F6"></rect><circle cx="74" cy="36" r="7" fill="#F2F4F6"></circle></g><text x="1010" y="430" text-anchor="end" font-size="34" font-weight="600" fill="#F2F4F6">احمد الحربي</text><text x="970" y="530" text-anchor="middle" font-size="22" fill="#8A93A0">النسخة الأفقية</text>
+<rect x="400" y="300" width="360" height="260" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect><g transform="translate(532,320)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4FD8C4"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#F2F4F6"></rect><circle cx="74" cy="36" r="7" fill="#F2F4F6"></circle></g><text x="580" y="470" text-anchor="middle" font-size="30" font-weight="600" fill="#F2F4F6">احمد الحربي</text><text x="580" y="530" text-anchor="middle" font-size="22" fill="#8A93A0">النسخة الرأسية</text>
+<rect x="60" y="300" width="310" height="260" rx="16" fill="#F2F4F6"></rect><g transform="translate(160,330) scale(1.1)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#0B0D10"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#0B0D10"></rect><circle cx="74" cy="36" r="7" fill="#0B0D10"></circle></g><g transform="translate(120,450) scale(.55)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#0B0D10"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#0B0D10"></rect><circle cx="74" cy="36" r="7" fill="#0B0D10"></circle></g><g transform="translate(200,455) scale(.35)"><rect x="16" y="30" width="44" height="12" rx="6" fill="#0B0D10"></rect><rect x="36" y="54" width="44" height="12" rx="6" fill="#0B0D10"></rect><circle cx="74" cy="36" r="7" fill="#0B0D10"></circle></g><text x="215" y="530" text-anchor="middle" font-size="22" fill="rgba(0,0,0,.55)">أحادي + فافيكون</text>
+
+
+<text x="1540" y="650" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">02 · الألوان</text>
+<g><rect x="60" y="690" width="280" height="150" rx="16" fill="#0B0D10" stroke="rgba(255,255,255,.12)"></rect><text x="200" y="880" text-anchor="middle" font-size="21" fill="#F2F4F6">الليل — الخلفية</text><text x="200" y="912" text-anchor="middle" font-size="19" font-family="monospace" fill="#8A93A0">#0B0D10</text></g><g><rect x="360" y="690" width="280" height="150" rx="16" fill="#171A1F" stroke="rgba(255,255,255,.12)"></rect><text x="500" y="880" text-anchor="middle" font-size="21" fill="#F2F4F6">السطح — البطاقات</text><text x="500" y="912" text-anchor="middle" font-size="19" font-family="monospace" fill="#8A93A0">#171A1F</text></g><g><rect x="660" y="690" width="280" height="150" rx="16" fill="#4FD8C4" stroke="rgba(255,255,255,.12)"></rect><text x="800" y="880" text-anchor="middle" font-size="21" fill="#F2F4F6">التركواز — للتمييز فقط</text><text x="800" y="912" text-anchor="middle" font-size="19" font-family="monospace" fill="#8A93A0">#4FD8C4</text></g><g><rect x="960" y="690" width="280" height="150" rx="16" fill="#F2F4F6" stroke="rgba(255,255,255,.12)"></rect><text x="1100" y="880" text-anchor="middle" font-size="21" fill="#F2F4F6">الأبيض — النصوص</text><text x="1100" y="912" text-anchor="middle" font-size="19" font-family="monospace" fill="#8A93A0">#F2F4F6</text></g><g><rect x="1260" y="690" width="280" height="150" rx="16" fill="#8A93A0" stroke="rgba(255,255,255,.12)"></rect><text x="1400" y="880" text-anchor="middle" font-size="21" fill="#F2F4F6">رمادي ثانوي</text><text x="1400" y="912" text-anchor="middle" font-size="19" font-family="monospace" fill="#8A93A0">#8A93A0</text></g>
+
+
+<text x="1540" y="1000" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">03 · الخط — Thmanyah Sans</text>
+<rect x="60" y="1030" width="1480" height="300" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect>
+<text x="1480" y="1110" text-anchor="end" font-size="56" font-weight="700" fill="#F2F4F6">أبني أنظمة ذكية — Bold 700</text>
+<text x="1480" y="1185" text-anchor="end" font-size="40" font-weight="500" fill="#F2F4F6">الذكاء الاصطناعي وتعلم الآلة — Medium 500</text>
+<text x="1480" y="1250" text-anchor="end" font-size="28" fill="rgba(242,244,246,.75)">نص الفقرات والمنشورات، ارتفاع سطر 1.8 — Regular 400</text>
+<text x="1480" y="1305" text-anchor="end" font-size="26" font-family="monospace" fill="#4FD8C4">model.predict(x) · #AI — Mono</text>
+
+
+<text x="1540" y="1420" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">04 · الأيقونات (Stroke 7 · Round)</text>
+<rect x="60" y="1450" width="1480" height="420" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect>
+<g transform="translate(120,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M34 30 16 48l18 18M62 30l18 18-18 18"></path></g>
+<g transform="translate(360,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><circle cx="26" cy="48" r="8"></circle><circle cx="70" cy="26" r="8"></circle><circle cx="70" cy="70" r="8"></circle><path d="M33 44l30 -14M33 52l30 14"></path></g>
+<g transform="translate(600,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><ellipse cx="48" cy="26" rx="26" ry="10"></ellipse><path d="M22 26v44c0 5.5 11.6 10 26 10s26-4.5 26-10V26M22 48c0 5.5 11.6 10 26 10s26-4.5 26-10"></path></g>
+<g transform="translate(840,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><rect x="18" y="18" width="60" height="60" rx="12"></rect><path d="M48 6v12M48 78v12M6 48h12M78 48h12"></path><circle cx="48" cy="48" r="9" fill="#4FD8C4" stroke="none"></circle></g>
+<g transform="translate(1080,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M16 72V50M36 72V38M56 72V26M76 72V54"></path><circle cx="76" cy="42" r="6" fill="#4FD8C4" stroke="none"></circle></g>
+<g transform="translate(1320,1500)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M56 14L28 54h16l-4 28 28-40H52z"></path></g>
+<g transform="translate(120,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><rect x="14" y="18" width="68" height="52" rx="10"></rect><path d="M28 34l10 10-10 10M48 56h20"></path></g>
+<g transform="translate(360,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M48 84s-30-17-30-40a17 17 0 0 1 30-11 17 17 0 0 1 30 11c0 23-30 40-30 40z"></path></g>
+<g transform="translate(600,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M40 58L20 78M46 20a30 30 0 0 1 30 30M46 34a16 16 0 0 1 16 16"></path><circle cx="44" cy="52" r="8" fill="#4FD8C4" stroke="none"></circle></g>
+<g transform="translate(840,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M30 40a18 18 0 0 1 36-4 16 16 0 0 1 2 32H32a15 15 0 0 1-2-28z"></path><path d="M48 50v20M48 50l-8 8M48 50l8 8" stroke="#4FD8C4"></path></g>
+<g transform="translate(1080,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><circle cx="48" cy="48" r="32"></circle><circle cx="48" cy="48" r="18"></circle><circle cx="48" cy="48" r="5" fill="#4FD8C4" stroke="none"></circle></g>
+<g transform="translate(1320,1690)" fill="none" stroke="#F2F4F6" stroke-width="7" stroke-linecap="round"><path d="M14 48h14l8-20 12 40 10-28 6 8h18"></path><circle cx="82" cy="48" r="5" fill="#4FD8C4" stroke="none"></circle></g>
+
+
+<text x="1540" y="1960" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">05 · الأنماط والعناصر</text>
+<rect x="1080" y="1990" width="460" height="300" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect>
+<g transform="translate(1150,2060)"><rect width="110" height="20" rx="10" fill="#4FD8C4"></rect><circle cx="132" cy="10" r="10" fill="#F2F4F6"></circle><rect x="50" y="44" width="110" height="20" rx="10" fill="rgba(242,244,246,.25)"></rect><rect x="100" y="88" width="110" height="20" rx="10" fill="rgba(242,244,246,.25)"></rect><circle cx="232" cy="98" r="10" fill="#4FD8C4"></circle></g>
+<text x="1310" y="2250" text-anchor="middle" font-size="21" fill="#8A93A0">نمط الإشارة — زخرفة الزوايا</text>
+<rect x="560" y="1990" width="460" height="300" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect>
+<defs><pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="22" cy="22" r="1.5" fill="rgba(242,244,246,.15)"></circle></pattern></defs>
+<rect x="590" y="2020" width="400" height="180" rx="12" fill="url(#dots)"></rect>
+<text x="790" y="2250" text-anchor="middle" font-size="21" fill="#8A93A0">شبكة النقاط — 44px · شفافية 10-15٪</text>
+<rect x="60" y="1990" width="460" height="300" rx="16" fill="#101216" stroke="rgba(255,255,255,.08)"></rect>
+<rect x="110" y="2050" width="150" height="52" rx="26" fill="#4FD8C4"></rect><text x="185" y="2084" text-anchor="middle" font-size="22" font-weight="600" fill="#0B0D10">أساسي</text>
+<rect x="280" y="2050" width="150" height="52" rx="26" fill="none" stroke="#4FD8C4" stroke-width="2.5"></rect><text x="355" y="2084" text-anchor="middle" font-size="22" font-weight="600" fill="#4FD8C4">ثانوي</text>
+<rect x="110" y="2130" width="110" height="42" rx="21" fill="rgba(79,216,196,.12)"></rect><text x="165" y="2158" text-anchor="middle" font-size="19" fill="#4FD8C4">شارة</text>
+<rect x="240" y="2130" width="110" height="42" rx="21" fill="rgba(242,244,246,.08)"></rect><text x="295" y="2158" text-anchor="middle" font-size="19" font-family="monospace" fill="rgba(242,244,246,.7)">#AI</text>
+<text x="290" y="2250" text-anchor="middle" font-size="21" fill="#8A93A0">الأزرار والشارات</text>
+
+
+<text x="1540" y="2380" text-anchor="end" font-size="26" font-weight="700" fill="#4FD8C4">06 · قواعد سريعة</text>
+<text x="1540" y="2430" text-anchor="end" font-size="24" fill="rgba(242,244,246,.65)">نظام 8px · هامش 64-88px على 1080 · زوايا 12-20px · تركواز على عنصر واحد فقط · لا تدوير ولا ظلال للشعار</text>
+<text x="1540" y="2475" text-anchor="end" font-size="24" fill="rgba(242,244,246,.65)">المساحة الآمنة حول الشعار: وحدة (ارتفاع الشرطة) · الحد الأدنى لعرض الرمز 24px</text>
+</svg>

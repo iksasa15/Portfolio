@@ -808,25 +808,7 @@ main {
 }
 
 .hero {
-  position: relative;
   padding-block: clamp(2.5rem, 6vw, 4.5rem);
-}
-
-.hero__ornament {
-  position: absolute;
-  top: clamp(0.5rem, 2vw, 1.5rem);
-  inset-inline-end: 0;
-  width: clamp(5.5rem, 14vw, 7.5rem);
-  height: auto;
-  opacity: 0.95;
-  pointer-events: none;
-}
-
-@media (max-width: 640px) {
-  .hero__ornament {
-    width: 4.25rem;
-    opacity: 0.7;
-  }
 }
 
 .hero__hello {
@@ -1040,10 +1022,12 @@ html[data-theme='light'] .btn--ghost {
   justify-content: center;
   line-height: 1;
   color: var(--heading);
+  min-height: 1.75rem;
 }
 
 .stat-card__icon .brand-icon {
   display: block;
+  flex-shrink: 0;
 }
 
 .stat-card__value {
@@ -1572,7 +1556,7 @@ html[data-theme='light'] .skill-pill {
   gap: 0.35rem;
   font-size: 0.75rem;
   font-weight: 500;
-  font-family: var(--font-mono);
+  font-family: var(--font);
   padding: 0.3rem 0.65rem;
   border-radius: var(--radius-pill);
   background: var(--tag-bg);

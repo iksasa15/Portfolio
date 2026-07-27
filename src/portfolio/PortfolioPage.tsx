@@ -24,7 +24,6 @@ import { ThemeToggle } from '../theme/ThemeToggle'
 import { useTheme } from '../theme/useTheme'
 import { BrandIcon, resolveBrandIcon } from '../brand/BrandIcon'
 import { SignalMark } from '../brand/SignalMark'
-import { SignalOrnament } from '../brand/SignalOrnament'
 import { ProjectDetailModal } from './ProjectDetailModal'
 import { ProjectTag } from './ProjectTag'
 import { renderInlineBold } from '../renderInlineBold'
@@ -220,7 +219,6 @@ export function PortfolioPage() {
 
       <main>
         <section id="intro" className="hero shell">
-          <SignalOrnament className="hero__ornament" />
           <p className="hero__hello hero-intro-enter">
             <span className="wave" aria-hidden>
               👋
