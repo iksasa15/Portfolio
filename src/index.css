@@ -1083,19 +1083,12 @@ html[data-theme='light'] .btn--ghost {
   box-shadow: var(--shadow-sm);
   display: grid;
   gap: 0.25rem;
-  opacity: 0;
-  transform: translateY(12px);
+  opacity: 1;
+  transform: translateY(0);
   transition:
     transform var(--dur) var(--ease-out),
     box-shadow var(--dur-fast) ease,
-    border-color var(--dur-fast) ease,
-    opacity var(--dur-slow) var(--ease-out);
-  transition-delay: calc(var(--i, 0) * 70ms);
-}
-
-.stat-card--in {
-  opacity: 1;
-  transform: translateY(0);
+    border-color var(--dur-fast) ease;
 }
 
 .stat-card:hover {

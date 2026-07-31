@@ -279,7 +279,6 @@ export function PortfolioPage() {
                 value={s.value}
                 label={s.label}
                 index={i}
-                active={heroTyping.done}
               />
             ))}
           </ul>
