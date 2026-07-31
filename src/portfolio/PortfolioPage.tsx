@@ -26,7 +26,9 @@ import { BrandIcon, resolveBrandIcon } from '../brand/BrandIcon'
 import { SignalMark } from '../brand/SignalMark'
 import { ProjectDetailModal } from './ProjectDetailModal'
 import { ProjectTag } from './ProjectTag'
+import { ScrollProgress } from './ScrollProgress'
 import { SectionHead } from './SectionHead'
+import { StatCard } from './StatCard'
 import { renderInlineBold } from '../renderInlineBold'
 
 function RevealSection({
@@ -137,6 +139,7 @@ export function PortfolioPage() {
       </a>
 
       <div className="bg-mesh" aria-hidden />
+      <ScrollProgress />
 
       {navOpen ? (
         <button
@@ -150,7 +153,7 @@ export function PortfolioPage() {
       <header className="site-header">
         <div className="shell site-header__inner">
           <a className="brand" href="#intro">
-            <SignalMark />
+            <SignalMark className="brand__mark brand__mark--pulse" />
             <span className="brand__text">
               <span className="brand__given">{brandSplit.first}</span>
               {brandSplit.rest ? (
@@ -269,22 +272,16 @@ export function PortfolioPage() {
             className="stat-row hero-intro-enter hero-intro-enter--d2"
             aria-label={ui.statRowAria}
           >
-            {p.stats.map((s) => {
-              const brandIcon = resolveBrandIcon(s.icon)
-              return (
-              <li key={s.label} className="stat-card">
-                <span className="stat-card__icon" aria-hidden>
-                  {brandIcon ? (
-                    <BrandIcon name={brandIcon} size={28} />
-                  ) : (
-                    s.icon
-                  )}
-                </span>
-                <span className="stat-card__value">{s.value}</span>
-                <span className="stat-card__label">{s.label}</span>
-              </li>
-              )
-            })}
+            {p.stats.map((s, i) => (
+              <StatCard
+                key={s.label}
+                icon={s.icon}
+                value={s.value}
+                label={s.label}
+                index={i}
+                active={heroTyping.done}
+              />
+            ))}
           </ul>
         </section>
 

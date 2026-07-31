@@ -18,6 +18,7 @@ export function SectionHead({ id, index, kicker, title }: SectionHeadProps) {
         <span>{kicker}</span>
       </p>
       <h2 className="section-head__title">{title}</h2>
+      <span className="section-head__signal" aria-hidden />
     </header>
   )
 }
