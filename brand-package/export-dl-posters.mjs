@@ -6,7 +6,7 @@ import fs from 'node:fs'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = __dirname
 const htmlPath = path.join(root, 'html', 'سلسلة-التعلم-العميق.html')
-const outDir = path.join(root, 'png')
+const outDir = path.join(root, 'png', 'سلسلة-التعلم-العميق')
 
 const require = createRequire(import.meta.url)
 
