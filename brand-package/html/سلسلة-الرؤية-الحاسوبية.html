@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"/>
+<title>سلسلة الرؤية الحاسوبية — احمد الحربي (نهاري)</title>
+<style>
+@font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Light.otf');font-weight:300}
+@font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Regular.otf');font-weight:400}
+@font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Medium.otf');font-weight:500 600}
+@font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Bold.otf');font-weight:700}
+@font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Black.otf');font-weight:900}
+body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
+.wrap{display:flex;flex-direction:column;gap:48px;align-items:center;padding:48px 0 80px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div style="width:1080px;color:#8a93a0;font-size:22px">سلسلة الرؤية الحاسوبية · Computer Vision · 15 بوستر 1080×1350</div>
+
+<!-- p1 -->
+<div id="p1" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;background:#4fd8c4;color:#0b0d10;font-weight:600;border-radius:999px">سلسلة CV</span>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+    <div style="font-size:58px;font-weight:700;color:#0b0d10;line-height:1.3">وش يعني الرؤية الحاسوبية؟</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;max-width:860px">نخلي الآلة <span style="color:#4fd8c4;font-weight:600">تفهم الصورة</span> — تصنيف، كشف، وتجزئة من بكسلات خام.</div>
+    <svg viewBox="0 0 920 280" width="100%" height="250">
+      <rect x="640" y="70" width="240" height="140" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <rect x="670" y="100" width="180" height="80" rx="10" fill="#f2f4f6" stroke="#8a93a0" stroke-width="2"/>
+      <circle cx="760" cy="140" r="18" fill="none" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="760" y="195" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">صورة</text>
+      <path d="M620 140h-50" stroke="#4fd8c4" stroke-width="4"/><polygon points="570,132 558,140 570,148" fill="#4fd8c4"/>
+      <rect x="340" y="60" width="200" height="160" rx="22" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="440" y="130" text-anchor="middle" fill="#0b0d10" font-size="32" font-weight="700" font-family="Thmanyah Sans">CV</text>
+      <text x="440" y="170" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">يفهم المشهد</text>
+      <path d="M320 140h-50" stroke="#4fd8c4" stroke-width="4"/><polygon points="270,132 258,140 270,148" fill="#4fd8c4"/>
+      <rect x="40" y="80" width="190" height="120" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="135" y="130" text-anchor="middle" fill="#0b0d10" font-size="24" font-weight="700" font-family="Thmanyah Sans">فهم</text>
+      <text x="135" y="165" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">تصنيف · كشف</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;line-height:1.55;text-align:center">كاميرات · طب · سيارات</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;line-height:1.55;text-align:center">تعرف الوجوه والمنتجات</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">CV = جسر بين الصورة وما تفهمه الآلة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">1 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p2 -->
+<div id="p2" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 02</span>
+  </div>
+  <div style="margin-top:32px">
+    <div style="font-size:60px;font-weight:700;color:#0b0d10;line-height:1.3">من صورة إلى أرقام</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">الصورة شبكة بكسلات — كل نقطة ثلاثة أرقام: أحمر · أخضر · أزرق.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px">
+    <svg viewBox="0 0 920 280" width="100%" height="250">
+      <rect x="40" y="20" width="840" height="240" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <g>
+        <rect x="80" y="50" width="70" height="70" fill="#4fd8c4" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="150" y="50" width="70" height="70" fill="#c8ece6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="220" y="50" width="70" height="70" fill="#8a93a0" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="290" y="50" width="70" height="70" fill="#0b0d10" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="80" y="120" width="70" height="70" fill="#f2f4f6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="150" y="120" width="70" height="70" fill="#4fd8c4" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="220" y="120" width="70" height="70" fill="#171a1f" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="290" y="120" width="70" height="70" fill="#8a93a0" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+      </g>
+      <text x="220" y="230" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">شبكة بكسلات</text>
+      <path d="M400 120h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="470,112 482,120 470,128" fill="#4fd8c4"/>
+      <rect x="500" y="55" width="360" height="150" rx="18" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="680" y="110" text-anchor="middle" fill="#0b0d10" font-size="28" font-weight="700" font-family="Thmanyah Sans">Tensor</text>
+      <text x="680" y="150" text-anchor="middle" fill="#0b0d10" font-size="22" font-family="Thmanyah Sans">H × W × 3</text>
+      <text x="680" y="180" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">ارتفاع · عرض · قنوات</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px;font-size:22px;color:#0b0d10;text-align:center">R أحمر</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px;font-size:22px;color:#0b0d10;text-align:center">G أخضر</div>
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:16px;padding:18px;font-size:22px;color:#0b0d10;text-align:center">B أزرق</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">قبل أي نموذج: الصورة أرقام على شبكة ثابتة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">2 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p3 -->
+<div id="p3" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 03</span>
+  </div>
+  <div style="margin-top:32px">
+    <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الالتفاف Convolution</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">فلتر 3×3 يمر على الصورة ويضرب الأرقام — الناتج يبرز الحواف والأنماط.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
+    <svg viewBox="0 0 920 300" width="100%" height="270">
+      <text x="200" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">صورة</text>
+      <g>
+        <rect x="70" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="174" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="226" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="70" y="112" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="70" y="164" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="70" y="216" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+      </g>
+      <path d="M310 160h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="380,152 392,160 380,168" fill="#4fd8c4"/>
+      <rect x="420" y="90" width="180" height="160" rx="18" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="510" y="140" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">فلتر</text>
+      <text x="510" y="178" text-anchor="middle" fill="#0b0d10" font-size="32" font-weight="700" font-family="Thmanyah Sans">3×3</text>
+      <text x="510" y="214" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">Kernel</text>
+      <path d="M620 160h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="690,152 702,160 690,168" fill="#4fd8c4"/>
+      <rect x="720" y="110" width="160" height="100" rx="16" fill="#4fd8c4"/>
+      <text x="800" y="155" text-anchor="middle" fill="#0b0d10" font-size="24" font-weight="700" font-family="Thmanyah Sans">خريطة</text>
+      <text x="800" y="186" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">حواف</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">نفس الفلتر على كل الموقع</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">أوزان قليلة مقارنة بشبكة كاملة</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">الالتفاف = بحث محلي عن نمط يتكرر في الصورة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">3 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p4 -->
+<div id="p4" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 04</span>
+  </div>
+  <div style="margin-top:32px">
+    <div style="font-size:60px;font-weight:700;color:#0b0d10;line-height:1.3">Pooling</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">Max pooling يأخذ أعلى قيمة في نافذة 2×2 — الخريطة تصغر والإشارة القوية تبقى.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
+    <svg viewBox="0 0 920 260" width="100%" height="240">
+      <text x="220" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">4×4</text>
+      <g font-size="22" font-weight="700" font-family="Thmanyah Sans" text-anchor="middle">
+        <rect x="80" y="55" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="115" y="98" fill="#0b0d10">1</text>
+        <rect x="150" y="55" width="70" height="70" fill="rgba(79,216,196,.2)" stroke="#4fd8c4" stroke-width="2.5"/><text x="185" y="98" fill="#0b0d10">9</text>
+        <rect x="220" y="55" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="255" y="98" fill="#0b0d10">3</text>
+        <rect x="290" y="55" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="325" y="98" fill="#0b0d10">2</text>
+        <rect x="80" y="125" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="115" y="168" fill="#0b0d10">4</text>
+        <rect x="150" y="125" width="70" height="70" fill="rgba(79,216,196,.2)" stroke="#4fd8c4" stroke-width="2.5"/><text x="185" y="168" fill="#0b0d10">5</text>
+        <rect x="220" y="125" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="255" y="168" fill="#0b0d10">8</text>
+        <rect x="290" y="125" width="70" height="70" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/><text x="325" y="168" fill="#0b0d10">0</text>
+      </g>
+      <path d="M400 130h80" stroke="#4fd8c4" stroke-width="4"/><polygon points="480,122 492,130 480,138" fill="#4fd8c4"/>
+      <text x="700" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">2×2 بعد Max</text>
+      <rect x="580" y="70" width="120" height="120" rx="16" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="640" y="140" text-anchor="middle" fill="#0b0d10" font-size="40" font-weight="700" font-family="Thmanyah Sans">9</text>
+      <rect x="720" y="70" width="120" height="120" rx="16" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="780" y="140" text-anchor="middle" fill="#0b0d10" font-size="40" font-weight="700" font-family="Thmanyah Sans">8</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">أقل حسابات في الطبقات التالية</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">ثبات بسيط لإزاحة الجسم</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">Pooling يضغط الحجم ويُبقي أقوى إشارة في النافذة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">4 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p5 -->
+<div id="p5" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 05</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:56px;font-weight:700;color:#0b0d10;line-height:1.3">شبكة CNN</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">طبقات تتكدس: الحواف الصغيرة تصير أشكالًا ثم أشياء كاملة.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <svg viewBox="0 0 920 280" width="100%" height="250">
+      <rect x="40" y="80" width="180" height="120" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="130" y="135" text-anchor="middle" fill="#0b0d10" font-size="24" font-weight="700" font-family="Thmanyah Sans">حواف</text>
+      <text x="130" y="168" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">طبقة مبكرة</text>
+      <path d="M240 140h50" stroke="#4fd8c4" stroke-width="4"/><polygon points="290,132 302,140 290,148" fill="#4fd8c4"/>
+      <rect x="320" y="60" width="200" height="160" rx="20" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="420" y="125" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">أشكال</text>
+      <text x="420" y="162" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">عين · إطار</text>
+      <path d="M540 140h50" stroke="#4fd8c4" stroke-width="4"/><polygon points="590,132 602,140 590,148" fill="#4fd8c4"/>
+      <rect x="620" y="50" width="260" height="180" rx="22" fill="#4fd8c4"/>
+      <text x="750" y="125" text-anchor="middle" fill="#0b0d10" font-size="28" font-weight="700" font-family="Thmanyah Sans">أشياء</text>
+      <text x="750" y="165" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">وجه · سيارة</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">Conv + ReLU + Pool تتكرر</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">آخر طبقة: متجه ثم تصنيف</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">CNN = هرم ميزات: من الخط إلى الكائن</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">5 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p6 -->
+<div id="p6" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 06</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">مهام CV الأساسية</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">ثلاث مخرجات مختلفة من نفس الصورة — حسب سؤالك.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:22px;padding:28px 18px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:#0b0d10;margin-bottom:16px">تصنيف</div>
+        <svg viewBox="0 0 200 140" width="100%" height="120">
+          <rect x="30" y="20" width="140" height="100" rx="12" fill="#f2f4f6" stroke="#8a93a0" stroke-width="2"/>
+          <text x="100" y="80" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">قطة</text>
+        </svg>
+      </div>
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:22px;padding:28px 18px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:#4fd8c4;margin-bottom:16px">كشف</div>
+        <svg viewBox="0 0 200 140" width="100%" height="120">
+          <rect x="20" y="20" width="160" height="100" rx="12" fill="#f2f4f6" stroke="#8a93a0" stroke-width="2"/>
+          <rect x="50" y="40" width="90" height="60" fill="none" stroke="#4fd8c4" stroke-width="3"/>
+        </svg>
+      </div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:22px;padding:28px 18px;text-align:center">
+        <div style="font-size:26px;font-weight:700;color:#0b0d10;margin-bottom:16px">تجزئة</div>
+        <svg viewBox="0 0 200 140" width="100%" height="120">
+          <rect x="20" y="20" width="160" height="100" rx="12" fill="#f2f4f6" stroke="#8a93a0" stroke-width="2"/>
+          <path d="M50 90 Q80 40 120 55 Q145 70 150 95 Z" fill="rgba(79,216,196,.45)" stroke="#4fd8c4" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">تصنيف = تسمية · كشف = مربع · تجزئة = حدود البكسل</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">6 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p7 -->
+<div id="p7" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 07</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الكشف Detection</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">لكل جسم: مربع (Bounding box) + فئة + درجة ثقة.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
+    <svg viewBox="0 0 920 300" width="100%" height="270">
+      <rect x="80" y="20" width="760" height="260" rx="22" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <rect x="160" y="70" width="240" height="150" fill="none" stroke="#4fd8c4" stroke-width="4" rx="6"/>
+      <rect x="160" y="40" width="150" height="36" rx="8" fill="#4fd8c4"/>
+      <text x="235" y="65" text-anchor="middle" fill="#0b0d10" font-size="20" font-weight="700" font-family="Thmanyah Sans">سيارة 0.94</text>
+      <rect x="480" y="100" width="200" height="130" fill="none" stroke="#0b0d10" stroke-width="3" rx="6"/>
+      <rect x="480" y="70" width="140" height="36" rx="8" fill="#0b0d10"/>
+      <text x="550" y="95" text-anchor="middle" fill="#f2f4f6" font-size="20" font-weight="700" font-family="Thmanyah Sans">شخص 0.81</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:16px;font-size:22px;color:#0b0d10;text-align:center">الموقع xywh</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:16px;font-size:22px;color:#0b0d10;text-align:center">الفئة</div>
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:16px;padding:16px;font-size:22px;color:#0b0d10;text-align:center">الثقة</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">الكشف يجيب: وين الجسم؟ وش هو؟ كم واثق؟</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">7 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p8 -->
+<div id="p8" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 08</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">التجزئة Segmentation</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">كل بكسل له فئة — أدق من المربع لأنه يتبع الشكل الحقيقي.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:22px;padding:28px">
+        <div style="font-size:28px;font-weight:700;color:#0b0d10;text-align:center">Semantic</div>
+        <div style="font-size:22px;color:#8a93a0;text-align:center;margin:10px 0 16px">كل السيارات نفس اللون</div>
+        <svg viewBox="0 0 360 140" width="100%" height="120">
+          <rect x="20" y="20" width="320" height="100" rx="12" fill="#f2f4f6"/>
+          <ellipse cx="110" cy="80" rx="55" ry="28" fill="rgba(79,216,196,.5)"/>
+          <ellipse cx="230" cy="78" rx="50" ry="26" fill="rgba(79,216,196,.5)"/>
+        </svg>
+      </div>
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:22px;padding:28px">
+        <div style="font-size:28px;font-weight:700;color:#4fd8c4;text-align:center">Instance</div>
+        <div style="font-size:22px;color:#8a93a0;text-align:center;margin:10px 0 16px">كل سيارة جسم مستقل</div>
+        <svg viewBox="0 0 360 140" width="100%" height="120">
+          <rect x="20" y="20" width="320" height="100" rx="12" fill="#f2f4f6"/>
+          <ellipse cx="110" cy="80" rx="55" ry="28" fill="#4fd8c4"/>
+          <ellipse cx="230" cy="78" rx="50" ry="26" fill="#0b0d10"/>
+        </svg>
+      </div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">Mask لكل بكسل — مناسب للطب والخرائط والقص الدقيق</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">8 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p9 -->
+<div id="p9" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 09</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">نقل التعلّم Transfer</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">نموذج مدرب على ImageNet يعرف الحواف والأشكال — Fine-tune على بياناتك.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <svg viewBox="0 0 920 240" width="100%" height="220">
+      <rect x="40" y="50" width="280" height="140" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="180" y="115" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">ImageNet</text>
+      <text x="180" y="150" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">ملايين الصور</text>
+      <path d="M340 120h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="410,112 422,120 410,128" fill="#4fd8c4"/>
+      <rect x="440" y="40" width="200" height="160" rx="20" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="540" y="115" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">Backbone</text>
+      <text x="540" y="150" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">مجمّد أو لطيف</text>
+      <path d="M660 120h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="730,112 742,120 730,128" fill="#4fd8c4"/>
+      <rect x="750" y="50" width="140" height="140" rx="20" fill="#4fd8c4"/>
+      <text x="820" y="115" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">رأس</text>
+      <text x="820" y="148" text-anchor="middle" fill="#0b0d10" font-size="18" font-family="Thmanyah Sans">مهمتك</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">ResNet · EfficientNet · ViT</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">بيانات أقل من التدريب الكامل</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">ابدأ بـ pretrained ثم عدّل الرأس على مجموعتك</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">9 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p10 -->
+<div id="p10" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 10</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">زيادة البيانات</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">Augmentation يولّد نسخًا من نفس الصورة حتى لا يحفظ الخلفية.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:28px 12px;text-align:center;font-size:24px;font-weight:700;color:#0b0d10">قلب</div>
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:18px;padding:28px 12px;text-align:center;font-size:24px;font-weight:700;color:#4fd8c4">قص</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:28px 12px;text-align:center;font-size:24px;font-weight:700;color:#0b0d10">إضاءة</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:28px 12px;text-align:center;font-size:24px;font-weight:700;color:#0b0d10">دوران</div>
+    </div>
+    <svg viewBox="0 0 920 160" width="100%" height="140">
+      <rect x="80" y="30" width="160" height="100" rx="16" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/><text x="160" y="90" text-anchor="middle" fill="#0b0d10" font-size="22" font-family="Thmanyah Sans">أصل</text>
+      <path d="M260 80h50" stroke="#4fd8c4" stroke-width="3"/><polygon points="310,72 322,80 310,88" fill="#4fd8c4"/>
+      <rect x="340" y="30" width="120" height="100" rx="14" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="2"/><text x="400" y="90" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">+1</text>
+      <rect x="480" y="30" width="120" height="100" rx="14" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="2"/><text x="540" y="90" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">+2</text>
+      <rect x="620" y="30" width="120" height="100" rx="14" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="2"/><text x="680" y="90" text-anchor="middle" fill="#0b0d10" font-size="20" font-family="Thmanyah Sans">+3</text>
+      <rect x="760" y="30" width="80" height="100" rx="14" fill="#4fd8c4"/><text x="800" y="90" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">…</text>
+    </svg>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">الهدف: يتعلم الشكل — مو زاوية الكاميرا أو الإضاءة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">10 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p11 -->
+<div id="p11" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 11</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الكشف اللحظي YOLO</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">مسار واحد: الصورة تدخل… الصناديق تخرج مباشرة بدون مرحلة اقتراح منفصلة.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <svg viewBox="0 0 920 220" width="100%" height="200">
+      <rect x="40" y="50" width="200" height="120" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="140" y="120" text-anchor="middle" fill="#0b0d10" font-size="24" font-weight="700" font-family="Thmanyah Sans">إطار</text>
+      <path d="M260 110h60" stroke="#4fd8c4" stroke-width="4"/><polygon points="320,102 332,110 320,118" fill="#4fd8c4"/>
+      <rect x="350" y="40" width="220" height="140" rx="20" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="460" y="105" text-anchor="middle" fill="#0b0d10" font-size="28" font-weight="700" font-family="Thmanyah Sans">YOLO</text>
+      <text x="460" y="140" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">شبكة واحدة</text>
+      <path d="M590 110h60" stroke="#4fd8c4" stroke-width="4"/><polygon points="650,102 662,110 650,118" fill="#4fd8c4"/>
+      <rect x="680" y="50" width="200" height="120" rx="18" fill="#4fd8c4"/>
+      <text x="780" y="105" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">صناديق</text>
+      <text x="780" y="138" text-anchor="middle" fill="#0b0d10" font-size="18" font-family="Thmanyah Sans">+ فئات</text>
+    </svg>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">مناسب للفيديو والكاميرات</div>
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;padding:18px 22px;font-size:22px;color:#0b0d10;text-align:center;line-height:1.5">المقايضة: سرعة مقابل دقة التفاصيل</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">You Only Look Once = نظرة واحدة تكفي للكشف</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">11 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p12 -->
+<div id="p12" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 12</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">Vision Transformer</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">الصورة تُقطَّع إلى رقع (patches) — كل رقعة توكِن مثل كلمات NLP.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <svg viewBox="0 0 920 280" width="100%" height="250">
+      <g>
+        <rect x="40" y="40" width="70" height="70" fill="#ffffff" stroke="#4fd8c4" stroke-width="2.5"/>
+        <rect x="110" y="40" width="70" height="70" fill="#f2f4f6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="180" y="40" width="70" height="70" fill="#ffffff" stroke="#4fd8c4" stroke-width="2.5"/>
+        <rect x="40" y="110" width="70" height="70" fill="#f2f4f6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="110" y="110" width="70" height="70" fill="#ffffff" stroke="#4fd8c4" stroke-width="2.5"/>
+        <rect x="180" y="110" width="70" height="70" fill="#f2f4f6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="40" y="180" width="70" height="70" fill="#ffffff" stroke="#4fd8c4" stroke-width="2.5"/>
+        <rect x="110" y="180" width="70" height="70" fill="#f2f4f6" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+        <rect x="180" y="180" width="70" height="70" fill="#ffffff" stroke="#4fd8c4" stroke-width="2.5"/>
+      </g>
+      <text x="145" y="275" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">رقع</text>
+      <path d="M280 140h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="350,132 362,140 350,148" fill="#4fd8c4"/>
+      <rect x="380" y="70" width="200" height="140" rx="20" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
+      <text x="480" y="130" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">توكينات</text>
+      <text x="480" y="165" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">+ موقع</text>
+      <path d="M600 140h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="670,132 682,140 670,148" fill="#4fd8c4"/>
+      <rect x="690" y="70" width="200" height="140" rx="20" fill="#4fd8c4"/>
+      <text x="790" y="130" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">ViT</text>
+      <text x="790" y="165" text-anchor="middle" fill="#0b0d10" font-size="18" font-family="Thmanyah Sans">Attention</text>
+    </svg>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">ViT يقرأ الصورة كجملة مربعات — نفس فكرة Transformers في NLP</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">12 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p13 -->
+<div id="p13" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 13</span>
+  </div>
+  <div style="margin-top:32px">
+    <div style="font-size:58px;font-weight:700;color:#0b0d10;line-height:1.3">تحديات الرؤية</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">المختبر سهل — الشارع والإضاءة والزاوية تغيّر كل شيء.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px">
+    <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:20px;padding:26px;display:flex;align-items:center;gap:22px">
+      <div style="width:64px;height:64px;border-radius:16px;background:rgba(79,216,196,.15);display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;font-family:'Thmanyah Sans',sans-serif;color:#0b0d10;flex-shrink:0" dir="ltr">1</div>
+      <div><div style="font-size:30px;font-weight:700;color:#4fd8c4">الإضاءة</div><div style="font-size:24px;color:#8a93a0;margin-top:6px">ليل · ظل · وهج الشمس</div></div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:20px;padding:26px;display:flex;align-items:center;gap:22px">
+      <div style="width:64px;height:64px;border-radius:16px;background:#f2f4f6;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;font-family:'Thmanyah Sans',sans-serif;color:#0b0d10;flex-shrink:0" dir="ltr">2</div>
+      <div><div style="font-size:30px;font-weight:700;color:#0b0d10">الانسداد</div><div style="font-size:24px;color:#8a93a0;margin-top:6px">جسم يغطي جسمًا آخر</div></div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:20px;padding:26px;display:flex;align-items:center;gap:22px">
+      <div style="width:64px;height:64px;border-radius:16px;background:#f2f4f6;display:flex;align-items:center;justify-content:center;font-size:28px;font-weight:700;font-family:'Thmanyah Sans',sans-serif;color:#0b0d10;flex-shrink:0" dir="ltr">3</div>
+      <div><div style="font-size:30px;font-weight:700;color:#0b0d10">التحيّز</div><div style="font-size:24px;color:#8a93a0;margin-top:6px">بيانات لا تمثل واقعك</div></div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">اختبر على ظروفك الحقيقية قبل ما تثق بالدقة</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">13 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p14 -->
+<div id="p14" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 14</span>
+  </div>
+  <div style="margin-top:28px">
+    <div style="font-size:56px;font-weight:700;color:#0b0d10;line-height:1.3">ابدأ صح</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">ثلاث ركائز قبل ما تبني معمارية من الصفر.</div>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:26px 28px;display:flex;align-items:center;gap:18px">
+      <span dir="ltr" style="font-family:'Thmanyah Sans',sans-serif;font-weight:700;color:#4fd8c4;font-size:26px">01</span>
+      <div style="font-size:28px;font-weight:600;color:#0b0d10">بيانات نظيفة ومعلّمة بوضوح</div>
+    </div>
+    <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:18px;padding:26px 28px;display:flex;align-items:center;gap:18px">
+      <span dir="ltr" style="font-family:'Thmanyah Sans',sans-serif;font-weight:700;color:#4fd8c4;font-size:26px">02</span>
+      <div style="font-size:28px;font-weight:600;color:#4fd8c4">نموذج pretrained ثم Fine-tune</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:26px 28px;display:flex;align-items:center;gap:18px">
+      <span dir="ltr" style="font-family:'Thmanyah Sans',sans-serif;font-weight:700;color:#4fd8c4;font-size:26px">03</span>
+      <div style="font-size:28px;font-weight:600;color:#0b0d10">قيّم بـ mAP / IoU مو دقة التصنيف فقط</div>
+    </div>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 28px;font-size:24px;color:#0b0d10;text-align:center;line-height:1.55">المقياس الخطأ يضلّك — الكشف يحتاج تداخل الصناديق لا نسبة صح/خطأ</div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">14 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+<!-- p15 -->
+<div id="p15" dir="rtl" style="width:1080px;height:1350px;background-color:#f2f4f6;background-image:radial-gradient(ellipse 70% 50% at 85% 0%,rgba(79,216,196,.10),transparent 55%),radial-gradient(rgba(11,13,16,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
+  <div style="display:flex;justify-content:space-between;align-items:center">
+    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg><span style="font-size:30px;font-weight:600;color:#0b0d10">احمد الحربي</span></div>
+    <span style="font-size:24px;padding:12px 28px;border:2.5px solid #4fd8c4;color:#4fd8c4;font-weight:600;border-radius:999px">الجزء 15</span>
+  </div>
+  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
+    <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3;text-align:center">من البكسل إلى CNN وViT</div>
+    <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin:0 auto"></div>
+    <div style="font-size:28px;color:#8a93a0;line-height:1.7;text-align:center">فهمت المسار… طبّق على مهمة صغيرة: تصنيف صور أو كشف جسم واحد.</div>
+    <svg viewBox="0 0 900 180" width="100%" height="160">
+      <rect x="640" y="40" width="200" height="90" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="740" y="80" text-anchor="middle" fill="#4fd8c4" font-size="22" font-family="Thmanyah Sans" font-weight="700">01</text>
+      <text x="740" y="110" text-anchor="middle" fill="#0b0d10" font-size="20" font-weight="600" font-family="Thmanyah Sans">اجمع صور</text>
+      <path d="M620 85h-36" stroke="#4fd8c4" stroke-width="4"/><polygon points="584,77 572,85 584,93" fill="#4fd8c4"/>
+      <rect x="350" y="40" width="200" height="90" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <text x="450" y="80" text-anchor="middle" fill="#4fd8c4" font-size="22" font-family="Thmanyah Sans" font-weight="700">02</text>
+      <text x="450" y="110" text-anchor="middle" fill="#0b0d10" font-size="20" font-weight="600" font-family="Thmanyah Sans">pretrained</text>
+      <path d="M330 85h-36" stroke="#4fd8c4" stroke-width="4"/><polygon points="294,77 282,85 294,93" fill="#4fd8c4"/>
+      <rect x="60" y="40" width="200" height="90" rx="18" fill="#4fd8c4"/>
+      <text x="160" y="80" text-anchor="middle" fill="#0b0d10" font-size="22" font-family="Thmanyah Sans" font-weight="700">03</text>
+      <text x="160" y="110" text-anchor="middle" fill="#0b0d10" font-size="20" font-weight="700" font-family="Thmanyah Sans">قيّم ونشر</text>
+    </svg>
+    <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:20px 28px;font-size:24px;color:#0b0d10;text-align:center;line-height:1.55">ابدأ صغيرًا على بياناتك — لا تنتظر معمارية مثالية</div>
+    <div style="display:flex;justify-content:center">
+      <div style="padding:18px 40px;background:#4fd8c4;color:#0b0d10;font-weight:700;font-size:28px;border-radius:999px">تابعني للمزيد</div>
+    </div>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-top:24px">
+    <span dir="ltr" style="font-size:26px;font-family:'Thmanyah Sans',sans-serif;color:#8a93a0">15 / 15</span>
+    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="#8a93a0" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#8a93a0" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#4fd8c4">@Ahmed014x</span></div>
+    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#4fd8c4"></span><span style="width:80px;height:14px;border-radius:7px;background:rgba(11,13,16,.18);margin-right:36px"></span></div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
