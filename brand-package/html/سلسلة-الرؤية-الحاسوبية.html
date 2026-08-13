@@ -126,24 +126,33 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
     <svg viewBox="0 0 920 300" width="100%" height="270">
-      <text x="200" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">صورة</text>
+      <text x="200" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">صورة قطة</text>
+      <defs><clipPath id="convclip"><rect x="70" y="60" width="208" height="208" rx="4"/></clipPath></defs>
+      <g clip-path="url(#convclip)">
+        <rect x="70" y="60" width="208" height="80" fill="#8a93a0"/>
+        <rect x="70" y="140" width="208" height="128" fill="#e8ebee"/>
+        <circle cx="174" cy="176" r="36" fill="#0b0d10"/>
+        <polygon points="148,154 138,122 168,148" fill="#0b0d10"/>
+        <polygon points="200,154 210,122 180,148" fill="#0b0d10"/>
+        <ellipse cx="174" cy="232" rx="42" ry="16" fill="#4fd8c4"/>
+      </g>
       <g>
-        <rect x="70" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="122" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="174" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="226" y="60" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="70" y="112" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="122" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="174" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="226" y="112" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="70" y="164" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="122" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="174" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="226" y="164" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="70" y="216" width="52" height="52" fill="#f2f4f6" stroke="#8a93a0" stroke-width="1.5"/>
-        <rect x="122" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="174" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
-        <rect x="226" y="216" width="52" height="52" fill="rgba(79,216,196,.25)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="70" y="60" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="60" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="174" y="60" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="226" y="60" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="70" y="112" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="112" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="112" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="112" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="70" y="164" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="164" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="164" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="164" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="70" y="216" width="52" height="52" fill="none" stroke="#8a93a0" stroke-width="1.5"/>
+        <rect x="122" y="216" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="174" y="216" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
+        <rect x="226" y="216" width="52" height="52" fill="rgba(79,216,196,.22)" stroke="#4fd8c4" stroke-width="3"/>
       </g>
       <path d="M310 160h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="380,152 392,160 380,168" fill="#4fd8c4"/>
       <rect x="420" y="90" width="180" height="160" rx="18" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
@@ -423,9 +432,15 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <svg viewBox="0 0 920 240" width="100%" height="220">
-      <rect x="40" y="50" width="280" height="140" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
-      <text x="180" y="115" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">ImageNet</text>
-      <text x="180" y="150" text-anchor="middle" fill="#8a93a0" font-size="18" font-family="Thmanyah Sans">ملايين الصور</text>
+      <rect x="40" y="40" width="280" height="160" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
+      <circle cx="90" cy="88" r="18" fill="#0b0d10"/>
+      <polygon points="78,76 72,60 88,72" fill="#0b0d10"/><polygon points="102,76 108,60 92,72" fill="#0b0d10"/>
+      <rect x="150" y="78" width="44" height="16" rx="4" fill="#4fd8c4"/>
+      <circle cx="160" cy="100" r="7" fill="#0b0d10"/><circle cx="184" cy="100" r="7" fill="#0b0d10"/>
+      <circle cx="250" cy="86" r="18" fill="#0b0d10"/>
+      <circle cx="244" cy="82" r="3" fill="#4fd8c4"/><circle cx="256" cy="82" r="3" fill="#4fd8c4"/>
+      <text x="180" y="150" text-anchor="middle" fill="#0b0d10" font-size="22" font-weight="700" font-family="Thmanyah Sans">ImageNet</text>
+      <text x="180" y="176" text-anchor="middle" fill="#8a93a0" font-size="16" font-family="Thmanyah Sans">قطة · سيارة · وجه</text>
       <path d="M340 120h70" stroke="#4fd8c4" stroke-width="4"/><polygon points="410,112 422,120 410,128" fill="#4fd8c4"/>
       <rect x="440" y="40" width="200" height="160" rx="20" fill="rgba(79,216,196,.12)" stroke="#4fd8c4" stroke-width="3"/>
       <text x="540" y="115" text-anchor="middle" fill="#0b0d10" font-size="26" font-weight="700" font-family="Thmanyah Sans">Backbone</text>
