@@ -26,8 +26,8 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
     <div style="font-size:58px;font-weight:700;color:#0b0d10;line-height:1.3">وش يعني الرؤية الحاسوبية؟</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;max-width:860px">نخلي الآلة <span style="color:#4fd8c4;font-weight:600">تفهم الصورة</span> — تصنيف، كشف، وتجزئة من بكسلات خام.</div>
-    <svg viewBox="0 0 920 300" width="100%" height="270">
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;max-width:860px">نخلي الآلة <span style="color:#4fd8c4;font-weight:600">تفهم الصورة</span> — تصنيف، كشف، وتجزئة من بكسلات خام.<br/>مو تصوير فقط. من نفس الإطار يطلع تسمية أو مربع أو حدود — تستخدمها يوميًا بدون ما تحس.</div>
+    <svg viewBox="0 0 920 300" width="100%" height="240">
       <rect x="620" y="20" width="260" height="220" rx="22" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
       <rect x="640" y="40" width="220" height="150" rx="14" fill="#e8ebee"/>
       <rect x="640" y="40" width="220" height="70" fill="#8a93a0"/>
@@ -74,10 +74,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:32px">
     <div style="font-size:60px;font-weight:700;color:#0b0d10;line-height:1.3">من صورة إلى أرقام</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">الصورة شبكة بكسلات — كل نقطة ثلاثة أرقام: أحمر · أخضر · أزرق.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">الصورة شبكة بكسلات — كل نقطة ثلاثة أرقام: أحمر · أخضر · أزرق.<br/>الشبكة = ارتفاع × عرض × 3 قنوات RGB. تغيّر حجم الصورة = تتغيّر كل الأرقام.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px">
-    <svg viewBox="0 0 920 280" width="100%" height="250">
+    <svg viewBox="0 0 920 280" width="100%" height="220">
       <rect x="40" y="20" width="840" height="240" rx="20" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
       <defs><clipPath id="pxclip"><rect x="70" y="40" width="280" height="160" rx="8"/></clipPath></defs>
       <g clip-path="url(#pxclip)">
@@ -122,10 +122,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:32px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الالتفاف Convolution</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">فلتر 3×3 يمر على الصورة ويضرب الأرقام — الناتج يبرز الحواف والأنماط.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">فلتر 3×3 يمر على الصورة ويضرب الأرقام — الناتج يبرز الحواف والأنماط.<br/>الفلتر أوزان صغيرة تتكرر فوق الصورة. نفس نمط الحافة يُبحث عنه في كل موضع.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
-    <svg viewBox="0 0 920 300" width="100%" height="270">
+    <svg viewBox="0 0 920 300" width="100%" height="240">
       <text x="200" y="36" text-anchor="middle" fill="#8a93a0" font-size="22" font-family="Thmanyah Sans">صورة قطة</text>
       <defs><clipPath id="convclip"><rect x="70" y="60" width="208" height="208" rx="4"/></clipPath></defs>
       <g clip-path="url(#convclip)">
@@ -186,10 +186,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:32px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">التجميع Pooling</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">Max pooling يأخذ أعلى قيمة في نافذة 2×2 — الخريطة تصغر والإشارة القوية تبقى.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">Max pooling يأخذ أعلى قيمة في نافذة 2×2 — الخريطة تصغر والإشارة القوية تبقى.<br/>النافذة تمشي بخطوة 2. أربعة أرقام تصير رقمًا واحدًا: الأكبر.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
-    <svg viewBox="0 0 920 280" width="100%" height="250">
+    <svg viewBox="0 0 920 280" width="100%" height="220">
       <text x="210" y="28" text-anchor="middle" fill="#8a93a0" font-size="20" font-family="Thmanyah Sans">4×4</text>
       <g font-size="20" font-weight="700" font-family="Thmanyah Sans" text-anchor="middle">
         <rect x="70" y="42" width="52" height="52" fill="rgba(79,216,196,.2)" stroke="#4fd8c4" stroke-width="2.5"/><text x="96" y="74" fill="#0b0d10">1</text>
@@ -240,10 +240,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">شبكة الالتفاف CNN</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">طبقات تتكدس: الحواف الصغيرة تصير أشكالًا ثم أشياء كاملة.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">طبقات تتكدس: الحواف الصغيرة تصير أشكالًا ثم أشياء كاملة.<br/>كل طبقة تبني على اللي قبلها. الحافة تصير عين، والعين تصير وجه.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
-    <svg viewBox="0 0 920 280" width="100%" height="250">
+    <svg viewBox="0 0 920 280" width="100%" height="220">
       <rect x="40" y="70" width="180" height="150" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
       <path d="M70 150 L110 90 L160 150" fill="none" stroke="#4fd8c4" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
       <text x="130" y="200" text-anchor="middle" fill="#0b0d10" font-size="20" font-weight="700" font-family="Thmanyah Sans">حواف</text>
@@ -280,7 +280,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">مهام CV الأساسية</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">ثلاث مخرجات مختلفة من نفس الصورة — حسب سؤالك.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">ثلاث مخرجات مختلفة من نفس الصورة — حسب سؤالك.<br/>لا تخلط المهام. اختيار المهمة غلط يضيّع أسابيع تدريب على بيانات بمسميات خطأ.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px">
@@ -342,10 +342,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الكشف Detection</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">لكل جسم: مربع (Bounding box) + فئة + درجة ثقة.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">لكل كائن: مربع (Bounding box) + فئة + درجة ثقة.<br/>الصندوق يحدد الموقع والحجم. الثقة تقول كم النموذج متأكد.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px">
-    <svg viewBox="0 0 920 300" width="100%" height="270">
+    <svg viewBox="0 0 920 300" width="100%" height="240">
       <rect x="80" y="20" width="760" height="260" rx="22" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
       <rect x="80" y="20" width="760" height="90" fill="#8a93a0" opacity=".25"/>
       <rect x="80" y="200" width="760" height="80" fill="#e8ebee"/>
@@ -387,7 +387,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">التجزئة Segmentation</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">كل بكسل له فئة — أدق من المربع لأنه يتبع الشكل الحقيقي.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">كل بكسل له فئة — أدق من المربع لأنه يتبع الشكل الحقيقي.<br/>الدلالي يلوّن الفئة كلها بلون واحد. الحالة تفصل كل سيارة حتى لو نفس النوع.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:18px">
@@ -438,7 +438,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">نقل التعلّم Transfer</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">نموذج مدرب على ImageNet يعرف الحواف والأشكال — Fine-tune على بياناتك.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">نموذج مدرب على ImageNet يعرف الحواف والأشكال — Fine-tune على بياناتك.<br/>ما تحتاج مليون صورة من الصفر. الأوزان الجاهزة تعطيك حواف وأشكال من أول يوم.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <svg viewBox="0 0 920 240" width="100%" height="220">
@@ -482,7 +482,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">زيادة البيانات</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">Augmentation يولّد نسخًا من نفس الصورة حتى لا يحفظ الخلفية.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">Augmentation يولّد نسخًا من نفس الصورة حتى لا يحفظ الخلفية.<br/>لو كل الصور من نفس الاستوديو، النموذج يحفظ الخلفية. نوّع الإضاءة والزاوية.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <div style="display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px">
@@ -532,7 +532,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3">الكشف اللحظي YOLO</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">مسار واحد: الصورة تدخل… الصناديق تخرج مباشرة بدون مرحلة اقتراح منفصلة.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">مسار واحد: الصورة تدخل… الصناديق تخرج مباشرة بدون مرحلة اقتراح منفصلة.<br/>ما في مرحلتين (اقتراح ثم تصنيف). نظرة واحدة على الإطار كله تطلع الصناديق.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <svg viewBox="0 0 920 220" width="100%" height="200">
@@ -576,10 +576,10 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:48px;font-weight:700;color:#0b0d10;line-height:1.3">Vision Transformer</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">الصورة تُقطَّع إلى رقع — كل رقعة = كلمة في جملة الصورة.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">الصورة تُقطَّع إلى رقع — كل رقعة = كلمة في جملة الصورة.<br/>الانتباه يربط الرقع البعيدة. الأذن والذيل يتواصلان حتى لو تباعدوا في الصورة.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
-    <svg viewBox="0 0 920 280" width="100%" height="250">
+    <svg viewBox="0 0 920 280" width="100%" height="220">
       <defs>
         <clipPath id="vitclip"><rect x="40" y="40" width="210" height="210" rx="8"/></clipPath>
       </defs>
@@ -623,7 +623,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:32px">
     <div style="font-size:58px;font-weight:700;color:#0b0d10;line-height:1.3">تحديات الرؤية</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">المختبر سهل — الشارع والإضاءة والزاوية تغيّر كل شيء.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">المختبر سهل — الشارع والإضاءة والزاوية تغيّر كل شيء.<br/>دقة 98٪ في النهار ما تعني شيء بالليل. اختبر على الإضاءة والغبار عندك.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:14px">
     <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:20px;padding:22px;display:flex;align-items:center;gap:22px">
@@ -656,7 +656,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="margin-top:28px">
     <div style="font-size:56px;font-weight:700;color:#0b0d10;line-height:1.3">ابدأ صح</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:14px"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;margin-top:10px">ثلاث ركائز قبل ما تبني معمارية من الصفر.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;margin-top:10px">ثلاث ركائز قبل ما تبني معمارية من الصفر.<br/>المعمارية آخر همّك. البيانات النظيفة والمقياس الصحيح يحددون النجاح.</div>
   </div>
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:16px">
     <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:18px;padding:26px 28px;display:flex;align-items:center;gap:18px">
@@ -689,7 +689,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
   <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
     <div style="font-size:52px;font-weight:700;color:#0b0d10;line-height:1.3;text-align:center">من البكسل إلى CNN وViT</div>
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin:0 auto"></div>
-    <div style="font-size:28px;color:#8a93a0;line-height:1.7;text-align:center">فهمت المسار… ابدأ بتصنيف 200 صورة من بيئتك.</div>
+    <div style="font-size:26px;color:#8a93a0;line-height:1.65;text-align:center">فهمت المسار… ابدأ بتصنيف 200 صورة من بيئتك.<br/>اجمع من نفس الكاميرا اللي بتنشر عليها. بعدين Fine-tune وقيّم بـ mAP.</div>
     <svg viewBox="0 0 900 180" width="100%" height="160">
       <rect x="640" y="40" width="200" height="90" rx="18" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2.5"/>
       <text x="740" y="80" text-anchor="middle" fill="#4fd8c4" font-size="22" font-family="Thmanyah Sans" font-weight="700">01</text>
