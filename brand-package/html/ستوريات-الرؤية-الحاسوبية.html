@@ -278,10 +278,18 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:12px"></div>
     <div style="font-size:26px;color:#8a93a0;line-height:1.6">قلب · قص · إضاءة · دوران — بدون تصوير جديد</div>
     <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px">
-      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;height:88px"></div>
-      <div style="background:rgba(79,216,196,.2);border:2px solid #4fd8c4;border-radius:16px;height:88px;transform:scaleX(-1)"></div>
-      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:16px;height:88px;opacity:.7"></div>
-      <div style="background:#4fd8c4;border-radius:16px;height:88px"></div>
+      <svg viewBox="0 0 120 120" width="100%" height="110" style="background:#e8ebee;border-radius:16px;border:1px solid rgba(11,13,16,.10)">
+        <rect width="120" height="50" fill="#8a93a0"/><circle cx="60" cy="68" r="22" fill="#0b0d10"/><ellipse cx="60" cy="98" rx="28" ry="12" fill="#4fd8c4"/>
+      </svg>
+      <svg viewBox="0 0 120 120" width="100%" height="110" style="background:#e8ebee;border-radius:16px;border:2px solid #4fd8c4;transform:scaleX(-1)">
+        <rect width="120" height="50" fill="#8a93a0"/><circle cx="60" cy="68" r="22" fill="#0b0d10"/><ellipse cx="60" cy="98" rx="28" ry="12" fill="#4fd8c4"/>
+      </svg>
+      <svg viewBox="0 0 120 120" width="100%" height="110" style="background:#cfd8dc;border-radius:16px;border:1px solid rgba(11,13,16,.10)">
+        <rect width="120" height="50" fill="#5a6270"/><circle cx="60" cy="68" r="22" fill="#0b0d10"/><ellipse cx="60" cy="98" rx="28" ry="12" fill="#4fd8c4"/>
+      </svg>
+      <svg viewBox="0 0 120 120" width="100%" height="110" style="background:#e8ebee;border-radius:16px;border:1px solid rgba(11,13,16,.10);transform:rotate(-8deg)">
+        <rect width="120" height="50" fill="#8a93a0"/><circle cx="60" cy="68" r="22" fill="#0b0d10"/><ellipse cx="60" cy="98" rx="28" ry="12" fill="#4fd8c4"/>
+      </svg>
     </div>
     <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 26px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">يتعلم الشكل — مو خلفية الاستوديو</div>
   </div>
@@ -326,13 +334,27 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
     <div style="width:72px;height:6px;border-radius:4px;background:#4fd8c4;margin-top:12px"></div>
     <div style="font-size:26px;color:#8a93a0;line-height:1.6">الكلمة في النص = الرقعة في الصورة</div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
-      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:20px;padding:32px;text-align:center">
+      <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-radius:20px;padding:24px;text-align:center">
         <div style="font-size:28px;font-weight:700;color:#0b0d10">NLP</div>
-        <div style="font-size:22px;color:#8a93a0;margin-top:10px">توكِن كلمة</div>
+        <div style="display:flex;gap:8px;justify-content:center;margin:16px 0 8px">
+          <span style="padding:10px 14px;background:#f2f4f6;border-radius:10px;font-size:20px;font-weight:700">قطة</span>
+          <span style="padding:10px 14px;background:#f2f4f6;border-radius:10px;font-size:20px;font-weight:700">جلست</span>
+        </div>
+        <div style="font-size:20px;color:#8a93a0">توكِن كلمة</div>
       </div>
-      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:20px;padding:32px;text-align:center">
+      <div style="background:rgba(79,216,196,.06);border:2.5px solid #4fd8c4;border-radius:20px;padding:24px;text-align:center">
         <div style="font-size:28px;font-weight:700;color:#4fd8c4">ViT</div>
-        <div style="font-size:22px;color:#8a93a0;margin-top:10px">توكِن رقعة</div>
+        <svg viewBox="0 0 180 120" width="100%" height="100">
+          <defs><clipPath id="s12c"><rect x="20" y="8" width="140" height="104" rx="6"/></clipPath></defs>
+          <g clip-path="url(#s12c)">
+            <rect x="20" y="8" width="140" height="44" fill="#8a93a0"/>
+            <rect x="20" y="52" width="140" height="60" fill="#e8ebee"/>
+            <circle cx="90" cy="70" r="22" fill="#0b0d10"/>
+            <ellipse cx="90" cy="98" rx="26" ry="10" fill="#4fd8c4"/>
+          </g>
+          <path d="M66 8v104 M112 8v104 M20 42h140 M20 76h140" fill="none" stroke="#4fd8c4" stroke-width="2.5"/>
+        </svg>
+        <div style="font-size:20px;color:#8a93a0">توكِن رقعة</div>
       </div>
     </div>
     <div style="background:#ffffff;border:1px solid rgba(11,13,16,.10);border-right:5px solid #4fd8c4;border-radius:18px;padding:22px 26px;font-size:26px;color:#0b0d10;text-align:center;line-height:1.55">نفس Attention — مدخل مختلف</div>
