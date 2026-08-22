@@ -50,6 +50,11 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .timeline-card .role{font-size:26px;font-weight:600;line-height:1.35}
 .timeline-card .range{font-size:18px;color:#8a93a0;margin-top:8px}
 .timeline-card .sum{font-size:19px;color:#8a93a0;margin-top:8px;line-height:1.55}
+.bio{font-size:32px;line-height:1.65;margin-top:28px;max-width:none}
+.stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:32px;width:100%}
+.stat-card{text-align:center;padding:28px 20px}
+.stat-value{font-size:52px;font-weight:700;color:#4fd8c4;line-height:1}
+.stat-label{font-size:22px;margin-top:10px}
 </style>
 </head>
 <body>
@@ -67,29 +72,28 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
     </div>
   </div>
 
-  <div style="margin-top:28px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:40px;flex:1">
+  <div style="margin-top:28px;display:flex;flex-direction:column;flex:1;gap:32px">
     <div>
       <div class="kicker">من أنا؟</div>
       <div class="title">أحمد الحربي</div>
       <div class="bar"></div>
-      <div style="font-size:24px;line-height:1.7;margin-top:18px;max-width:920px">
-        أصمّم وأطلق حلول ذكاء اصطناعي للإنتاج — أربط <span class="teal" style="font-weight:600">موديلات لغوية ضخمة</span> بمسارات العمل، أبني <span class="teal" style="font-weight:600">رؤية حاسوبية</span> يُعتمد عليها، وأشغّل <span class="teal" style="font-weight:600">أتمتة</span> تقودها البيانات.
-      </div>
-    </div>
 
-    <div style="display:flex;flex-direction:column;gap:20px;justify-content:center">
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:18px">
-        <div class="card" style="text-align:center;padding:28px 16px">
-          <div style="font-size:48px;font-weight:700;color:#4fd8c4">8+</div>
-          <div class="muted" style="font-size:20px;margin-top:8px">مشاريع جاهزة</div>
+      <div class="bio">
+        خريج <span class="teal" style="font-weight:600">جامعة تبوك</span> — بكالوريوس علوم حاسب (2025). تخصص ذكاء اصطناعي في <span class="teal" style="font-weight:600">كاوست</span>، ومعسكر علوم البيانات والذكاء الاصطناعي في <span class="teal" style="font-weight:600">أكاديمية طويق</span>، وحضانة <span class="teal" style="font-weight:600">Savvy Games</span>. يعمل حالياً ضمن حضانة <span class="teal" style="font-weight:600">الكراج</span>.
+      </div>
+
+      <div class="stats-row">
+        <div class="card stat-card">
+          <div class="stat-value">8+</div>
+          <div class="stat-label muted">مشاريع جاهزة</div>
         </div>
-        <div class="card" style="text-align:center;padding:28px 16px">
-          <div style="font-size:48px;font-weight:700;color:#4fd8c4">8+</div>
-          <div class="muted" style="font-size:20px;margin-top:8px">الجوائز</div>
+        <div class="card stat-card">
+          <div class="stat-value">8+</div>
+          <div class="stat-label muted">الجوائز</div>
         </div>
-        <div class="card accent" style="text-align:center;padding:28px 16px">
-          <div style="font-size:48px;font-weight:700;color:#4fd8c4">700+</div>
-          <div class="muted" style="font-size:20px;margin-top:8px">ساعات التطوع</div>
+        <div class="card accent stat-card">
+          <div class="stat-value">700+</div>
+          <div class="stat-label muted">ساعات التطوع</div>
         </div>
       </div>
     </div>
