@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <rect width="120" height="120" rx="24" fill="#ffffff" stroke="rgba(11,13,16,.12)" stroke-width="2"/>
+  <circle cx="60" cy="54" r="28" fill="#2e7d52"/>
+  <rect x="54" y="38" width="12" height="32" rx="3" fill="#ffffff"/>
+  <rect x="44" y="48" width="32" height="12" rx="3" fill="#ffffff"/>
+  <text x="60" y="98" text-anchor="middle" fill="#8a93a0" font-family="Arial,sans-serif" font-size="13" font-weight="600">MOH</text>
+</svg>
