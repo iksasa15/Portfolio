@@ -144,11 +144,15 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .slide.kushkooli .mark svg rect:first-child{fill:#1d3583}
 .slide.kushkooli .mark svg rect:nth-child(2){fill:#1a2744}
 .slide.kushkooli .mark svg circle{fill:#1a2744}
-.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:28px;flex:1;align-content:start}
-.team-card{padding:32px 30px;display:flex;flex-direction:column;gap:14px;min-height:220px}
-.team-num{font-size:18px;font-weight:700;color:#4fd8c4}
-.team-title{font-size:28px;font-weight:700;line-height:1.3;margin:0}
-.team-desc{font-size:20px;line-height:1.6;color:#8a93a0;margin:0}
+.team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start;min-height:0}
+.team-card{padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-height:0}
+.team-num{font-size:14px;font-weight:700;color:#4fd8c4}
+.team-title{font-size:20px;font-weight:700;line-height:1.25;margin:0}
+.team-desc{font-size:15px;line-height:1.45;color:#8a93a0;margin:0}
+.team-layout{display:grid;grid-template-columns:0.95fr 1.05fr;gap:22px;margin-top:20px;flex:1;min-height:0;align-items:stretch}
+.team-shots{display:grid;grid-template-columns:1fr 1fr;gap:14px;min-height:0;height:100%}
+.team-shot{background:#ffffff;border:2px solid #4fd8c4;border-radius:16px;padding:6px;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:0}
+.team-shot img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block;border-radius:10px}
 .project-gallery.g8{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}
 .project-gallery.g5{grid-template-columns:repeat(6,1fr);grid-template-rows:1.1fr 1fr}
 .project-gallery.g5 .project-shot:nth-child(-n+3){grid-column:span 2}
@@ -994,30 +998,37 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
     <div class="title" style="font-size:48px">كيف اختار التيم؟</div>
     <div class="bar"></div>
 
-    <div class="team-grid">
-      <div class="card team-card">
-        <div class="team-num">01</div>
-        <h3 class="team-title">مهارات تكمل بعض</h3>
-        <p class="team-desc">مو كلنا نفس التخصص. أبي أدوار واضحة: بناء، بيانات، تصميم، وعرض.</p>
+    <div class="team-layout">
+      <div class="team-grid">
+        <div class="card team-card">
+          <div class="team-num">01</div>
+          <h3 class="team-title">مهارات تكمل بعض</h3>
+          <p class="team-desc">مو كلنا نفس التخصص. أبي أدوار واضحة: بناء، بيانات، تصميم، وعرض.</p>
+        </div>
+        <div class="card accent team-card">
+          <div class="team-num">02</div>
+          <h3 class="team-title">تواصل صريح</h3>
+          <p class="team-desc">يقول المشكلة بدري، ما يخبي التعطّل، ويتفق على القرار بسرعة.</p>
+        </div>
+        <div class="card team-card">
+          <div class="team-num">03</div>
+          <h3 class="team-title">شغف بالمشكلة</h3>
+          <p class="team-desc">يهتم بالحل والاستخدام، مو بالجائزة وحدها.</p>
+        </div>
+        <div class="card team-card">
+          <div class="team-num">04</div>
+          <h3 class="team-title">يتعلّم بسرعة</h3>
+          <p class="team-desc">يرفع مستواه وقت الضغط، ويتأقلم إذا تغيّر الاتجاه.</p>
+        </div>
       </div>
-      <div class="card accent team-card">
-        <div class="team-num">02</div>
-        <h3 class="team-title">تواصل صريح</h3>
-        <p class="team-desc">يقول المشكلة بدري، ما يخبي التعطّل، ويتفق على القرار بسرعة.</p>
-      </div>
-      <div class="card team-card">
-        <div class="team-num">03</div>
-        <h3 class="team-title">شغف بالمشكلة</h3>
-        <p class="team-desc">يهتم بالحل والاستخدام، مو بالجائزة وحدها.</p>
-      </div>
-      <div class="card team-card">
-        <div class="team-num">04</div>
-        <h3 class="team-title">يتعلّم بسرعة</h3>
-        <p class="team-desc">يرفع مستواه وقت الضغط، ويتأقلم إذا تغيّر الاتجاه.</p>
+
+      <div class="team-shots">
+        <div class="team-shot"><img src="../../public/projects/team/whatsapp-01.jpg" alt="سجلتك معي"/></div>
+        <div class="team-shot"><img src="../../public/projects/team/whatsapp-02.jpg" alt="هاكاثون أمد"/></div>
       </div>
     </div>
 
-    <div class="takeaway" style="margin-top:22px">التيم الصح = مهارات متكاملة + تواصل واضح + شغف بالمشكلة.</div>
+    <div class="takeaway" style="margin-top:18px">التيم الصح = مهارات متكاملة + تواصل واضح + شغف بالمشكلة.</div>
   </div>
 
   <div class="footer">
