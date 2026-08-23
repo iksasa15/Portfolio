@@ -67,6 +67,21 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .reject-item img{width:100%;height:100%;object-fit:contain;display:block;border-radius:8px;border:1.5px solid rgba(11,13,16,.10);background:#f2f4f6}
 .reject-featured{display:flex;justify-content:center}
 .reject-featured .reject-item{width:420px;height:200px;border-width:3px;background:rgba(79,216,196,.06)}
+.path-timeline{margin-top:24px;max-width:1500px;flex:1}
+.path-h{display:flex;flex:1;margin-top:28px;align-items:center;min-height:0}
+.path-h-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;position:relative;width:100%;align-items:start}
+.path-h-line{position:absolute;top:88px;left:12.5%;right:12.5%;height:4px;background:linear-gradient(to left,#4fd8c4 0%,rgba(79,216,196,.55) 55%,rgba(11,13,16,.14) 100%);border-radius:4px;z-index:0}
+.path-h-step{display:flex;flex-direction:column;align-items:center;gap:0;position:relative;min-width:0}
+.path-h-connector{height:44px;width:100%;display:flex;align-items:center;justify-content:center;position:relative;z-index:1}
+.path-h-dot{width:18px;height:18px;border-radius:50%;background:#4fd8c4;border:3px solid #f2f4f6;box-shadow:0 0 0 2px #4fd8c4;flex-shrink:0}
+.path-h-step:first-child .path-h-dot{background:rgba(11,13,16,.14);box-shadow:0 0 0 2px rgba(11,13,16,.2)}
+.path-h-step:last-child .path-h-dot{background:#0b0d10;box-shadow:0 0 0 2px #4fd8c4;width:22px;height:22px}
+.path-h-logo{width:72px;height:72px;border-radius:16px;background:#ffffff;border:2px solid #4fd8c4;padding:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-bottom:12px}
+.path-h-logo img{width:100%;height:100%;object-fit:contain}
+.path-h-card{width:100%;text-align:center;padding:20px 16px;margin-top:12px}
+.path-h-card .org{font-size:18px}
+.path-h-card .role{font-size:22px;line-height:1.35}
+.path-h-card .range{font-size:16px;margin-top:6px}
 </style>
 </head>
 <body>
@@ -298,6 +313,74 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 
   <div class="footer">
     <div class="page">بعد سلاسل من الرفض</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 6 اختيار المسار -->
+<div id="s6" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div style="margin-top:24px">
+    <div class="kicker">التعليم</div>
+    <div class="title" style="font-size:48px">اختيار المسار</div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="path-h">
+    <div class="path-h-steps">
+      <div class="path-h-line" aria-hidden="true"></div>
+
+      <div class="path-h-step">
+        <div class="path-h-logo"><img src="../../public/logos/kaust.svg" alt="كاوست"/></div>
+        <div class="path-h-connector"><div class="path-h-dot" aria-hidden="true"></div></div>
+        <div class="card timeline-card path-h-card">
+          <div class="org">كاوست</div>
+          <div class="role">معسكر تخصص ذكاء اصطناعي</div>
+          <div class="range">أكتوبر 2024 — يناير 2025</div>
+        </div>
+      </div>
+
+      <div class="path-h-step">
+        <div class="path-h-logo"><img src="../../public/logos/tabuk-university.svg" alt="جامعة تبوك"/></div>
+        <div class="path-h-connector"><div class="path-h-dot" aria-hidden="true"></div></div>
+        <div class="card timeline-card path-h-card">
+          <div class="org">جامعة تبوك</div>
+          <div class="role">مقرر تعلم الآلة</div>
+          <div class="range">خلال البكالوريوس</div>
+        </div>
+      </div>
+
+      <div class="path-h-step">
+        <div class="path-h-logo"><img src="../../public/logos/tabuk-university.svg" alt="جامعة تبوك"/></div>
+        <div class="path-h-connector"><div class="path-h-dot" aria-hidden="true"></div></div>
+        <div class="card timeline-card path-h-card">
+          <div class="org">جامعة تبوك</div>
+          <div class="role">مشروع التخرج</div>
+          <div class="range">2025</div>
+        </div>
+      </div>
+
+      <div class="path-h-step">
+        <div class="path-h-logo"><img src="../png/شعارات/tuwaiq-on-light.png" alt="أكاديمية طويق"/></div>
+        <div class="path-h-connector"><div class="path-h-dot" aria-hidden="true"></div></div>
+        <div class="card accent timeline-card path-h-card">
+          <div class="org">أكاديمية طويق</div>
+          <div class="role">معسكر علوم البيانات والذكاء الاصطناعي</div>
+          <div class="range">أكتوبر — ديسمبر 2025</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">اختيار المسار</div>
     <div class="signal"><span class="a"></span><span class="b"></span></div>
   </div>
 </div>
