@@ -160,6 +160,23 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .tool-card.accent .tool-mark{background:#ffffff;border-color:rgba(79,216,196,.45)}
 .tool-name{font-size:26px;font-weight:700;line-height:1.2;margin:0}
 .tool-role{font-size:17px;line-height:1.5;color:#8a93a0;margin:0}
+.h48-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;position:relative;width:100%;align-items:start;margin-top:28px;flex:1}
+.h48-line{position:absolute;top:52px;left:10%;right:10%;height:4px;background:linear-gradient(to left,#4fd8c4 0%,rgba(79,216,196,.55) 55%,rgba(11,13,16,.14) 100%);border-radius:4px;z-index:0}
+.h48-step{display:flex;flex-direction:column;align-items:center;gap:0;position:relative;min-width:0;z-index:1}
+.h48-badge{min-width:104px;height:44px;padding:0 14px;border-radius:999px;background:#ffffff;border:2px solid #4fd8c4;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#4fd8c4;margin-bottom:12px}
+.h48-step:last-child .h48-badge{background:rgba(79,216,196,.10);color:#0b0d10;border-color:#4fd8c4}
+.h48-connector{height:40px;width:100%;display:flex;align-items:center;justify-content:center}
+.h48-dot{width:16px;height:16px;border-radius:50%;background:#4fd8c4;border:3px solid #f2f4f6;box-shadow:0 0 0 2px #4fd8c4;flex-shrink:0}
+.h48-step:first-child .h48-dot{background:rgba(11,13,16,.14);box-shadow:0 0 0 2px rgba(11,13,16,.2)}
+.h48-step:last-child .h48-dot{background:#0b0d10;box-shadow:0 0 0 2px #4fd8c4;width:20px;height:20px}
+.h48-card{width:100%;text-align:center;padding:20px 14px;margin-top:10px;min-height:200px;display:flex;flex-direction:column;gap:8px}
+.h48-card .h48-title{font-size:22px;font-weight:700;line-height:1.35;margin:0}
+.h48-card .h48-desc{font-size:16px;line-height:1.5;color:#8a93a0;margin:0}
+.judges-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:24px;flex:1;align-content:start;min-height:0}
+.judge-card{padding:26px 24px;display:flex;flex-direction:column;gap:10px;min-height:0}
+.judge-num{font-size:16px;font-weight:700;color:#4fd8c4}
+.judge-title{font-size:24px;font-weight:700;line-height:1.3;margin:0}
+.judge-desc{font-size:17px;line-height:1.5;color:#8a93a0;margin:0}
 .project-gallery.g8{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}
 .project-gallery.g5{grid-template-columns:repeat(6,1fr);grid-template-rows:1.1fr 1fr}
 .project-gallery.g5 .project-shot:nth-child(-n+3){grid-column:span 2}
@@ -1102,11 +1119,136 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
       </div>
     </div>
 
-    <div class="takeaway" style="margin-top:20px">الأداة ما تفوز لوحدها — اللي يفوز هو اللي يستخدمها بسرعة ويسلّم نسخة شغّالة.</div>
   </div>
 
   <div class="footer">
     <div class="page">أدوات الهاكاثونات</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 22 كيف أمضي ٤٨ ساعة -->
+<div id="s22" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div style="margin-top:18px;display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="kicker">طريقة العمل</div>
+    <div class="title" style="font-size:48px">كيف أمضي ٤٨ ساعة؟</div>
+    <div class="bar"></div>
+
+    <div class="h48-steps">
+      <div class="h48-line" aria-hidden="true"></div>
+
+      <div class="h48-step">
+        <div class="h48-badge">0–4 س</div>
+        <div class="h48-connector"><div class="h48-dot" aria-hidden="true"></div></div>
+        <div class="card h48-card">
+          <h3 class="h48-title">فهم واختيار</h3>
+          <p class="h48-desc">نفهم التحدي، نختار مشكلة واضحة، ونوزّع الأدوار بسرعة.</p>
+        </div>
+      </div>
+
+      <div class="h48-step">
+        <div class="h48-badge">4–12 س</div>
+        <div class="h48-connector"><div class="h48-dot" aria-hidden="true"></div></div>
+        <div class="card h48-card">
+          <h3 class="h48-title">MVP رفيع</h3>
+          <p class="h48-desc">مسار واحد شغّال من البداية للنهاية — مو كل الميزات.</p>
+        </div>
+      </div>
+
+      <div class="h48-step">
+        <div class="h48-badge">12–30 س</div>
+        <div class="h48-connector"><div class="h48-dot" aria-hidden="true"></div></div>
+        <div class="card accent h48-card">
+          <h3 class="h48-title">بناء الجوهر</h3>
+          <p class="h48-desc">نكمل المنطق الأساسي وتكامل الذكاء أو البيانات.</p>
+        </div>
+      </div>
+
+      <div class="h48-step">
+        <div class="h48-badge">30–40 س</div>
+        <div class="h48-connector"><div class="h48-dot" aria-hidden="true"></div></div>
+        <div class="card h48-card">
+          <h3 class="h48-title">صقل الديمو</h3>
+          <p class="h48-desc">نصلح الكسور، نثبت السيناريو، ونجهّز الشاشات.</p>
+        </div>
+      </div>
+
+      <div class="h48-step">
+        <div class="h48-badge">40–48 س</div>
+        <div class="h48-connector"><div class="h48-dot" aria-hidden="true"></div></div>
+        <div class="card h48-card">
+          <h3 class="h48-title">عرض وبروفة</h3>
+          <p class="h48-desc">بروفة كاملة، نسخة احتياطية، وتسليم النسخة الشغّالة.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">كيف أمضي ٤٨ ساعة</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 23 العرض على المحكمين -->
+<div id="s23" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div style="margin-top:18px;display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="kicker">طريقة العمل</div>
+    <div class="title" style="font-size:48px">العرض على المحكمين</div>
+    <div class="bar"></div>
+
+    <div class="judges-grid">
+      <div class="card judge-card">
+        <div class="judge-num">01</div>
+        <h3 class="judge-title">المشكلة في ٣٠ ثانية</h3>
+        <p class="judge-desc">الحكم يفهم الألم قبل ما نشوف أي شاشة.</p>
+      </div>
+      <div class="card accent judge-card">
+        <div class="judge-num">02</div>
+        <h3 class="judge-title">نسخة شغّالة قبل السلايدات</h3>
+        <p class="judge-desc">الديمو الحي أقوى من أي عرض نظري.</p>
+      </div>
+      <div class="card judge-card">
+        <div class="judge-num">03</div>
+        <h3 class="judge-title">قصة قصيرة</h3>
+        <p class="judge-desc">ألم → حل → أثر. بدون تشتيت تقني مبكر.</p>
+      </div>
+      <div class="card judge-card">
+        <div class="judge-num">04</div>
+        <h3 class="judge-title">رقم واحد ملموس</h3>
+        <p class="judge-desc">وقت، دقة، أو نتيجة واضحة يتذكرونها.</p>
+      </div>
+      <div class="card judge-card">
+        <div class="judge-num">05</div>
+        <h3 class="judge-title">أدوار واضحة في العرض</h3>
+        <p class="judge-desc">كل عضو يعرف متى يتكلم وماذا يقول.</p>
+      </div>
+      <div class="card judge-card">
+        <div class="judge-num">06</div>
+        <h3 class="judge-title">بروفة + خطة B</h3>
+        <p class="judge-desc">فيديو أو لقطات جاهزة لو الشبكة أو الديمو وقع.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">العرض على المحكمين</div>
     <div class="signal"><span class="a"></span><span class="b"></span></div>
   </div>
 </div>
