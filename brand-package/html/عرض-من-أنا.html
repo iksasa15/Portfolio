@@ -82,6 +82,20 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .path-h-card .org{font-size:18px}
 .path-h-card .role{font-size:22px;line-height:1.35}
 .path-h-card .range{font-size:16px;margin-top:6px}
+.project-intro{display:flex;flex-direction:column;flex:1;justify-content:center;align-items:center;text-align:center;padding:0 120px}
+.project-intro .title{font-size:72px}
+.project-body{display:grid;grid-template-columns:38% 1fr;gap:28px;flex:1;margin-top:18px;min-height:0}
+.project-info{display:flex;flex-direction:column;gap:14px;min-width:0}
+.project-org-logo{width:120px;height:72px;border-radius:14px;background:#ffffff;border:1px solid rgba(11,13,16,.10);padding:10px 14px;display:flex;align-items:center;justify-content:center;align-self:flex-start}
+.project-org-logo img{width:100%;height:100%;object-fit:contain}
+.project-name{font-size:36px;font-weight:700;line-height:1.3;margin:0}
+.project-badge{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;font-weight:600;font-size:16px;line-height:1.4;background:rgba(79,216,196,.12);color:#4fd8c4;border:1.5px solid rgba(79,216,196,.35);align-self:flex-start;text-align:right}
+.project-desc{font-size:18px;line-height:1.62;color:#8a93a0;margin:0}
+.project-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:4px}
+.project-tag{padding:7px 14px;border-radius:999px;font-size:15px;font-weight:600;background:#ffffff;border:1px solid rgba(11,13,16,.10)}
+.project-gallery{display:grid;grid-template-columns:repeat(3,1fr);grid-template-rows:repeat(3,1fr);gap:10px;min-height:0;height:100%}
+.project-shot{background:#ffffff;border:2px solid #4fd8c4;border-radius:12px;padding:5px;overflow:hidden;display:flex;align-items:center;justify-content:center;min-height:0}
+.project-shot img{width:100%;height:100%;object-fit:contain;display:block;border-radius:6px;background:#f2f4f6;border:1px solid rgba(11,13,16,.08)}
 </style>
 </head>
 <body>
@@ -381,6 +395,76 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 
   <div class="footer">
     <div class="page">اختيار المسار</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 7 مشاريعي -->
+<div id="s7" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div class="project-intro">
+    <div class="kicker">أعمال مختارة</div>
+    <div class="title">مشاريعي</div>
+    <div class="bar" style="margin:20px auto 0"></div>
+    <p class="project-desc" style="font-size:26px;margin-top:32px;max-width:900px">منصات ذكاء اصطناعي، تطبيقات موبايل، ولوحات تحكم — من هاكاثونات ومعسكرات إلى مشاريع تخرج وحضانات.</p>
+  </div>
+
+  <div class="footer">
+    <div class="page">مشاريعي</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 8 عين Ayn -->
+<div id="s8" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div style="margin-top:14px">
+    <div class="kicker">المشاريع</div>
+    <div class="bar"></div>
+  </div>
+
+  <div class="project-body">
+    <div class="project-info">
+      <div class="project-org-logo"><img src="../../public/logos/gastat.png" alt="الهيئة العامة للإحصاء"/></div>
+      <h2 class="project-name">عين Ayn<br><span class="teal" style="font-size:28px;font-weight:600">عينٌ ذكية على جودة بياناتك</span></h2>
+      <div class="project-badge">المركز الثاني — هاكاثون الابتكار في البيانات · الهيئة العامة للإحصاء</div>
+      <p class="project-desc">منصّة لمراقبة وتحسين جودة البيانات أثناء الإدخال: لوحات مؤشرات، جداول ملوّنة حسب الخطأ والتحذير، تنبيهات قابلة للترشيح، وتقارير تحليل بنصوص مدعومة بنموذج لغوي إلى جانب طبقة قواعد أعمال. تدعم التحقق اللحظي في النماذج مع شرح المشكلة والاقتراح، ونافذة تفاصيل الصف للتدقيق العميق. فازت بالمركز الثاني في هاكاثون الهيئة، مع مشاركة في منتدى الأمم المتحدة العالمي للبيانات.</p>
+      <div class="project-tags">
+        <span class="project-tag">نماذج لغوية</span>
+        <span class="project-tag">جودة البيانات</span>
+        <span class="project-tag">قواعد أعمال</span>
+      </div>
+    </div>
+
+    <div class="project-gallery">
+      <div class="project-shot"><img src="../../public/projects/ayn/01-dashboard-kpi.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/02-data-grid.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/03-details-modal.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/04-analysis-insights.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/05-alerts-grid.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/06-form-demographic.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/07-realtime-verify.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/08-form-economic.png" alt=""/></div>
+      <div class="project-shot"><img src="../../public/projects/ayn/09-award-check-gastat.png" alt=""/></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">عين Ayn</div>
     <div class="signal"><span class="a"></span><span class="b"></span></div>
   </div>
 </div>
