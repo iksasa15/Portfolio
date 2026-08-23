@@ -100,6 +100,50 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .project-gallery.g11{grid-template-columns:repeat(12,1fr);grid-template-rows:repeat(3,1fr)}
 .project-gallery.g11 .project-shot{grid-column:span 3}
 .project-gallery.g11 .project-shot:nth-child(n+9){grid-column:span 4}
+/* كشكولي — هوية خاصة */
+.slide.kushkooli{
+  background-color:#faf6ee;
+  background-image:
+    linear-gradient(rgba(29,53,131,.06) 1px, transparent 1px),
+    radial-gradient(ellipse 60% 40% at 15% 0%,rgba(29,53,131,.08),transparent 55%);
+  background-size:100% 28px, auto;
+  background-position:0 56px, 0 0;
+  color:#1a2744;
+}
+.slide.kushkooli .kicker{color:#1d3583}
+.slide.kushkooli .teal{color:#1d3583}
+.slide.kushkooli .bar{background:#1d3583}
+.slide.kushkooli .pill{
+  background:rgba(29,53,131,.10);
+  color:#1d3583;
+  border-color:rgba(29,53,131,.28);
+}
+.slide.kushkooli .project-badge{
+  background:rgba(29,53,131,.10);
+  color:#1d3583;
+  border-color:rgba(29,53,131,.28);
+}
+.slide.kushkooli .project-desc{color:#5c6578}
+.slide.kushkooli .project-tag{
+  background:#ffffff;
+  border-color:rgba(29,53,131,.14);
+  color:#1a2744;
+}
+.slide.kushkooli .project-org-logo{
+  background:#ffffff;
+  border-color:rgba(29,53,131,.14);
+}
+.slide.kushkooli .project-shot{
+  background:#ffffff;
+  border-color:#1d3583;
+}
+.slide.kushkooli .project-shot img{background:#faf6ee;border-color:rgba(26,39,68,.08)}
+.slide.kushkooli .page{color:#8a8490}
+.slide.kushkooli .signal .a{background:#1d3583}
+.slide.kushkooli .signal .b{background:rgba(29,53,131,.22)}
+.slide.kushkooli .mark svg rect:first-child{fill:#1d3583}
+.slide.kushkooli .mark svg rect:nth-child(2){fill:#1a2744}
+.slide.kushkooli .mark svg circle{fill:#1a2744}
 .project-gallery.g8{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}
 .project-gallery.g5{grid-template-columns:repeat(6,1fr);grid-template-rows:1.1fr 1fr}
 .project-gallery.g5 .project-shot:nth-child(-n+3){grid-column:span 2}
@@ -948,17 +992,17 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 </div>
 
 <!-- 19 كشكولي -->
-<div id="s19" class="slide">
+<div id="s19" class="slide kushkooli">
   <div class="header">
     <div class="mark">
-      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#1d3583"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#1a2744"/><circle cx="74" cy="36" r="7" fill="#1a2744"/></svg>
       <span style="font-size:28px;font-weight:600">احمد الحربي</span>
     </div>
-    <span class="pill">ahmed014x.com</span>
+    <span class="pill">kushkooli.com</span>
   </div>
 
   <div style="margin-top:14px">
-    <div class="kicker">المشاريع</div>
+    <div class="kicker">كشكولي</div>
     <div class="bar"></div>
   </div>
 
@@ -966,7 +1010,7 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
     <div class="project-info">
       <div class="project-org-logo" style="width:120px;height:120px;padding:14px"><img src="../../public/logos/kushkooli.png" alt="كشكولي"/></div>
       <h2 class="project-name">كشكولي<br><span class="teal" style="font-size:26px;font-weight:600">دفترك الرقمي للجامعة</span></h2>
-      <div class="project-badge">kushkooli.com · تطبيق iOS · App Store</div>
+      <div class="project-badge">تطبيق iOS · متوفر على App Store</div>
       <p class="project-desc">دفترك الرقمي بروح الكشكول والحبر: محاضرات، مهام، معدل، إحصائيات وتحليل أداء، مع مساعد ذكي للملخصات وبطاقات المراجعة — على iPhone وiPad وApple Watch.</p>
       <div class="project-tags">
         <span class="project-tag">iOS</span>
