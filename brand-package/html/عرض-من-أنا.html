@@ -144,6 +144,21 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .slide.kushkooli .mark svg rect:first-child{fill:#1d3583}
 .slide.kushkooli .mark svg rect:nth-child(2){fill:#1a2744}
 .slide.kushkooli .mark svg circle{fill:#1a2744}
+.slide.kushkooli .social-label{color:#1d3583}
+.slide.kushkooli .social-qr{border-color:#1d3583}
+.slide.kushkooli .card.accent{background:rgba(29,53,131,.06);border:2.5px solid #1d3583}
+.slide.kushkooli .social-icon{background:#ffffff;border-color:rgba(29,53,131,.14)}
+.kush-dl{display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;margin-top:28px;flex:1;align-items:center;min-height:0}
+.kush-dl-info{display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+.kush-dl-logo{width:140px;height:140px;border-radius:28px;background:#ffffff;border:1px solid rgba(29,53,131,.14);padding:16px;display:flex;align-items:center;justify-content:center}
+.kush-dl-logo img{width:100%;height:100%;object-fit:contain}
+.kush-dl-title{font-size:44px;font-weight:700;line-height:1.25;margin:0;color:#1a2744}
+.kush-dl-sub{font-size:24px;line-height:1.55;color:#5c6578;margin:0;max-width:640px}
+.kush-dl-badge{display:inline-flex;align-items:center;padding:10px 18px;border-radius:999px;font-weight:600;font-size:18px;background:rgba(29,53,131,.10);color:#1d3583;border:1.5px solid rgba(29,53,131,.28)}
+.kush-dl-qr-wrap{display:flex;flex-direction:column;align-items:center;gap:16px;justify-self:center}
+.kush-dl-qr{width:340px;height:340px;border-radius:24px;background:#ffffff;border:3px solid #1d3583;padding:18px;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 40px rgba(26,39,68,.08)}
+.kush-dl-qr img{width:100%;height:100%;object-fit:contain;display:block;image-rendering:pixelated}
+.kush-dl-caption{font-size:20px;font-weight:600;color:#1d3583;margin:0}
 .team-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-content:start;min-height:0}
 .team-card{padding:16px 18px;display:flex;flex-direction:column;gap:6px;min-height:0}
 .team-num{font-size:14px;font-weight:700;color:#4fd8c4}
@@ -177,6 +192,15 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 .judge-num{font-size:16px;font-weight:700;color:#4fd8c4}
 .judge-title{font-size:24px;font-weight:700;line-height:1.3;margin:0}
 .judge-desc{font-size:17px;line-height:1.5;color:#8a93a0;margin:0}
+.social-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:28px;flex:1;align-content:start;min-height:0}
+.social-card{padding:28px 24px;display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;min-height:0}
+.social-icon{width:52px;height:52px;border-radius:14px;background:#f2f4f6;border:1px solid rgba(11,13,16,.10);display:flex;align-items:center;justify-content:center;padding:12px;flex-shrink:0}
+.social-icon img{width:100%;height:100%;object-fit:contain;display:block}
+.social-card.accent .social-icon{background:#ffffff;border-color:rgba(79,216,196,.45)}
+.social-label{font-size:22px;font-weight:700;margin:0;color:#4fd8c4}
+.social-handle{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:18px;font-weight:600;margin:0;color:#0b0d10}
+.social-qr{width:180px;height:180px;border-radius:16px;background:#ffffff;border:2px solid #4fd8c4;padding:10px;display:flex;align-items:center;justify-content:center;margin-top:4px}
+.social-qr img{width:100%;height:100%;object-fit:contain;display:block;image-rendering:pixelated}
 .project-gallery.g8{grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,1fr)}
 .project-gallery.g5{grid-template-columns:repeat(6,1fr);grid-template-rows:1.1fr 1fr}
 .project-gallery.g5 .project-shot:nth-child(-n+3){grid-column:span 2}
@@ -1249,6 +1273,90 @@ body{margin:0;background:#e8ebee;font-family:'Thmanyah Sans',sans-serif}
 
   <div class="footer">
     <div class="page">العرض على المحكمين</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 24 حساباتي -->
+<div id="s24" class="slide">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">ahmed014x.com</span>
+  </div>
+
+  <div style="margin-top:18px;display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="kicker">تواصل</div>
+    <div class="title" style="font-size:48px">حساباتي</div>
+    <div class="bar"></div>
+
+    <div class="social-grid">
+      <div class="card accent social-card">
+        <div class="social-icon"><img src="../png/شعارات/logo-mark-on-light-1024.png" alt="Portfolio"/></div>
+        <h3 class="social-label">Portfolio</h3>
+        <p class="social-handle">ahmed014x.com</p>
+        <div class="social-qr"><img src="../../public/qr/portfolio.png" alt="QR Portfolio"/></div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon"><img src="../../public/logos/social/linkedin.svg" alt="LinkedIn"/></div>
+        <h3 class="social-label">لينكدإن</h3>
+        <p class="social-handle">ahmed014x</p>
+        <div class="social-qr"><img src="../../public/qr/linkedin.png" alt="QR LinkedIn"/></div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon"><img src="../../public/logos/social/instagram.svg" alt="Instagram"/></div>
+        <h3 class="social-label">إنستقرام</h3>
+        <p class="social-handle">ahmed014x</p>
+        <div class="social-qr"><img src="../../public/qr/instagram.png" alt="QR Instagram"/></div>
+      </div>
+      <div class="card social-card">
+        <div class="social-icon"><img src="../../public/logos/social/x.svg" alt="X"/></div>
+        <h3 class="social-label">إكس</h3>
+        <p class="social-handle">ahmed014x</p>
+        <div class="social-qr"><img src="../../public/qr/x.png" alt="QR X"/></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">حساباتي</div>
+    <div class="signal"><span class="a"></span><span class="b"></span></div>
+  </div>
+</div>
+
+<!-- 25 تحميل كشكولي -->
+<div id="s25" class="slide kushkooli">
+  <div class="header">
+    <div class="mark">
+      <svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#4fd8c4"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#0b0d10"/><circle cx="74" cy="36" r="7" fill="#0b0d10"/></svg>
+      <span style="font-size:28px;font-weight:600">احمد الحربي</span>
+    </div>
+    <span class="pill">kushkooli.com</span>
+  </div>
+
+  <div style="margin-top:18px;display:flex;flex-direction:column;flex:1;min-height:0">
+    <div class="kicker">كشكولي</div>
+    <div class="title" style="font-size:48px">حمّل كشكولي</div>
+    <div class="bar"></div>
+
+    <div class="kush-dl">
+      <div class="kush-dl-info">
+        <div class="kush-dl-logo"><img src="../../public/logos/kushkooli.png" alt="كشكولي"/></div>
+        <h2 class="kush-dl-title">دفترك الرقمي للجامعة<br><span class="teal" style="font-size:28px;font-weight:600">متوفر على App Store</span></h2>
+        <p class="kush-dl-sub">امسح الرمز وحمّل التطبيق على iPhone وiPad — محاضرات، مهام، معدل، ومساعد ذكي.</p>
+      </div>
+
+      <div class="kush-dl-qr-wrap">
+        <div class="kush-dl-qr"><img src="../../public/qr/kushkooli-appstore.png" alt="QR تحميل كشكولي"/></div>
+        <p class="kush-dl-caption">امسح للتحميل من App Store</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="page">حمّل كشكولي</div>
     <div class="signal"><span class="a"></span><span class="b"></span></div>
   </div>
 </div>
