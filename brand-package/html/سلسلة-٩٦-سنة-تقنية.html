@@ -12,558 +12,283 @@
 @font-face{font-family:'Thmanyah Sans';src:url('../fonts/thmanyahsans-Black.otf');font-weight:900}
 body{margin:0;background:#123528;font-family:'Thmanyah Sans',sans-serif}
 .wrap{display:flex;flex-direction:column;gap:48px;align-items:center;padding:48px 0 80px}
+.poster{
+  width:1080px;height:1350px;background-color:#0A1F14;
+  background-image:radial-gradient(rgba(245,247,245,.06) 1.5px,transparent 1.5px);
+  background-size:44px 44px;padding:72px 72px 64px;box-sizing:border-box;
+  display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif;color:#F5F7F5;overflow:hidden;
+}
+.hdr{display:flex;justify-content:space-between;align-items:center;flex-shrink:0}
+.mark{display:flex;align-items:center;gap:14px;font-size:28px;font-weight:600}
+.badge{font-size:22px;padding:10px 24px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px}
+.badge.fill{background:#006C35;color:#F5F7F5;border-color:#006C35}
+.badge.gold{background:#C9A227;color:#0A1F14;border-color:#C9A227}
+.photo{
+  position:relative;border-radius:20px;overflow:hidden;flex-shrink:0;
+  margin-top:28px;height:340px;
+}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .veil{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(10,31,20,.15) 0%,rgba(10,31,20,.55) 55%,rgba(10,31,20,.92) 100%);
+}
+.photo.tall{height:420px}
+.photo.hero{height:480px;margin-top:36px}
+.year{font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-top:28px}
+.title{font-size:52px;font-weight:700;line-height:1.3;margin-top:8px}
+.body{font-size:26px;color:rgba(245,247,245,.72);line-height:1.75;margin-top:16px}
+.body + .body{margin-top:12px}
+.points{margin-top:20px;display:flex;flex-direction:column;gap:10px}
+.point{
+  background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);
+  border-radius:14px;padding:16px 22px;font-size:24px;line-height:1.55;color:rgba(245,247,245,.85);
+}
+.point strong{color:#C9A227;font-weight:600}
+.ftr{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:24px;flex-shrink:0}
+.pg{font-size:24px;color:rgba(245,247,245,.45)}
+.handle{
+  display:flex;align-items:center;gap:12px;padding:10px 22px;
+  background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px;
+  font-family:ui-monospace,monospace;font-size:24px;color:#C9A227;direction:ltr;
+}
+.sig{display:flex;flex-direction:column;gap:10px}
+.sig span{width:72px;height:12px;border-radius:6px}
+.sig .a{background:#006C35}.sig .b{background:#C9A227;margin-right:28px;opacity:.75}
 </style>
 </head>
 <body>
 <div class="wrap">
-  <div dir="rtl" style="width:1080px;color:rgba(245,247,245,.55);font-size:22px">٩٦ سنة تقنية سعودية · 12 بوستر 1080×1350 · @Ahmed014x</div>
+  <div dir="rtl" style="width:1080px;color:rgba(245,247,245,.55);font-size:22px">٩٦ سنة تقنية سعودية · 12 بوستر · صور حقيقية · @Ahmed014x</div>
 
-<!-- ========== 1 غلاف ========== -->
-<div id="p1" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(0,108,53,.35),transparent 60%),radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;background:#006C35;color:#F5F7F5;font-weight:600;border-radius:999px">اليوم الوطني</span>
+<!-- 1 -->
+<div id="p1" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge fill">اليوم الوطني</span>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:28px">
-    <svg width="160" height="160" viewBox="0 0 160 160" fill="none">
-      <circle cx="80" cy="80" r="72" stroke="#006C35" stroke-width="3" opacity=".4"/>
-      <circle cx="80" cy="80" r="52" stroke="#C9A227" stroke-width="2" opacity=".5"/>
-      <path d="M48 88c8-28 24-44 32-44s24 16 32 44" stroke="#F5F7F5" stroke-width="4" stroke-linecap="round" fill="none"/>
-      <circle cx="80" cy="72" r="10" fill="#006C35"/>
-      <circle cx="80" cy="72" r="4" fill="#C9A227"/>
-      <path d="M40 110h80M50 122h60" stroke="#8A968E" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-    <div style="font-size:28px;font-weight:600;color:#C9A227;letter-spacing:.04em">من أول إشارة… إلى مدار وذكاء</div>
-    <div style="font-size:78px;font-weight:700;color:#F5F7F5;line-height:1.25">٩٦ سنة<br>تقنية سعودية</div>
-    <div style="font-size:32px;color:rgba(245,247,245,.55);line-height:1.7;max-width:760px">رحلة المملكة من الراديو والنفط إلى الفضاء والذكاء الاصطناعي</div>
+  <div class="photo hero">
+    <img src="../png/٩٦-سنة-تقنية-صور/skyline.jpg" alt=""/>
+    <div class="veil"></div>
+    <div style="position:absolute;right:36px;left:36px;bottom:36px">
+      <div style="font-size:26px;font-weight:600;color:#C9A227;margin-bottom:10px">من أول إشارة… إلى مدار وذكاء</div>
+      <div style="font-size:56px;font-weight:700;line-height:1.25">٩٦ سنة<br>تقنية سعودية</div>
+    </div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">1 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="body" style="margin-top:28px">هذه السلسلة تروي كيف انتقلت المملكة من بدايات الاتصال والبث والطاقة، إلى منظومة رقمية واسعة تضم الحكومة الإلكترونية، والفضاء، والذكاء الاصطناعي.</div>
+  <div class="body">القصة ليست محطات منفصلة؛ كل جيل تقني مهّد للذي بعده — من موجة الراديو إلى الأقمار الصناعية ونماذج اللغة.</div>
+  <div class="ftr"><span class="pg">1 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 2 المسار كامل ========== -->
-<div id="p2" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 02</span>
+<!-- 2 -->
+<div id="p2" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 02</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:64px;font-weight:700;color:#F5F7F5;line-height:1.3">المسار الكامل</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">ست محطات رسمت قصة التقنية في المملكة</div>
+  <div class="photo" style="height:260px">
+    <img src="../png/٩٦-سنة-تقنية-صور/cover.jpg" alt="" style="object-position:center 40%"/>
+    <div class="veil"></div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:0;position:relative;padding:20px 0">
-    <div style="position:absolute;right:38px;top:40px;bottom:40px;width:4px;background:linear-gradient(180deg,#006C35,#C9A227);border-radius:2px;opacity:.5"></div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#006C35;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #006C35"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">راديو وبرق</div><div style="font-size:22px;color:#8A968E;margin-top:4px">بدايات الاتصال</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">1930s</span>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#006C35;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #006C35"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">نفط وصناعة</div><div style="font-size:22px;color:#8A968E;margin-top:4px">محرّك البنية التقنية</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">1950s+</span>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#006C35;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #006C35"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">اتصالات وبث</div><div style="font-size:22px;color:#8A968E;margin-top:4px">تلفزيون وشبكات هاتف</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">1960s–90s</span>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#006C35;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #006C35"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">إنترنت ورقمنة</div><div style="font-size:22px;color:#8A968E;margin-top:4px">شبكة وخدمات دولة</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">1990s–10s</span>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#C9A227;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #C9A227"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:2px solid #C9A227;border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#C9A227">رؤية 2030</div><div style="font-size:22px;color:#8A968E;margin-top:4px">تحول رقمي وطني</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">2016+</span>
-      </div>
-    </div>
-    <div style="display:flex;align-items:center;gap:28px;padding:18px 0;position:relative">
-      <div style="width:28px;height:28px;border-radius:50%;background:#C9A227;border:4px solid #0A1F14;flex-shrink:0;z-index:1;box-shadow:0 0 0 3px #C9A227"></div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:16px;padding:22px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">فضاء وذكاء</div><div style="font-size:22px;color:#8A968E;margin-top:4px">مدار · نماذج · بيانات</div></div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">اليوم</span>
-      </div>
-    </div>
+  <div class="year">الخط الزمني</div>
+  <div class="title" style="font-size:46px">المسار الكامل في ست محطات</div>
+  <div class="body">على امتداد نحو قرن، لم تكن التقنية مشروعًا واحدًا؛ بل طبقات متراكمة: اتصال، طاقة، بث، شبكة، ثم تحول رقمي وطني يقودنا اليوم نحو الفضاء والذكاء.</div>
+  <div class="points">
+    <div class="point"><strong>1930s–50s</strong> — راديو وبرق: أول جسر معلوماتي يربط المناطق</div>
+    <div class="point"><strong>1950s+</strong> — نفط وصناعة: تمويل بنية تحتية ومعرفة هندسية</div>
+    <div class="point"><strong>1960s–90s</strong> — تلفزيون واتصالات: بث وطني وشبكات هاتف</div>
+    <div class="point"><strong>1990s–2010s</strong> — إنترنت وحكومة إلكترونية ثم جوال وخدمات</div>
+    <div class="point" style="border-color:#C9A227"><strong>2016–اليوم</strong> — رؤية 2030، فضاء، وذكاء اصطناعي وطني</div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">2 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">2 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 3 راديو ========== -->
-<div id="p3" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 03</span>
+<!-- 3 -->
+<div id="p3" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 03</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">1930s – 1950s</div>
-    <div style="font-size:68px;font-weight:700;color:#F5F7F5;line-height:1.3">الراديو والبرق</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">أول جسر يربط مناطق المملكة بالعالم — موجات ومورس قبل الشاشات</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/radio.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">1930s – 1950s</div>
+  <div class="title">الراديو والبرق</div>
+  <div class="body">قبل الشاشات والهواتف الذكية، كانت الموجات الراديوية والخطوط البرقية وسيلة الدولة والمجتمع لتبادل الأخبار والتعليمات والأخبار الرسمية عبر المسافات الشاسعة.</div>
+  <div class="body">محطات البث نقلت الصوت إلى البيوت، بينما خدمت الرسائل البرقية الإدارات والقطاعات بسرعة لم تكن ممكنة بالبريد التقليدي وحده. هذه البنية كانت اللبنة الأولى لثقافة «الاتصال الفوري».</div>
+  <div class="points">
+    <div class="point">توسيع تغطية البث تدريجيًا ليشمل مناطق أوسع من المملكة</div>
+    <div class="point">تأسيس عادة الاستماع الوطني وربط المواطن بالمعلومة الرسمية</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
-    <div style="display:flex;justify-content:center;margin-bottom:12px">
-      <svg width="280" height="180" viewBox="0 0 280 180" fill="none">
-        <rect x="40" y="50" width="160" height="100" rx="12" stroke="#F5F7F5" stroke-width="4"/>
-        <circle cx="100" cy="100" r="28" stroke="#006C35" stroke-width="5"/>
-        <circle cx="100" cy="100" r="10" fill="#C9A227"/>
-        <rect x="155" y="70" width="28" height="12" rx="3" fill="#006C35"/>
-        <rect x="155" y="92" width="28" height="12" rx="3" fill="#8A968E"/>
-        <rect x="155" y="114" width="28" height="12" rx="3" fill="#8A968E"/>
-        <path d="M220 40c20 20 20 80 0 100" stroke="#C9A227" stroke-width="3" stroke-linecap="round" opacity=".7"/>
-        <path d="M240 25c30 30 30 100 0 130" stroke="#006C35" stroke-width="3" stroke-linecap="round" opacity=".5"/>
-        <line x1="80" y1="150" x2="80" y2="170" stroke="#8A968E" stroke-width="4"/>
-        <line x1="160" y1="150" x2="160" y2="170" stroke="#8A968E" stroke-width="4"/>
-      </svg>
-    </div>
-    <div style="display:flex;gap:16px">
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#F5F7F5">محطات بث</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px">صوت يصل للبيوت</div>
-      </div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#F5F7F5">خطوط برقية</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px">رسائل رسمية عاجلة</div>
-      </div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:18px;padding:26px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#006C35">بنية اتصال</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px">أساس ما جاء بعدها</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">3 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">3 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 4 نفط ========== -->
-<div id="p4" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 04</span>
+<!-- 4 -->
+<div id="p4" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 04</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">1950s+</div>
-    <div style="font-size:64px;font-weight:700;color:#F5F7F5;line-height:1.3">النفط والتقنية الصناعية</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">الطاقة موّلت شبكات، معامل، ومختبرات — التقنية الصناعية كبنية تحتية</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/oil.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">1950s+</div>
+  <div class="title" style="font-size:46px">النفط والتقنية الصناعية</div>
+  <div class="body">لم يكن النفط مجرد مورد اقتصادي؛ بل محرّكًا أدخل أنظمة قياس، وتحكم، وتشغيل صناعي متقدم، وموّل شبكات النقل والاتصال والتعليم التي غذّت الأجيال التقنية اللاحقة.</div>
+  <div class="body">المصافي والمعامل والأنابيب احتاجت مهندسين وأدوات رصد وبنية لوجستية — فنشأت خبرة وطنية في التشغيل المعقّد أصبحت أساسًا لأي تحول صناعي أو رقمي لاحق.</div>
+  <div class="points">
+    <div class="point">استثمار طويل الأمد في البنية التحتية والمعرفة الهندسية</div>
+    <div class="point">ربط مناطق الإنتاج بالأسواق عبر أنظمة نقل ومراقبة</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
-    <div style="display:flex;justify-content:center">
-      <svg width="320" height="200" viewBox="0 0 320 200" fill="none">
-        <rect x="40" y="120" width="240" height="16" rx="4" fill="#123528"/>
-        <path d="M80 120V50h24v70" stroke="#F5F7F5" stroke-width="4" fill="none"/>
-        <path d="M104 70h40l20-30h36" stroke="#006C35" stroke-width="4" stroke-linecap="round" fill="none"/>
-        <circle cx="200" cy="40" r="14" stroke="#C9A227" stroke-width="3"/>
-        <rect x="160" y="90" width="70" height="30" rx="6" stroke="#8A968E" stroke-width="3"/>
-        <path d="M230 105h50" stroke="#006C35" stroke-width="4" stroke-linecap="round"/>
-        <rect x="270" y="90" width="20" height="30" rx="4" fill="#006C35"/>
-        <ellipse cx="100" cy="145" rx="18" ry="8" fill="#C9A227" opacity=".6"/>
-      </svg>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">مصافي ومعامل</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px;line-height:1.55">هندسة تشغيل وقياس وتحكم</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">نقل واتصال</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px;line-height:1.55">أنابيب مرتبطة بأنظمة رصد</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:18px;padding:28px;grid-column:1/-1">
-        <div style="font-size:28px;font-weight:700;color:#006C35">أثر طويل الأمد</div>
-        <div style="font-size:24px;color:rgba(245,247,245,.55);margin-top:8px">مولّد تمويل التعليم والبحث والبنية الرقمية لاحقًا</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">4 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">4 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 5 اتصالات ========== -->
-<div id="p5" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 05</span>
+<!-- 5 -->
+<div id="p5" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 05</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">1960s – 1990s</div>
-    <div style="font-size:64px;font-weight:700;color:#F5F7F5;line-height:1.3">التلفزيون والاتصالات</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">من البث الوطني إلى شبكة هاتف تغطي المدن والقرى</div>
+  <div class="photo" style="height:300px"><img src="../png/٩٦-سنة-تقنية-صور/tv.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">1960s – 1990s</div>
+  <div class="title" style="font-size:46px">التلفزيون والاتصالات</div>
+  <div class="body">مع انطلاق البث التلفزيوني الوطني، دخلت الصورة إلى المنازل إلى جانب الصوت، وأصبحت المعلومة والترفيه جزءًا يوميًا من الحياة العامة في المدن ثم القرى.</div>
+  <div class="body">في الوقت نفسه توسّعت شبكات الهاتف، ثم ظهرت بدايات الجوال، فتهيّأت البنية المادية — أبراج وكابلات ومحطات — التي سيعتمد عليها الإنترنت لاحقًا دون أن يبدأ من الصفر.</div>
+  <div class="points">
+    <div class="point"><strong>بث وطني:</strong> توحيد الرسالة الإعلامية ووصولها لشرائح أوسع</div>
+    <div class="point"><strong>هاتف وجوال:</strong> اتصال شخصي ومؤسسي على نطاق متزايد</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
-    <div style="display:flex;justify-content:center;gap:40px;align-items:flex-end">
-      <svg width="140" height="160" viewBox="0 0 140 160" fill="none">
-        <rect x="20" y="30" width="100" height="70" rx="8" stroke="#F5F7F5" stroke-width="4"/>
-        <rect x="32" y="42" width="76" height="46" rx="4" fill="#006C35" opacity=".4"/>
-        <line x1="50" y1="100" x2="50" y2="120" stroke="#8A968E" stroke-width="4"/>
-        <line x1="90" y1="100" x2="90" y2="120" stroke="#8A968E" stroke-width="4"/>
-        <rect x="35" y="120" width="70" height="10" rx="3" fill="#C9A227"/>
-        <circle cx="70" cy="20" r="6" fill="#006C35"/>
-        <line x1="70" y1="26" x2="70" y2="30" stroke="#006C35" stroke-width="3"/>
-      </svg>
-      <svg width="120" height="200" viewBox="0 0 120 200" fill="none">
-        <rect x="52" y="40" width="16" height="140" fill="#8A968E"/>
-        <path d="M60 40L20 90M60 40L100 90M60 70L30 110M60 70L90 110" stroke="#006C35" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="60" cy="36" r="10" fill="#C9A227"/>
-        <rect x="40" y="175" width="40" height="12" rx="3" fill="#123528"/>
-      </svg>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
-      <div style="display:flex;align-items:center;gap:20px;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px">
-        <span style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227;width:48px">01</span>
-        <div><div style="font-size:28px;font-weight:600;color:#F5F7F5">بث تلفزيوني وطني</div><div style="font-size:22px;color:#8A968E;margin-top:4px">معلومة وترفيه يصلان لكل منزل</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:20px;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px 28px">
-        <span style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227;width:48px">02</span>
-        <div><div style="font-size:28px;font-weight:600;color:#F5F7F5">هاتف ثابت وجوال مبكر</div><div style="font-size:22px;color:#8A968E;margin-top:4px">توسيع الشبكة عبر العقود</div></div>
-      </div>
-      <div style="display:flex;align-items:center;gap:20px;background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:16px;padding:24px 28px">
-        <span style="font-size:26px;font-family:ui-monospace,monospace;color:#006C35;width:48px">03</span>
-        <div><div style="font-size:28px;font-weight:600;color:#006C35">أساس الإنترنت القادم</div><div style="font-size:22px;color:#8A968E;margin-top:4px">الكابلات والأبراج مهّدت للشبكة</div></div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">5 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">5 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 6 إنترنت ========== -->
-<div id="p6" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 06</span>
+<!-- 6 -->
+<div id="p6" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 06</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">1990s – 2010s</div>
-    <div style="font-size:60px;font-weight:700;color:#F5F7F5;line-height:1.3">الإنترنت والحكومة الإلكترونية</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">دخول الشبكة، مواقع رسمية، وبداية الخدمات الرقمية للمواطن</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/cyber.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">1990s – 2010s</div>
+  <div class="title" style="font-size:42px">الإنترنت والحكومة الإلكترونية</div>
+  <div class="body">دخول الإنترنت غيّر إيقاع العمل والحياة: من الاتصال البطيء المنزلي إلى بروودباند أوسع، ومن الورق والطوابير إلى مواقع وبوابات رسمية تقدّم معلومة وخدمة عن بُعد.</div>
+  <div class="body">بدأت علاقة المواطن بالدولة تتحول رقميًا؛ ظهرت بوابات إلكترونية، وتدريجيًا صارت الخدمة العامة مسارًا يمكن إكماله دون زيارة ميدانية في كثير من الحالات — وهذا الأساس الذي بُنيت عليه تطبيقات الجوال لاحقًا.</div>
+  <div class="points">
+    <div class="point">انتشار الاتصال المنزلي والمؤسسي عبر مراحل تقنية متتالية</div>
+    <div class="point">انتقال تدريجي من «معلومة على موقع» إلى «خدمة مكتملة أونلاين»</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:24px">
-    <div style="display:flex;justify-content:center">
-      <svg width="300" height="160" viewBox="0 0 300 160" fill="none">
-        <circle cx="150" cy="80" r="28" fill="#006C35"/>
-        <circle cx="150" cy="80" r="10" fill="#C9A227"/>
-        <circle cx="60" cy="40" r="16" stroke="#F5F7F5" stroke-width="3"/>
-        <circle cx="240" cy="40" r="16" stroke="#F5F7F5" stroke-width="3"/>
-        <circle cx="50" cy="120" r="16" stroke="#F5F7F5" stroke-width="3"/>
-        <circle cx="250" cy="120" r="16" stroke="#F5F7F5" stroke-width="3"/>
-        <circle cx="150" cy="20" r="12" stroke="#8A968E" stroke-width="3"/>
-        <line x1="74" y1="48" x2="128" y2="68" stroke="#006C35" stroke-width="2"/>
-        <line x1="226" y1="48" x2="172" y2="68" stroke="#006C35" stroke-width="2"/>
-        <line x1="64" y1="112" x2="126" y2="90" stroke="#C9A227" stroke-width="2"/>
-        <line x1="236" y1="112" x2="174" y2="90" stroke="#C9A227" stroke-width="2"/>
-        <line x1="150" y1="32" x2="150" y2="52" stroke="#8A968E" stroke-width="2"/>
-      </svg>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">اتصال منزلي</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px">من dial-up إلى بروودباند</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:26px">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">بوابات حكومية</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:8px">معلومات وخدمات أونلاين</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:18px;padding:26px;grid-column:1/-1;display:flex;align-items:center;gap:20px">
-        <svg width="48" height="48" viewBox="0 0 48 48" fill="none"><rect x="8" y="12" width="32" height="24" rx="4" stroke="#006C35" stroke-width="3"/><path d="M16 24h16M16 30h10" stroke="#C9A227" stroke-width="2.5" stroke-linecap="round"/></svg>
-        <div><div style="font-size:28px;font-weight:700;color:#006C35">تحول في علاقة المواطن بالدولة</div><div style="font-size:22px;color:#8A968E;margin-top:4px">من الورق والطوابير إلى الشاشة</div></div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">6 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">6 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 7 جوال ========== -->
-<div id="p7" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 07</span>
+<!-- 7 -->
+<div id="p7" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 07</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">2010s</div>
-    <div style="font-size:60px;font-weight:700;color:#F5F7F5;line-height:1.3">الجوال والخدمات الرقمية</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">أبشر، نفاذ، ومدن أذكى — الدولة في جيب المواطن</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/mobile.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">2010s</div>
+  <div class="title" style="font-size:44px">الجوال والخدمات الرقمية</div>
+  <div class="body">الهاتف الذكي نقل الحكومة والخدمات إلى الجيب. منصات مثل أبشر ونفاذ لم تعد «مواقع تُفتح من المكتب» فحسب، بل تجارب يومية يُنجز عبرها المواطن معاملات مدنية وهوية رقمية بضغطة.</div>
+  <div class="body">تزامن ذلك مع تحسّن شبكات الجيل المتقدم وانتشار التطبيقات، فصار الوصول إلى الخدمة أسرع، وأصبحت المدن أكثر قابلية لحلول رقمية في التنقل والطاقة والخدمات البلدية.</div>
+  <div class="points">
+    <div class="point"><strong>أبشر:</strong> خدمات مدنية ومعاملات في مسار رقمي موحّد</div>
+    <div class="point"><strong>نفاذ:</strong> هوية رقمية تمكّن الدخول الآمن عبر جهات متعددة</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
-    <div style="display:flex;justify-content:center">
-      <svg width="120" height="220" viewBox="0 0 120 220" fill="none">
-        <rect x="20" y="10" width="80" height="200" rx="14" stroke="#F5F7F5" stroke-width="4"/>
-        <rect x="30" y="40" width="60" height="140" rx="4" fill="#123528"/>
-        <rect x="38" y="55" width="44" height="28" rx="6" fill="#006C35"/>
-        <rect x="38" y="95" width="44" height="28" rx="6" fill="#006C35" opacity=".6"/>
-        <rect x="38" y="135" width="44" height="28" rx="6" stroke="#C9A227" stroke-width="2"/>
-        <circle cx="60" cy="195" r="8" stroke="#8A968E" stroke-width="2"/>
-        <rect x="48" y="22" width="24" height="6" rx="3" fill="#8A968E"/>
-      </svg>
-    </div>
-    <div style="display:flex;gap:14px">
-      <div style="flex:1;background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:18px;padding:24px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#006C35">أبشر</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:8px">خدمات مدنية</div>
-      </div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:2px solid #C9A227;border-radius:18px;padding:24px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#C9A227">نفاذ</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:8px">هوية رقمية</div>
-      </div>
-      <div style="flex:1;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:24px;text-align:center">
-        <div style="font-size:28px;font-weight:700;color:#F5F7F5">مدن</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:8px">خدمات أذكى</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">7 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">7 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 8 رؤية 2030 ========== -->
-<div id="p8" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(ellipse 70% 40% at 50% 20%,rgba(201,162,39,.15),transparent 55%),radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;background:#C9A227;color:#0A1F14;font-weight:600;border-radius:999px">الجزء 08</span>
+<!-- 8 -->
+<div id="p8" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge gold">الجزء 08</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227;margin-bottom:12px">2016+</div>
-    <div style="font-size:68px;font-weight:700;color:#F5F7F5;line-height:1.3">رؤية 2030<br><span style="color:#C9A227">والتحول الرقمي</span></div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">استراتيجية وطنية تجعل التقنية ركيزة اقتصاد ومجتمع</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/skyline.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">2016+</div>
+  <div class="title" style="font-size:44px">رؤية 2030 والتحول الرقمي</div>
+  <div class="body">رؤية المملكة 2030 جعلت التقنية ركيزة صريحة: اقتصاد رقمي يتنوّع بعيدًا عن النفط وحده، وحكومة رقمية أسرع وأوضح، ومجتمع يبني مهارات ومعرفة لا يستهلك التقنية فقط.</div>
+  <div class="body">التحول هنا استراتيجي لا تجميلي؛ يربط الاستثمار، والتعليم، والبنية السحابية، وتنظيم البيانات في مسار واحد يخدم المواطن والاقتصاد معًا.</div>
+  <div class="points">
+    <div class="point"><strong>اقتصاد رقمي:</strong> شركات، استثمار، ومنصات نمو وطنية</div>
+    <div class="point"><strong>حكومة رقمية:</strong> خدمات شاملة بتجربة مستخدم أوضح</div>
+    <div class="point"><strong>مجتمع معرفي:</strong> مواهب ومهارات تقود المرحلة التالية</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:20px">
-    <div style="display:flex;justify-content:center;margin-bottom:8px">
-      <svg width="200" height="100" viewBox="0 0 200 100" fill="none">
-        <circle cx="100" cy="50" r="36" stroke="#C9A227" stroke-width="3"/>
-        <circle cx="100" cy="50" r="18" stroke="#006C35" stroke-width="3"/>
-        <circle cx="100" cy="50" r="6" fill="#F5F7F5"/>
-        <path d="M100 14v12M100 74v12M46 50h12M142 50h12" stroke="#8A968E" stroke-width="2"/>
-      </svg>
-    </div>
-    <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px 32px;display:flex;align-items:center;gap:24px">
-      <span style="width:56px;height:56px;border-radius:50%;background:#006C35;color:#F5F7F5;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;flex-shrink:0">1</span>
-      <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">اقتصاد رقمي</div><div style="font-size:24px;color:#8A968E;margin-top:4px">تنويع بعيدًا عن النفط وحده</div></div>
-    </div>
-    <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px 32px;display:flex;align-items:center;gap:24px">
-      <span style="width:56px;height:56px;border-radius:50%;background:#006C35;color:#F5F7F5;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;flex-shrink:0">2</span>
-      <div><div style="font-size:30px;font-weight:700;color:#F5F7F5">حكومة رقمية</div><div style="font-size:24px;color:#8A968E;margin-top:4px">خدمات شاملة وشفافة أسرع</div></div>
-    </div>
-    <div style="background:rgba(18,53,40,.95);border:2px solid #C9A227;border-radius:18px;padding:28px 32px;display:flex;align-items:center;gap:24px">
-      <span style="width:56px;height:56px;border-radius:50%;background:#C9A227;color:#0A1F14;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:24px;flex-shrink:0">3</span>
-      <div><div style="font-size:30px;font-weight:700;color:#C9A227">مجتمع معرفي</div><div style="font-size:24px;color:#8A968E;margin-top:4px">مهارات رقمية ومواهب وطنية</div></div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">8 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">8 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 9 فضاء ========== -->
-<div id="p9" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 09</span>
+<!-- 9 -->
+<div id="p9" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 09</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:68px;font-weight:700;color:#F5F7F5;line-height:1.3">الفضاء والأقمار</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">هيئة الفضاء السعودية، أقمار وطنية، وطموح مداري</div>
+  <div class="photo tall"><img src="../png/٩٦-سنة-تقنية-صور/space.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">اليوم</div>
+  <div class="title">الفضاء والأقمار</div>
+  <div class="body">انتقلت الطموحات التقنية إلى المدار: هيئة الفضاء السعودية، برامج أقمار للرصد والاتصال، ومشاركة سعودية في رحلات ومبادرات تعزّز الحضور العلمي والوطني خارج الغلاف الجوي.</div>
+  <div class="body">الفضاء ليس رمزًا فقط؛ هو امتداد لقدرات الأرض في الرصد البيئي، والاتصالات، والبحث — وحلقة تربط البنية الرقمية الوطنية بشبكات عالمية فوق الكوكب.</div>
+  <div class="points">
+    <div class="point">أقمار وطنية ودولية تخدم الرصد والاتصال والبحث</div>
+    <div class="point">بناء خبرة وكوادر تفتح مسارات صناعات فضائية طويلة الأمد</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:32px">
-    <div style="display:flex;justify-content:center">
-      <svg width="340" height="220" viewBox="0 0 340 220" fill="none">
-        <ellipse cx="170" cy="110" rx="140" ry="70" stroke="#006C35" stroke-width="2" stroke-dasharray="8 6" opacity=".5"/>
-        <ellipse cx="170" cy="110" rx="100" ry="40" stroke="#C9A227" stroke-width="2" opacity=".4"/>
-        <circle cx="170" cy="110" r="36" fill="#123528" stroke="#F5F7F5" stroke-width="3"/>
-        <path d="M155 100h30M170 90v40" stroke="#006C35" stroke-width="2" opacity=".5"/>
-        <rect x="250" y="50" width="50" height="28" rx="4" fill="#006C35"/>
-        <rect x="242" y="58" width="10" height="12" fill="#C9A227"/>
-        <rect x="298" y="58" width="10" height="12" fill="#C9A227"/>
-        <circle cx="275" cy="64" r="6" fill="#F5F7F5"/>
-        <circle cx="60" cy="40" r="3" fill="#F5F7F5"/>
-        <circle cx="100" cy="30" r="2" fill="#C9A227"/>
-        <circle cx="300" cy="160" r="2.5" fill="#F5F7F5"/>
-        <circle cx="40" cy="150" r="2" fill="#8A968E"/>
-      </svg>
-    </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px">
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px;text-align:center">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">أقمار</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:6px">رصد واتصال</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:24px;text-align:center">
-        <div style="font-size:26px;font-weight:700;color:#F5F7F5">روّاد</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:6px">وجود سعودي</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:2px solid #C9A227;border-radius:16px;padding:24px;text-align:center">
-        <div style="font-size:26px;font-weight:700;color:#C9A227">مدار</div>
-        <div style="font-size:20px;color:#8A968E;margin-top:6px">طموح مستمر</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">9 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">9 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 10 AI ========== -->
-<div id="p10" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 10</span>
+<!-- 10 -->
+<div id="p10" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 10</span>
   </div>
-  <div style="margin-top:48px">
-    <div style="font-size:64px;font-weight:700;color:#F5F7F5;line-height:1.3">الذكاء الاصطناعي</div>
-    <div style="font-size:30px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:14px">SDAIA، مراكز بيانات، ونماذج تخدم اللغة والمجتمع</div>
+  <div class="photo" style="height:300px"><img src="../png/٩٦-سنة-تقنية-صور/ai.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">اليوم</div>
+  <div class="title">الذكاء الاصطناعي</div>
+  <div class="body">الهيئة السعودية للبيانات والذكاء الاصطناعي (SDAIA) تقود أجندة وطنية تجمع حوكمة البيانات، ومراكز الحوسبة، وتطوير نماذج وخدمات تخدم اللغة العربية والمجتمع والقطاعات.</div>
+  <div class="body">السيادة الرقمية هنا تعني قدرة محلية على تخزين المعالجة، وتدريب النماذج، ونشر حلول ذكية في الصحة والتعليم والخدمات — لا الاعتماد الكامل على منصات خارجية فقط.</div>
+  <div class="points">
+    <div class="point"><strong>SDAIA:</strong> إطار وطني للبيانات والذكاء الاصطناعي</div>
+    <div class="point"><strong>مراكز بيانات:</strong> حوسبة وسحابة أقرب للمستخدم والسياسات</div>
+    <div class="point"><strong>نماذج عربية:</strong> لغة ورؤية وخدمات مبنية على سياقنا</div>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:28px">
-    <div style="display:flex;justify-content:center">
-      <svg width="280" height="160" viewBox="0 0 280 160" fill="none">
-        <circle cx="70" cy="80" r="18" fill="#006C35"/>
-        <circle cx="140" cy="50" r="18" fill="#006C35"/>
-        <circle cx="140" cy="110" r="18" fill="#006C35"/>
-        <circle cx="210" cy="80" r="22" fill="#C9A227"/>
-        <line x1="88" y1="74" x2="122" y2="56" stroke="#8A968E" stroke-width="2"/>
-        <line x1="88" y1="86" x2="122" y2="104" stroke="#8A968E" stroke-width="2"/>
-        <line x1="158" y1="56" x2="192" y2="72" stroke="#8A968E" stroke-width="2"/>
-        <line x1="158" y1="104" x2="192" y2="88" stroke="#8A968E" stroke-width="2"/>
-        <line x1="140" y1="68" x2="140" y2="92" stroke="#8A968E" stroke-width="2"/>
-        <text x="210" y="86" text-anchor="middle" fill="#0A1F14" font-size="16" font-weight="700" font-family="ui-monospace,monospace">AI</text>
-      </svg>
-    </div>
-    <div style="display:flex;flex-direction:column;gap:14px">
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:26px 28px;display:flex;justify-content:space-between;align-items:center">
-        <div style="font-size:28px;font-weight:600;color:#F5F7F5">الهيئة السعودية للبيانات والAI</div>
-        <span style="font-size:22px;font-family:ui-monospace,monospace;color:#C9A227">SDAIA</span>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:26px 28px">
-        <div style="font-size:28px;font-weight:600;color:#F5F7F5">مراكز بيانات وطنية</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:6px">سيادة حوسبة وسحابة محلية</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:2px solid #006C35;border-radius:16px;padding:26px 28px">
-        <div style="font-size:28px;font-weight:600;color:#006C35">نماذج وخدمات عربية</div>
-        <div style="font-size:22px;color:#8A968E;margin-top:6px">لغة، رؤية، وقرارات مدعومة بالبيانات</div>
-      </div>
-    </div>
-  </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">10 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="ftr"><span class="pg">10 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 11 أرقام ========== -->
-<div id="p11" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;border:2px solid #006C35;color:#006C35;font-weight:600;border-radius:999px">الجزء 11</span>
+<!-- 11 -->
+<div id="p11" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge">الجزء 11</span>
   </div>
-  <div style="margin-top:40px">
-    <div style="font-size:60px;font-weight:700;color:#F5F7F5;line-height:1.3">أرقام ومقارنات</div>
-    <div style="font-size:28px;color:rgba(245,247,245,.55);line-height:1.7;margin-top:12px">من ندرة الاتصال إلى تغطية رقمية واسعة — اتجاه تصاعدي</div>
-  </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;gap:36px">
-    <!-- Bar chart: internet coverage trend (illustrative) -->
-    <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px 36px">
-      <div style="font-size:26px;font-weight:600;color:#F5F7F5;margin-bottom:28px">اتجاه انتشار الإنترنت <span style="font-size:20px;color:#8A968E;font-weight:400">(توضيحي)</span></div>
-      <div style="display:flex;align-items:flex-end;gap:28px;height:220px;padding-bottom:8px">
-        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end">
-          <div style="width:100%;height:18%;background:#123528;border-radius:10px 10px 4px 4px;border:1px solid rgba(255,255,255,.06)"></div>
-          <span style="font-size:20px;color:#8A968E">2000</span>
-        </div>
-        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end">
-          <div style="width:100%;height:35%;background:#006C35;opacity:.55;border-radius:10px 10px 4px 4px"></div>
-          <span style="font-size:20px;color:#8A968E">2010</span>
-        </div>
-        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end">
-          <div style="width:100%;height:62%;background:#006C35;opacity:.8;border-radius:10px 10px 4px 4px"></div>
-          <span style="font-size:20px;color:#8A968E">2016</span>
-        </div>
-        <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:10px;height:100%;justify-content:flex-end">
-          <div style="width:100%;height:88%;background:linear-gradient(180deg,#C9A227,#006C35);border-radius:10px 10px 4px 4px"></div>
-          <span style="font-size:20px;color:#C9A227;font-weight:600">اليوم</span>
-        </div>
-      </div>
-    </div>
-    <!-- Line-ish comparison cards -->
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px">
-        <div style="font-size:20px;color:#8A968E">خدمات رقمية حكومية</div>
-        <div style="font-size:48px;font-weight:700;color:#006C35;margin-top:8px">آلاف+</div>
-        <div style="font-size:22px;color:rgba(245,247,245,.5);margin-top:6px">من بضعة مواقع → منظومة</div>
-      </div>
-      <div style="background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:28px">
-        <div style="font-size:20px;color:#8A968E">استثمار تقني</div>
-        <svg width="100%" height="56" viewBox="0 0 200 56" preserveAspectRatio="none" style="margin-top:12px">
-          <polyline points="0,50 40,42 80,38 120,28 160,18 200,8" fill="none" stroke="#C9A227" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <circle cx="200" cy="8" r="5" fill="#C9A227"/>
-        </svg>
-        <div style="font-size:22px;color:rgba(245,247,245,.5);margin-top:4px">منحى تصاعدي مستمر</div>
-      </div>
+  <div class="photo" style="height:220px"><img src="../png/٩٦-سنة-تقنية-صور/charts.jpg" alt=""/><div class="veil"></div></div>
+  <div class="year">قبل / بعد</div>
+  <div class="title" style="font-size:46px">أرقام ومقارنات</div>
+  <div class="body">من ندرة الاتصال في مطلع الألفية إلى تغطية رقمية واسعة اليوم: الاتجاه العام تصاعدي في انتشار الإنترنت، وعدد الخدمات الحكومية الرقمية، وحجم الاستثمار التقني.</div>
+  <div style="margin-top:18px;background:rgba(18,53,40,.95);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:22px 24px">
+    <div style="font-size:22px;font-weight:600;margin-bottom:16px">اتجاه انتشار الإنترنت <span style="color:#8A968E;font-weight:400;font-size:18px">(توضيحي)</span></div>
+    <div style="display:flex;align-items:flex-end;gap:18px;height:140px">
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end"><div style="width:100%;height:18%;background:#123528;border-radius:8px"></div><span style="font-size:18px;color:#8A968E">2000</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end"><div style="width:100%;height:35%;background:#006C35;opacity:.55;border-radius:8px"></div><span style="font-size:18px;color:#8A968E">2010</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end"><div style="width:100%;height:62%;background:#006C35;opacity:.8;border-radius:8px"></div><span style="font-size:18px;color:#8A968E">2016</span></div>
+      <div style="flex:1;display:flex;flex-direction:column;align-items:center;gap:8px;height:100%;justify-content:flex-end"><div style="width:100%;height:88%;background:linear-gradient(180deg,#C9A227,#006C35);border-radius:8px"></div><span style="font-size:18px;color:#C9A227;font-weight:600">اليوم</span></div>
     </div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">11 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="body" style="margin-top:14px;font-size:24px">الخدمات الحكومية انتقلت من بضعة مواقع إلى منظومة واسعة، والاستثمار التقني يسلك منحنى تصاعديًا يعكس أولوية الرؤية.</div>
+  <div class="ftr"><span class="pg">11 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
-<!-- ========== 12 ختام ========== -->
-<div id="p12" dir="rtl" style="width:1080px;height:1350px;background-color:#0A1F14;background-image:radial-gradient(ellipse 80% 50% at 50% 40%,rgba(0,108,53,.3),transparent 60%),radial-gradient(rgba(245,247,245,.08) 1.5px,transparent 1.5px);background-size:auto,44px 44px;padding:88px 80px;box-sizing:border-box;display:flex;flex-direction:column;font-family:'Thmanyah Sans',sans-serif">
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <div style="display:flex;align-items:center;gap:16px"><svg width="56" height="56" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg><span style="font-size:30px;font-weight:600;color:#F5F7F5">احمد الحربي</span></div>
-    <span style="font-size:24px;padding:12px 28px;background:#006C35;color:#F5F7F5;font-weight:600;border-radius:999px">الجزء الأخير</span>
+<!-- 12 -->
+<div id="p12" class="poster">
+  <div class="hdr">
+    <div class="mark"><svg width="48" height="48" viewBox="0 0 96 96"><rect x="16" y="30" width="44" height="12" rx="6" fill="#006C35"/><rect x="36" y="54" width="44" height="12" rx="6" fill="#F5F7F5"/><circle cx="74" cy="36" r="7" fill="#C9A227"/></svg>احمد الحربي</div>
+    <span class="badge fill">الجزء الأخير</span>
   </div>
-  <div style="flex:1;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:32px">
-    <div style="font-size:28px;font-weight:600;color:#C9A227">٩٦ سنة… والقصة مستمرة</div>
-    <div style="font-size:58px;font-weight:700;color:#F5F7F5;line-height:1.35">من إشارة راديو<br>إلى مدار وذكاء</div>
-    <div style="font-size:28px;color:rgba(245,247,245,.55);line-height:1.7;max-width:780px">كل محطة بنت التي تليها — والقادم يُكتب الآن في البيانات والخوارزميات</div>
-    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:8px">
-      <span style="padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:22px;color:#F5F7F5">راديو</span>
-      <span style="padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:22px;color:#F5F7F5">نفط</span>
-      <span style="padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:22px;color:#F5F7F5">اتصالات</span>
-      <span style="padding:12px 22px;border-radius:999px;border:1px solid rgba(255,255,255,.12);font-size:22px;color:#F5F7F5">إنترنت</span>
-      <span style="padding:12px 22px;border-radius:999px;background:#006C35;font-size:22px;color:#F5F7F5">رؤية</span>
-      <span style="padding:12px 22px;border-radius:999px;background:#C9A227;font-size:22px;color:#0A1F14;font-weight:600">فضاء · AI</span>
+  <div class="photo hero">
+    <img src="../png/٩٦-سنة-تقنية-صور/servers.jpg" alt=""/>
+    <div class="veil"></div>
+    <div style="position:absolute;right:36px;left:36px;bottom:36px">
+      <div style="font-size:26px;font-weight:600;color:#C9A227;margin-bottom:10px">٩٦ سنة… والقصة مستمرة</div>
+      <div style="font-size:48px;font-weight:700;line-height:1.3">من إشارة راديو<br>إلى مدار وذكاء</div>
     </div>
-    <div style="margin-top:24px;padding:18px 40px;background:#006C35;color:#F5F7F5;font-weight:700;font-size:28px;border-radius:999px">احفظ السلسلة وشاركها</div>
   </div>
-  <div style="display:flex;justify-content:space-between;align-items:center">
-    <span style="font-size:26px;color:rgba(245,247,245,.45)">12 / 12</span>
-    <div dir="ltr" style="display:flex;align-items:center;gap:14px;padding:12px 26px;background:rgba(18,53,40,.9);border:1px solid rgba(255,255,255,.1);border-radius:999px"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.4" stroke-linecap="round"><path d="M4 4l16 16M20 4L4 20"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.5"/><circle cx="17.2" cy="6.8" r="1.4" fill="rgba(245,247,245,.6)" stroke="none"/></svg><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="rgba(245,247,245,.6)" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="4"/><path d="M7.5 11v6M7.5 7.8v.1M12 17v-4a2.5 2.5 0 0 1 5 0v4"/></svg><span dir="ltr" style="font-size:26px;font-family:ui-monospace,monospace;color:#C9A227">@Ahmed014x</span></div>
-    <div style="display:flex;flex-direction:column;gap:12px;align-items:flex-start"><span style="width:80px;height:14px;border-radius:7px;background:#006C35"></span><span style="width:80px;height:14px;border-radius:7px;background:#C9A227;margin-right:36px;opacity:.7"></span></div>
-  </div>
+  <div class="body" style="margin-top:24px">كل محطة بنت التي تليها: الراديو مهّد للبث، والطاقة موّلت الشبكات، والاتصالات حملت الإنترنت، والرؤية فتحت باب الفضاء والذكاء الاصطناعي.</div>
+  <div class="body">القادم يُكتب الآن في البيانات، والخوارزميات، والكفاءات الوطنية — احفظ السلسلة وشاركها في يومنا الوطني.</div>
+  <div style="margin-top:20px;align-self:center;padding:16px 36px;background:#006C35;color:#F5F7F5;font-weight:700;font-size:26px;border-radius:999px">احفظها وشاركها · @Ahmed014x</div>
+  <div class="ftr"><span class="pg">12 / 12</span><div class="handle" dir="ltr">@Ahmed014x</div><div class="sig"><span class="a"></span><span class="b"></span></div></div>
 </div>
 
 </div>
