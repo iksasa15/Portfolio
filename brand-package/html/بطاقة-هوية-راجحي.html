@@ -16,18 +16,14 @@ body{
 }
 #card{
   width:1536px;height:969px;position:relative;overflow:hidden;border-radius:28px;
-  /* Diamond Affluent lavender-grey #8B87A3 */
-  background:
-    radial-gradient(ellipse 75% 60% at 85% 10%, rgba(255,255,255,.16), transparent 55%),
-    radial-gradient(ellipse 55% 50% at 15% 20%, rgba(255,255,255,.08), transparent 50%),
-    linear-gradient(152deg, #9a96b0 0%, #8b87a3 38%, #7e7a96 68%, #736f8a 100%);
+  background:#8b87a3 url("../png/بطاقة-فضية/diamond-bg.png") center / cover no-repeat;
   box-shadow:
     0 40px 80px rgba(0,0,0,.45),
     inset 0 1px 0 rgba(255,255,255,.28),
     inset 0 -1px 0 rgba(0,0,0,.1);
 }
 #card::before{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.28;mix-blend-mode:soft-light;
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;mix-blend-mode:soft-light;
   background:
     repeating-linear-gradient(92deg, transparent 0 1px, rgba(255,255,255,.04) 1px 2px),
     repeating-linear-gradient(0deg, transparent 0 2px, rgba(0,0,0,.03) 2px 3px);
@@ -35,18 +31,6 @@ body{
 #card::after{
   content:"";position:absolute;inset:0;border-radius:28px;pointer-events:none;
   box-shadow:inset 0 0 0 1px rgba(255,255,255,.22);
-}
-/* Diamond Affluent curved swoosh */
-.swoosh{
-  position:absolute;inset:0;pointer-events:none;
-  background:
-    radial-gradient(ellipse 130% 100% at -10% 120%, rgba(70,68,95,.72) 0%, transparent 52%),
-    radial-gradient(ellipse 95% 75% at 55% 138%, rgba(90,87,115,.48) 0%, transparent 48%);
-}
-.sheen{
-  position:absolute;width:560px;height:560px;border-radius:50%;
-  background:radial-gradient(circle, rgba(242,243,245,.14), transparent 68%);
-  left:38%;top:8%;pointer-events:none;filter:blur(8px);
 }
 .product{
   position:absolute;top:64px;left:68px;
@@ -89,9 +73,6 @@ body{
 </head>
 <body>
 <div id="card">
-  <div class="swoosh"></div>
-  <div class="sheen"></div>
-
   <div class="product">
     <div class="ar">تميز ماسي</div>
     <div class="en">diamond affluent</div>
