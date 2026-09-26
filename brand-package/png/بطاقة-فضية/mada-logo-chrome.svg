@@ -3,23 +3,10 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 width="796.2px" height="265.5px" viewBox="0 0 796.2 265.5" style="enable-background:new 0 0 796.2 265.5;" xml:space="preserve"
 	>
-<defs>
-  <linearGradient id="chrome" x1="0%" y1="0%" x2="100%" y2="100%">
-    <stop offset="0%" stop-color="#ffffff"/>
-    <stop offset="12%" stop-color="#d0d5dc"/>
-    <stop offset="24%" stop-color="#4a525c"/>
-    <stop offset="38%" stop-color="#f4f6f8"/>
-    <stop offset="52%" stop-color="#2e343c"/>
-    <stop offset="66%" stop-color="#c5ccd4"/>
-    <stop offset="80%" stop-color="#5a636e"/>
-    <stop offset="100%" stop-color="#e8ebef"/>
-  </linearGradient>
-</defs>
-
 <style type="text/css">
-	.st0{fill:url(#chrome);}
-	.st1{fill:url(#chrome);}
-	.st2{fill:url(#chrome);}
+	.st0{fill:#E4E8ED;}
+	.st1{fill:#E4E8ED;}
+	.st2{fill:#E4E8ED;}
 </style>
 <g>
 	<rect y="153.1" class="st0" width="336.8" height="112.2"/>
